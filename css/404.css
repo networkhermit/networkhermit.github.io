@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+body {
+    padding: 7.5% 0;
+}
+
+#main-content {
+    color: #66595c;
+    font-family: 'Helvetica';
+    text-align: center;
+}
