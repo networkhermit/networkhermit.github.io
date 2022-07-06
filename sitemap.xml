@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://blog.vac.fun/</loc>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/about/</loc>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/posts/</loc>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/posts/hello-world/</loc>
+        <lastmod>2022-07-06</lastmod>
+    </url>
+</urlset>
