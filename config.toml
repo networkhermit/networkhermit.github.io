@@ -23,7 +23,8 @@ highlight_theme = "nord"
 favicon = "/images/favicon.ico"
 menu = [
     { name = "/posts", url = "/posts", weight = 1 },
-    { name = "/about", url = "/about", weight = 2 },
+    { name = "/prism", url = "/prism", weight = 2 },
+    { name = "/about", url = "/about", weight = 3 },
 ]
 theme = "auto"
 toc = false
