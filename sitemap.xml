@@ -16,4 +16,15 @@
         <loc>https://blog.vac.fun/posts/hello-world/</loc>
         <lastmod>2022-07-06</lastmod>
     </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/</loc>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/gitlab/</loc>
+        <lastmod>2022-07-07</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/honeycomb/</loc>
+        <lastmod>2022-07-07</lastmod>
+    </url>
 </urlset>

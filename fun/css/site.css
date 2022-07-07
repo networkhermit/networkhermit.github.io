@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+div {
+    text-align: center;
+}
+
+#main-content {
+    color: #656565;
+    font: bold medium 'Verdana', sans-serif;
+}
+
+a {
+    color: #f08080;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}

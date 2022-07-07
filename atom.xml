@@ -4,8 +4,55 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-06T00:00:00+00:00</updated>
+	<updated>2022-07-07T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>GitLab Blog: We are splitting our database into Main and CI &amp; Why we&#x27;re sticking with Ruby on Rails</title>
+		<published>2022-07-07T00:00:00+00:00</published>
+		<updated>2022-07-07T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/prism/gitlab/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/gitlab/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;We are splitting our database into Main and CI to improve the scalability and reliability of GitLab.com.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Fabian Zimmer &lt;a href=&quot;https:&#x2F;&#x2F;about.gitlab.com&#x2F;blog&#x2F;2022&#x2F;06&#x2F;02&#x2F;splitting-database-into-main-and-ci&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We don’t need microservices&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Architecture follows needs, not the other way around.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Luckily, only a tiny part of most codebases is actually performance critical.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;about.gitlab.com&#x2F;blog&#x2F;2022&#x2F;07&#x2F;06&#x2F;why-were-sticking-with-ruby-on-rails&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can&#x27;t build a monolith, what makes you think microservices are the answer?&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.codingthearchitecture.com&#x2F;2014&#x2F;07&#x2F;06&#x2F;distributed_big_balls_of_mud.html&quot;&gt;Distributed big balls of mud&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Honeycomb Blog: We Learn Systems by Changing Them</title>
+		<published>2022-07-07T00:00:00+00:00</published>
+		<updated>2022-07-07T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/prism/honeycomb/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/honeycomb/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;It is only possible to come to an understanding of a system of interest by trying to change it.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Michael C. Jackson explains Kurt Lewin’s work, in Critical Systems Thinking&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.honeycomb.io&#x2F;blog&#x2F;learn-systems-by-changing&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>致敬 hello, world</title>
 		<published>2022-07-06T00:00:00+00:00</published>
