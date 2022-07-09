@@ -12,4 +12,4 @@ and [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
 ---
 
-[Feed](https://blog.vac.fun/atom.xml)
+[Atom feed](https://blog.vac.fun/atom.xml)
