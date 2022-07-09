@@ -4,14 +4,50 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-07T00:00:00+00:00</updated>
+	<updated>2022-07-09T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Honeycomb Blog: Tracking On-Call Health</title>
+		<published>2022-07-09T00:00:00+00:00</published>
+		<updated>2022-07-09T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/prism/20220709-honeycomb/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220709-honeycomb/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The ability to &lt;strong&gt;respond&lt;&#x2F;strong&gt;. Knowing what to do, or being able to respond to regular and
+irregular changes, disturbances, and opportunities by activating prepared actions or by
+adjusting current mode of functioning.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The ability to &lt;strong&gt;monitor&lt;&#x2F;strong&gt;. Knowing what to look for, or being able to monitor that which
+is or could seriously affect the system’s performance in the near term3 – positively or
+negatively. The monitoring must cover the system’s own performance as well as what
+happens in the environment.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The ability to &lt;strong&gt;learn&lt;&#x2F;strong&gt;. Knowing what has happened, or being able to learn from
+experience, in particular to learn the right lessons from the right experience.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The ability to &lt;strong&gt;anticipate&lt;&#x2F;strong&gt;. Knowing what to expect, or being able to anticipate
+developments further into the future, such as potential disruptions, novel demands or
+constraints, new opportunities, or changing operating conditions.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;erikhollnagel.com&#x2F;onewebmedia&#x2F;RAG%20Outline%20V2.pdf&quot;&gt;Resilience Analysis Grid&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.honeycomb.io&#x2F;blog&#x2F;tracking-on-call-health&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>GitLab Blog: We are splitting our database into Main and CI &amp; Why we&#x27;re sticking with Ruby on Rails</title>
 		<published>2022-07-07T00:00:00+00:00</published>
 		<updated>2022-07-07T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/gitlab/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/gitlab/</id>
+		<link href="https://blog.vac.fun/prism/20220707-gitlab/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220707-gitlab/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;We are splitting our database into Main and CI to improve the scalability and reliability of GitLab.com.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -42,8 +78,8 @@
 		<title>Honeycomb Blog: We Learn Systems by Changing Them</title>
 		<published>2022-07-07T00:00:00+00:00</published>
 		<updated>2022-07-07T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/honeycomb/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/honeycomb/</id>
+		<link href="https://blog.vac.fun/prism/20220707-honeycomb/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220707-honeycomb/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;It is only possible to come to an understanding of a system of interest by trying to change it.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -57,8 +93,8 @@
 		<title>致敬 hello, world</title>
 		<published>2022-07-06T00:00:00+00:00</published>
 		<updated>2022-07-06T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/posts/hello-world/" type="text/html"/>
-		<id>https://blog.vac.fun/posts/hello-world/</id>
+		<link href="https://blog.vac.fun/posts/20220706-hello-world/" type="text/html"/>
+		<id>https://blog.vac.fun/posts/20220706-hello-world/</id>
 		<content type="html">&lt;h1 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h1&gt;
 &lt;p&gt;和大学同学聊天偶然提到写博客，我决定尝试写写看。由于平时工作比较忙，所以不太有时间写专业性很强的长篇内容，博客主要会以原创和分享为主，记录自己的学习过程，也顺便练习下表达能力。&lt;&#x2F;p&gt;
 &lt;p&gt;为了管理简单，我选择用 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;Zola&lt;&#x2F;a&gt; 以 &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown&quot;&gt;Markdown&lt;&#x2F;a&gt; 格式编写博客，模板用的是 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;not-matthias&#x2F;apollo&quot;&gt;apollo&lt;&#x2F;a&gt;，代码高亮主题为 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;arcticicestudio&#x2F;nord&quot;&gt;Nord&lt;&#x2F;a&gt;，目前博客托管在 &lt;a href=&quot;https:&#x2F;&#x2F;pages.github.com&quot;&gt;GitHub Pages&lt;&#x2F;a&gt; 上。&lt;&#x2F;p&gt;
