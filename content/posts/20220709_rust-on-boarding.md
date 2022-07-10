@@ -98,3 +98,26 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 ```
 
 ## Rust 开发环境
+
+* 代码编辑器：[VS Code](https://github.com/microsoft/vscode), 搭配 `rust-analyzer` 和 `Even Better TOML`[^1] 两个插件
+
+* Language Server 支持: [Rust Analyzer](https://rust-analyzer.github.io)
+
+* 代码质量必备：[rustfmt](https://github.com/rust-lang/rustfmt), [clippy](https://github.com/rust-lang/rust-clippy), 使用如下配置
+
+```json
+{
+    "[rust]": {
+        "editor.formatOnSave": true
+    },
+    "rust-analyzer.checkOnSave.command": "clippy"
+}
+```
+
+* 依赖安全：[cargo-audit](https://github.com/RustSec/cargo-audit), [cargo-outdated](https://github.com/kbknapp/cargo-outdated)
+
+* 额外推荐：[mold](https://github.com/rui314/mold)（一款现代链接器）, [sccache](https://github.com/mozilla/sccache)（编译缓存）
+
+---
+
+[^1]: TOML 文件格式支持, 可选
