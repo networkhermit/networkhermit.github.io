@@ -4,8 +4,30 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-09T00:00:00+00:00</updated>
+	<updated>2022-07-10T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Irrational Exuberance: How to safely think in systems</title>
+		<published>2022-07-10T00:00:00+00:00</published>
+		<updated>2022-07-10T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/prism/20220710-irrational-exuberance/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220710-irrational-exuberance/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When your model and reality conflict, reality is always right&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Models are immutable, but reality isn’t&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Every model omits information; some omit critical information&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lethain.com&#x2F;how-to-safely-think-in-systems&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Honeycomb Blog: Tracking On-Call Health</title>
 		<published>2022-07-09T00:00:00+00:00</published>
