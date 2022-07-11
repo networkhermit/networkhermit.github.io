@@ -4,8 +4,236 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-10T00:00:00+00:00</updated>
+	<updated>2022-07-11T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Rust: 上手和提升</title>
+		<published>2022-07-11T00:00:00+00:00</published>
+		<updated>2022-07-11T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/posts/20220711-rust-onboarding/" type="text/html"/>
+		<id>https://blog.vac.fun/posts/20220711-rust-onboarding/</id>
+		<content type="html">&lt;h2 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h2&gt;
+&lt;p&gt;前段时间因为项目需要短期内上手了 Rust，也顺便逛了一圈 Rust 的生态，这里记录一下学习的经验。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;shi-yao-shi-rust&quot;&gt;什么是 Rust？&lt;&#x2F;h2&gt;
+&lt;p&gt;一门&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Programming_language&quot;&gt;编程语言&lt;&#x2F;a&gt;, &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Memory_safety&quot;&gt;memory safe&lt;&#x2F;a&gt; without &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Garbage_collection_(computer_science)&quot;&gt;garbage collection&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Technology from the past come to save the future from itself&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Graydon Hoare (Rust 创始人)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&quot;&gt;官网&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Rust_(programming_language)&quot;&gt;维基百科&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&quot;&gt;GitHub&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;stable&#x2F;reference&#x2F;influences.html&quot;&gt;Influenced by&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;和 &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Go_(programming_language)&quot;&gt;Go&lt;&#x2F;a&gt; 一样，我觉得它们都很现代。&lt;&#x2F;p&gt;
+&lt;p&gt;如果听腻了 &lt;code&gt;Performance&lt;&#x2F;code&gt;, &lt;code&gt;Reliability&lt;&#x2F;code&gt;, &lt;code&gt;Productivity&lt;&#x2F;code&gt;，我告诉你一个我在 Rust 上学到的新词：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Ergonomic&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Ergonomics&lt;&#x2F;strong&gt; is a measure of the friction you experience when trying to get things done with a tool.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2017&#x2F;03&#x2F;02&#x2F;lang-ergonomics.html&quot;&gt;Rust&#x27;s language ergonomics initiative&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Doing so is a clear &lt;strong&gt;ergonomic&lt;&#x2F;strong&gt; win.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;0141-lifetime-elision.html&quot;&gt;Rust RFC 0141 - lifetime elision&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This proposal will improve the &lt;strong&gt;ergonomics&lt;&#x2F;strong&gt; of the Rust language for development of command-line tools and &amp;quot;back end&amp;quot; &#x2F; &amp;quot;computational kernel&amp;quot; programs.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;1869-eprintln.html&quot;&gt;Rust RFC 1869 - eprintln&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Better &lt;strong&gt;ergonomics&lt;&#x2F;strong&gt; for pattern-matching on references.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2005-match-ergonomics.html&quot;&gt;Rust RFC 2005 - match &lt;strong&gt;ergonomics&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Add async &amp;amp; await syntaxes to make it more &lt;strong&gt;ergonomic&lt;&#x2F;strong&gt; to write code manipulating futures.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2394-async_await.html&quot;&gt;Rust RFC 2394 - async await&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The main motivation for this RFC is improving readability, &lt;strong&gt;ergonomics&lt;&#x2F;strong&gt;, and reducing paper cuts.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2497-if-let-chains.html&quot;&gt;Rust RFC 2497 - if let chains&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;axum&lt;&#x2F;code&gt; is a web application framework that focuses on &lt;strong&gt;ergonomics&lt;&#x2F;strong&gt; and modularity.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tokio-rs&#x2F;axum&quot;&gt;axum&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;async fn(Request) -&amp;gt; Result&amp;lt;Response, Error&amp;gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Tower is a library of modular and reusable components for building robust networking clients and servers.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tower-rs&#x2F;tower&quot;&gt;Tower&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Rust makes systems programming accessible. - Kosinix&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;brson.github.io&#x2F;fireflowers&#x2F;&quot;&gt;fireflowers - The Rust Programming Language, in the words of its practitioners&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;rust-ru-men&quot;&gt;Rust 入门&lt;&#x2F;h2&gt;
+&lt;p&gt;刚开始入门，学习资源限制在如下三个就足够了：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustlings&quot;&gt;rustlings&lt;&#x2F;a&gt; &lt;del&gt;Jedi Younglings&lt;&#x2F;del&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Small exercises to get you used to reading and writing Rust code.&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;index.html&quot;&gt;The Book&lt;&#x2F;a&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;code&gt;The Rust Programming Language&lt;&#x2F;code&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;index.html&quot;&gt;Rust by Example&lt;&#x2F;a&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Learn Rust with examples&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;先让自己对这门语言关键的概念有个印象，避免刻意套用以往的编程经验，试着去接受和理解 Rust 的独特之处，入个门没那么难。把 &lt;code&gt;rustlings&lt;&#x2F;code&gt; 的全部小练习打通关后，就可以算是初步入门了，下面是我通关时出现的彩蛋 &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;🎉 All exercises completed! 🎉
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;+----------------------------------------------------+
+&lt;&#x2F;span&gt;&lt;span&gt;|          You made it to the Fe-nish line!          |
+&lt;&#x2F;span&gt;&lt;span&gt;+--------------------------  ------------------------+
+&lt;&#x2F;span&gt;&lt;span&gt;                          \\&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;     ▒▒          ▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒          ▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;   ▒▒▒▒  ▒▒    ▒▒        ▒▒  ▒▒        ▒▒    ▒▒  ▒▒▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;   ▒▒▒▒  ▒▒  ▒▒            ▒▒            ▒▒  ▒▒  ▒▒▒▒
+&lt;&#x2F;span&gt;&lt;span&gt; ░░▒▒▒▒░░▒▒  ▒▒            ▒▒            ▒▒  ▒▒░░▒▒▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;   ▓▓▓▓▓▓▓▓  ▓▓      ▓▓██  ▓▓  ▓▓██      ▓▓  ▓▓▓▓▓▓▓▓
+&lt;&#x2F;span&gt;&lt;span&gt;     ▒▒▒▒    ▒▒      ████  ▒▒  ████      ▒▒░░  ▒▒▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;       ▒▒  ▒▒▒▒▒▒        ▒▒▒▒▒▒        ▒▒▒▒▒▒  ▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;         ▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▒▒▒▒▒▒▓▓▒▒▓▓▒▒▒▒▒▒▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;             ▒▒▒▒▒▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▒▒▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;           ▒▒  ▒▒▒▒▒▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒  ▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;         ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒    ▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;       ▒▒    ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒    ▒▒    ▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;       ▒▒  ▒▒    ▒▒                  ▒▒    ▒▒  ▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;           ▒▒  ▒▒                      ▒▒  ▒▒
+&lt;&#x2F;span&gt;&lt;span&gt;We hope you enjoyed learning about the various aspects of Rust!
+&lt;&#x2F;span&gt;&lt;span&gt;If you noticed any issues, please don&amp;#39;t hesitate to report them to our repo.
+&lt;&#x2F;span&gt;&lt;span&gt;You can also contribute your own exercises to help the greater community!
+&lt;&#x2F;span&gt;&lt;span&gt;Before reporting an issue or contributing, please read our guidelines:
+&lt;&#x2F;span&gt;&lt;span&gt;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustlings&#x2F;blob&#x2F;main&#x2F;CONTRIBUTING.md
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;rust-kai-fa-huan-jing&quot;&gt;Rust 开发环境&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;代码编辑器：&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;vscode&quot;&gt;VS Code&lt;&#x2F;a&gt;, 搭配 &lt;code&gt;rust-analyzer&lt;&#x2F;code&gt; 和 &lt;code&gt;Even Better TOML&lt;&#x2F;code&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; 两个插件&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Language Server 支持: &lt;a href=&quot;https:&#x2F;&#x2F;rust-analyzer.github.io&quot;&gt;rust-analyzer&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;代码质量必备：&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustfmt&quot;&gt;rustfmt&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust-clippy&quot;&gt;clippy&lt;&#x2F;a&gt;, 使用如下配置&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;json&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;[rust]&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;editor.formatOnSave&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span&gt;    }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;rust-analyzer.checkOnSave.command&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;clippy&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;依赖安全：&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;RustSec&#x2F;cargo-audit&quot;&gt;cargo-audit&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kbknapp&#x2F;cargo-outdated&quot;&gt;cargo-outdated&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;额外推荐：&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rui314&#x2F;mold&quot;&gt;mold&lt;&#x2F;a&gt;（一款现代链接器）, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mozilla&#x2F;sccache&quot;&gt;sccache&lt;&#x2F;a&gt;（编译缓存）&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;rust-shi-ji-kai-fa&quot;&gt;Rust 实际开发&lt;&#x2F;h2&gt;
+&lt;p&gt;这个阶段应该是最难熬的，除了前面提到的学习资源，这里再增加一些常用的参考资料，另外也别忘了多使用&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Comparison_of_web_search_engines&quot;&gt;搜索引擎&lt;&#x2F;a&gt;和 &lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&quot;&gt;Stack Overflow&lt;&#x2F;a&gt;：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;stable&#x2F;std&#x2F;&quot;&gt;std&lt;&#x2F;a&gt;: Rust 标准库&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&quot;&gt;crates.io&lt;&#x2F;a&gt; 和 &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&quot;&gt;docs.rs&lt;&#x2F;a&gt;: 官方软件仓库和在线文档&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;api-guidelines&#x2F;&quot;&gt;api guidelines&lt;&#x2F;a&gt;: Rust API 风格指南&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cheats.rs&quot;&gt;cheats.rs&lt;&#x2F;a&gt;: Rust 速查表&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;你需要磨合一段时间才能适应 Rust 特有的 &lt;em&gt;&lt;code&gt;Ownership&lt;&#x2F;code&gt;&lt;&#x2F;em&gt; 和 &lt;em&gt;&lt;code&gt;Borrow Checker&lt;&#x2F;code&gt;&lt;&#x2F;em&gt;，其他对你而言陌生的概念也需要时间去熟悉，根据项目需求着手一些实际的功能，模仿、借鉴和延伸接触的 demo 和例子，注意模块划分、错误处理、架构抽象，花上点心思不用多久就可以上手 Rust 开发。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rust-sheng-tai-bei-jing&quot;&gt;Rust 生态背景&lt;&#x2F;h2&gt;
+&lt;p&gt;我一直提倡不要孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史渊源和演进过程，这对你的长期技术成长大有裨益。下面是我推荐的一些信息来源：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;master&#x2F;RELEASES.md&quot;&gt;Releases&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;&quot;&gt;RFCs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;this-week-in-rust.org&quot;&gt;This Week in Rust&lt;&#x2F;a&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&quot;&gt;GitHub&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&quot;&gt;Hacker News&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;rust-jin-jie&quot;&gt;Rust 进阶&lt;&#x2F;h2&gt;
+&lt;p&gt;不管你最终能走多远，只要是尝试了我都认可你：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;stable&#x2F;reference&#x2F;&quot;&gt;reference&lt;&#x2F;a&gt;: Rust 语言参考&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;stable&#x2F;nomicon&#x2F;&quot;&gt;nomicon&lt;&#x2F;a&gt;: &lt;code&gt;The Dark Arts of Advanced and Unsafe Rust Programming&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;源码阅读: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&quot;&gt;rust&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tokio-rs&#x2F;tokio&quot;&gt;tokio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;xie-zai-zui-hou&quot;&gt;写在最后&lt;&#x2F;h2&gt;
+&lt;p&gt;没有事物是完美的，Rust 也一样，不要陷入无谓的语言之争，很多技术都得看场景和环境。我用一句古文结束这篇博客：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;“它山之石，可以攻玉”&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;Rust 吉祥物 &lt;a href=&quot;https:&#x2F;&#x2F;rustacean.net&quot;&gt;Ferris&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;TOML 文件格式支持, 可选&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;&#x2F;sup&gt;
+&lt;p&gt;往期也可以回顾，里面有不少精华内容&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>FS Blog: How to Fail at Almost Everything and Still Win Big</title>
+		<published>2022-07-11T00:00:00+00:00</published>
+		<updated>2022-07-11T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/prism/20220711-fs/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220711-fs/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1. Do Creative Work First&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The way I approach the problem of multiple priorities is by focusing on just one main metric: my energy. I make choices that maximize my personal energy because that makes it easier to manage all of the other priorities.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the most important tricks for maximizing your productivity involves matching your mental state to the task.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;2. On Expecting People to Be Reasonable&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If your view of the world is that people use reason for their important decisions, you are setting yourself up for a life of frustration and confusion. You’ll find yourself continually debating people and never winning except in your own mind. Few things are as destructive and limiting as a worldview that assumes people are mostly rational.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;3. The Most Important Form of Selfishness&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The most important form of selfishness involves spending time on your fitness, eating right, pursuing your career, and still spending quality time with your family and friends.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;4. Withholding Praise is Immoral&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Children are accustomed to a continual stream of criticisms and praise, but adults can go weeks without a compliment while enduring criticism both at work and at home. Adults are starved for a kind word. When you understand the power of honest praise (as opposed to bullshitting, flattery, and sucking up), you realize that withholding it borders on immoral. If you see something that impresses you, a decent respect to humanity insists you voice your praise.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;5. Don’t Read the News for Truth&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I don’t read the news to find truth, as that would be a foolish waste of time. I read the news to broaden my exposure to new topics and patterns that make my brain more efficient in general and to enjoy myself, because learning interesting things increases my energy and makes me feel optimistic.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;6. Fake it Till you Make it&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;[W]e are designed to become in reality however we act. We fake it until it becomes real. Our core personality doesn’t change, but we quickly adopt the mannerisms and skills associated with our new status and position.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;7. Change Your Mind&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;[Y]ou shouldn’t hesitate to modify your perceptions to whatever makes you happy, because you’re probably wrong about the underlying nature of reality anyway.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;8. Systems Trump Goals&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you do something every day, it’s a system. If you’re waiting to achieve it someday in the future, it’s a goal.&lt;&#x2F;p&gt;
+&lt;p&gt;…&lt;&#x2F;p&gt;
+&lt;p&gt;[O]ne should have a system instead of a goal. The system-versus-goals model can be applied to most human endeavours. In the world of dieting, losing twenty pounds is a goal, but eating right is a system. In the exercise realm, running a marathon in under four hours is a goal, but exercising daily is a system. In business, making a million dollars is a goal, but being a serial entrepreneur is a system.&lt;&#x2F;p&gt;
+&lt;p&gt;…&lt;&#x2F;p&gt;
+&lt;p&gt;Goal-oriented people exist in a state of continuous pre-success failure at best, and permanent failure at worst if things never work out. Systems people succeed every time they apply their systems, in the sense that they did what they intended to do. The goals people are fighting the feeling of discouragement at each turn. The systems people are feeling good every time they apply their system. That’s a big difference in terms of maintaining your personal energy in the right direction. …&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;9. Psychology Matters&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;On a scale of one to ten, the importance of understanding psychology is a solid ten.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;10. Consider How You Look&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Realistically, most people have poor filters for sorting truth from fiction, and there’s no objective way to know if you’re particularly good at it or not. Consider the people who routinely disagree with you. See how confident they look while being dead wrong? That’s exactly how you look to them.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fs.blog&#x2F;scott-adams-fail-at-everything&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Irrational Exuberance: How to safely think in systems</title>
 		<published>2022-07-10T00:00:00+00:00</published>
@@ -59,7 +287,7 @@ constraints, new opportunities, or changing operating conditions.&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;erikhollnagel.com&#x2F;onewebmedia&#x2F;RAG%20Outline%20V2.pdf&quot;&gt;Resilience Analysis Grid&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;erikhollnagel.com&#x2F;onewebmedia&#x2F;RAG%20Outline%20V2.pdf&quot;&gt;Resilience Analysis Grid [pdf]&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.honeycomb.io&#x2F;blog&#x2F;tracking-on-call-health&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
@@ -117,7 +345,7 @@ constraints, new opportunities, or changing operating conditions.&lt;&#x2F;p&gt;
 		<updated>2022-07-06T00:00:00+00:00</updated>
 		<link href="https://blog.vac.fun/posts/20220706-hello-world/" type="text/html"/>
 		<id>https://blog.vac.fun/posts/20220706-hello-world/</id>
-		<content type="html">&lt;h1 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h1&gt;
+		<content type="html">&lt;h2 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h2&gt;
 &lt;p&gt;和大学同学聊天偶然提到写博客，我决定尝试写写看。由于平时工作比较忙，所以不太有时间写专业性很强的长篇内容，博客主要会以原创和分享为主，记录自己的学习过程，也顺便练习下表达能力。&lt;&#x2F;p&gt;
 &lt;p&gt;为了管理简单，我选择用 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;Zola&lt;&#x2F;a&gt; 以 &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown&quot;&gt;Markdown&lt;&#x2F;a&gt; 格式编写博客，模板用的是 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;not-matthias&#x2F;apollo&quot;&gt;apollo&lt;&#x2F;a&gt;，代码高亮主题为 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;arcticicestudio&#x2F;nord&quot;&gt;Nord&lt;&#x2F;a&gt;，目前博客托管在 &lt;a href=&quot;https:&#x2F;&#x2F;pages.github.com&quot;&gt;GitHub Pages&lt;&#x2F;a&gt; 上。&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;dai-ma-gao-liang-xiao-guo-zhan-shi&quot;&gt;代码高亮效果展示&lt;&#x2F;h2&gt;
