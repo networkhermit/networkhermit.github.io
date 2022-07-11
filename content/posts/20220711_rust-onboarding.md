@@ -1,10 +1,9 @@
 +++
-date = "2022-07-09"
-draft = true
+date = "2022-07-11"
 title = "Rust: 上手和提升"
 +++
 
-# 前言
+## 前言
 
 前段时间因为项目需要短期内上手了 Rust，也顺便逛了一圈 Rust 的生态，这里记录一下学习的经验。
 
@@ -66,7 +65,7 @@ title = "Rust: 上手和提升"
 * [Rust by Example](https://doc.rust-lang.org/rust-by-example/index.html)
   > `Learn Rust with examples`
 
-先让自己对这门语言关键的概念有个印象，避免刻意套用以往的编程经验，试着去接受和理解 Rust 的独特之处，入个门没那么难。把 `rustlings` 的全部小练习打通关后，就可以算是初步入门了，下面是通关时出现的彩蛋。
+先让自己对这门语言关键的概念有个印象，避免刻意套用以往的编程经验，试着去接受和理解 Rust 的独特之处，入个门没那么难。把 `rustlings` 的全部小练习打通关后，就可以算是初步入门了，下面是我通关时出现的彩蛋 [^1]。
 
 ```text
 🎉 All exercises completed! 🎉
@@ -99,9 +98,9 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 
 ## Rust 开发环境
 
-* 代码编辑器：[VS Code](https://github.com/microsoft/vscode), 搭配 `rust-analyzer` 和 `Even Better TOML`[^1] 两个插件
+* 代码编辑器：[VS Code](https://github.com/microsoft/vscode), 搭配 `rust-analyzer` 和 `Even Better TOML` [^2] 两个插件
 
-* Language Server 支持: [Rust Analyzer](https://rust-analyzer.github.io)
+* Language Server 支持: [rust-analyzer](https://rust-analyzer.github.io)
 
 * 代码质量必备：[rustfmt](https://github.com/rust-lang/rustfmt), [clippy](https://github.com/rust-lang/rust-clippy), 使用如下配置
 
@@ -118,6 +117,43 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 
 * 额外推荐：[mold](https://github.com/rui314/mold)（一款现代链接器）, [sccache](https://github.com/mozilla/sccache)（编译缓存）
 
+## Rust 实际开发
+
+这个阶段应该是最难熬的，除了前面提到的学习资源，这里再增加一些常用的参考资料，另外也别忘了多使用[搜索引擎](https://en.wikipedia.org/wiki/Comparison_of_web_search_engines)和 [Stack Overflow](https://stackoverflow.com)：
+
+* [std](https://doc.rust-lang.org/stable/std/): Rust 标准库
+* [crates.io](https://crates.io) 和 [docs.rs](https://docs.rs): 官方软件仓库和在线文档
+* [api guidelines](https://rust-lang.github.io/api-guidelines/): Rust API 风格指南
+* [cheats.rs](https://cheats.rs): Rust 速查表
+
+你需要磨合一段时间才能适应 Rust 特有的 *`Ownership`* 和 *`Borrow Checker`*，其他对你而言陌生的概念也需要时间去熟悉，根据项目需求着手一些实际的功能，模仿、借鉴和延伸接触的 demo 和例子，注意模块划分、错误处理、架构抽象，花上点心思不用多久就可以上手 Rust 开发。
+
+## Rust 生态背景
+
+我一直提倡不要孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史渊源和演进过程，这对你的长期技术成长大有裨益。下面是我推荐的一些信息来源：
+
+* [Releases](https://github.com/rust-lang/rust/blob/master/RELEASES.md), [RFCs](https://rust-lang.github.io/rfcs/)
+* [This Week in Rust](https://this-week-in-rust.org) [^3]
+* [GitHub](https://github.com), [Hacker News](https://news.ycombinator.com)
+
+## Rust 进阶
+
+不管你最终能走多远，只要是尝试了我都认可你：
+
+* [reference](https://doc.rust-lang.org/stable/reference/): Rust 语言参考
+* [nomicon](https://doc.rust-lang.org/stable/nomicon/): `The Dark Arts of Advanced and Unsafe Rust Programming`
+* 源码阅读: [rust](https://github.com/rust-lang/rust), [tokio](https://github.com/tokio-rs/tokio)
+
+## 写在最后
+
+没有事物是完美的，Rust 也一样，不要陷入无谓的语言之争，很多技术都得看场景和环境。我用一句古文结束这篇博客：
+
+**“它山之石，可以攻玉”**
+
 ---
 
-[^1]: TOML 文件格式支持, 可选
+[^1]: Rust 吉祥物 [Ferris](https://rustacean.net)
+
+[^2]: TOML 文件格式支持, 可选
+
+[^3]: 往期也可以回顾，里面有不少精华内容

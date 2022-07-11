@@ -18,6 +18,6 @@ title = "Honeycomb Blog: Tracking On-Call Health"
 > * The ability to **anticipate**. Knowing what to expect, or being able to anticipate
 > developments further into the future, such as potential disruptions, novel demands or
 > constraints, new opportunities, or changing operating conditions.
-- [Resilience Analysis Grid](https://erikhollnagel.com/onewebmedia/RAG%20Outline%20V2.pdf)
+- [Resilience Analysis Grid [pdf]](https://erikhollnagel.com/onewebmedia/RAG%20Outline%20V2.pdf)
 
 [Link](https://www.honeycomb.io/blog/tracking-on-call-health)
