@@ -132,6 +132,7 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 
 我一直提倡不要孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史渊源和演进过程，这对你的长期技术成长大有裨益。下面是我推荐的一些信息来源：
 
+* [Rust Blog](https://blog.rust-lang.org)
 * [Releases](https://github.com/rust-lang/rust/blob/master/RELEASES.md), [RFCs](https://rust-lang.github.io/rfcs/)
 * [This Week in Rust](https://this-week-in-rust.org) [^3]
 * [GitHub](https://github.com), [Hacker News](https://news.ycombinator.com)

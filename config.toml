@@ -8,7 +8,6 @@ compile_sass = true
 build_search_index = true
 
 generate_feed = true
-minify_html = true
 theme = "apollo"
 title = "hi, I’m vac"
 
