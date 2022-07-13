@@ -10,6 +10,9 @@
         <loc>https://blog.vac.fun/page/1/</loc>
     </url>
     <url>
+        <loc>https://blog.vac.fun/page/2/</loc>
+    </url>
+    <url>
         <loc>https://blog.vac.fun/posts/</loc>
     </url>
     <url>
@@ -42,5 +45,13 @@
     <url>
         <loc>https://blog.vac.fun/prism/20220711-fs/</loc>
         <lastmod>2022-07-11</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220713-gds/</loc>
+        <lastmod>2022-07-13</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220713-ykarroum/</loc>
+        <lastmod>2022-07-13</lastmod>
     </url>
 </urlset>

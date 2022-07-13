@@ -4,8 +4,42 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-11T00:00:00+00:00</updated>
+	<updated>2022-07-13T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Government Digital Service: Why we’ve decided to decommission GOV.UK PaaS (Platform as a Service)</title>
+		<published>2022-07-13T00:00:00+00:00</published>
+		<updated>2022-07-13T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/prism/20220713-gds/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220713-gds/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Our growth strategy is obviously not about making profit, but we are a small team at the centre of government and we need to make sure our people and our money are focused on services that have the biggest reach and the most impact.&lt;&#x2F;p&gt;
+&lt;p&gt;The big cloud providers (AWS, Azure, GCP and others) have upped their game and reduced the barriers to entry for digital teams.&lt;&#x2F;p&gt;
+&lt;p&gt;GOV.UK PaaS has not seen the rapid and continued growth that we’ve seen with some of our other platform products, and is now at a point where we either invest heavily in some significant technical architecture changes, or we make the difficult decision to sunset the product.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gds.blog.gov.uk&#x2F;2022&#x2F;07&#x2F;12&#x2F;why-weve-decided-to-decommission-gov-uk-paas-platform-as-a-service&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>YKarroum: The true cost of linked lists</title>
+		<published>2022-07-13T00:00:00+00:00</published>
+		<updated>2022-07-13T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/prism/20220713-ykarroum/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220713-ykarroum/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Linked lists are often overused in introductory algorithmics courses, due to a heavy focus on theorical complexities. Unfortunatly, in practice, computers are complex beasts. They don’t execute instructions sequentially with the same cost. This means that a data structure with faster theorical complexities does not necessarily translate to a more efficient data structure in practice.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;CPU cache miss: &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Locality_of_reference&quot;&gt;Locality of reference&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Memory allocation cost: &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Region-based_memory_management&quot;&gt;Region-based memory management&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ykarroum.com&#x2F;2022&#x2F;05&#x2F;30&#x2F;true-cost-list&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Rust: 上手和提升</title>
 		<published>2022-07-11T00:00:00+00:00</published>
@@ -172,6 +206,7 @@
 &lt;h2 id=&quot;rust-sheng-tai-bei-jing&quot;&gt;Rust 生态背景&lt;&#x2F;h2&gt;
 &lt;p&gt;我一直提倡不要孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史渊源和演进过程，这对你的长期技术成长大有裨益。下面是我推荐的一些信息来源：&lt;&#x2F;p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.rust-lang.org&quot;&gt;Rust Blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;master&#x2F;RELEASES.md&quot;&gt;Releases&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;&quot;&gt;RFCs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;this-week-in-rust.org&quot;&gt;This Week in Rust&lt;&#x2F;a&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&quot;&gt;GitHub&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&quot;&gt;Hacker News&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
