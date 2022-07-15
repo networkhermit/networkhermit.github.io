@@ -1,7 +1,8 @@
 +++
+paginate_by = 8
 path = "prism"
 sort_by = "date"
-template = "prism.html"
+template = "posts.html"
 title = "Prism"
 transparent = true
 +++

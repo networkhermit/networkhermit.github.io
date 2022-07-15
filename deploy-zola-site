@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -o errexit
+set -o errtrace
+set -o nounset
+set -o pipefail
+
+PAGE=../pages
+
+rm --force --recursive "${PAGE:?}/"*
+zola build --output-dir "${PAGE}/public"
+mv "${PAGE}/public/"* "${PAGE}"
+rmdir "${PAGE}/public"
+git -C "${PAGE}" add --all
+git -C "${PAGE}" commit --message 'deploy zola site'
+git -C "${PAGE}" push origin gh-pages
