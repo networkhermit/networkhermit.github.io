@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        Wandering Thoughts: Some things that make shell scripts have performance issues
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Wandering Thoughts: Some things that make shell scripts have performance issues<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+            
+                <div class="meta">
+                    Posted on 2022-07-15
+
+                    
+                </div>
+            
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<p>One thing that does not make shell scripts slow is the basic Unix commands themselves that you use in shell scripts. Those Unix commands generally perform pretty well, and their processing speed is probably close to the fastest you could get if you wrote what they're doing in your language of choice. Your program is unlikely to improve on the sorting performance of sort, the text transformation performance of sed, and so on. And the shell itself generally performs internal things more than fast enough for most cases. Instead, <strong>what causes shell scripts problems is the cost of starting separate programs</strong>. Sed may transform text very fast and sort may sort data very fast, but starting sed or sort is comparatively expensive. The more times you start programs and the more programs you have to start for each thing you want to do, the slower your shell script will run.</p>
+</blockquote>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Shell_builtin">Shell builtin</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Pipeline_(Unix)">Pipeline (Unix)</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/BusyBox#Single_binary">BusyBox</a></p>
+</li>
+</ul>
+<p><a href="https://utcc.utoronto.ca/%7Ecks/space/blog/programming/ShellScriptsAndSpeed">Link</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
