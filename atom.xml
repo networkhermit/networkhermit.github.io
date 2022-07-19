@@ -4,8 +4,26 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-15T00:00:00+00:00</updated>
+	<updated>2022-07-19T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Stack Overflow Blog: How observability is redefining the roles of developers</title>
+		<published>2022-07-19T00:00:00+00:00</published>
+		<updated>2022-07-19T00:00:00+00:00</updated>
+		<link href="https://blog.vac.fun/prism/20220719-stackoverflow/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220719-stackoverflow/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Developer observability is a new pillar of observability adapted for the needs of developers. Unlike typical observability solutions, it’s aimed directly at developers and not at DevOps. As such, it provides a direct connection between the source code and the observable production.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A good analogy would be that developer observability is like a debugger whereas current observability tools are like a profiler. When you run with a debugger, it doesn’t do much until you add breakpoints to extract information. A profiler constantly gets information while running. Both are very useful and both serve different use cases.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Some of you might have read this article thinking about remote debugging. This has many drawbacks&#x2F;problems but one shines above all. Imagine a developer in your company placing a breakpoint on the user authentication code and siphoning off user credentials. &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.blog&#x2F;2022&#x2F;07&#x2F;18&#x2F;how-observability-is-redefining-the-roles-of-developers&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>matklad: Why LSP?</title>
 		<published>2022-07-15T00:00:00+00:00</published>
@@ -22,7 +40,7 @@
 &lt;p&gt;On the editor’s side, there was little incentive for adding high-level APIs needed for IDEs, because there were no potential providers for those APIs.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Action Items for Everyone: Please demand better IDE support!&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Action Item for Everyone: Please demand better IDE support!&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matklad.github.io&#x2F;2022&#x2F;04&#x2F;25&#x2F;why-lsp.html&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
