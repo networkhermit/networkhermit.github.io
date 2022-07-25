@@ -4,13 +4,50 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-20T00:00:00+00:00</updated>
+	<updated>2022-07-25T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Inanna Malick Blog: Elegant and performant recursion in Rust</title>
+		<published>2022-07-25T00:00:00+00:00</published>
+		<updated>2022-07-25T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220725-inanna-malick/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220725-inanna-malick/</id>
+		<content type="html">&lt;p&gt;&lt;code&gt;1 * (2 - 3)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;Mul {
+&lt;&#x2F;span&gt;&lt;span&gt;    a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;LiteralInt { literal&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;Sub {
+&lt;&#x2F;span&gt;&lt;span&gt;        a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;LiteralInt { literal&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;LiteralInt { literal&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;3 &lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;[
+&lt;&#x2F;span&gt;&lt;span&gt;idx_0:    Mul(idx_1, idx_2)
+&lt;&#x2F;span&gt;&lt;span&gt;idx_1:    LiteralInt(1)
+&lt;&#x2F;span&gt;&lt;span&gt;idx_2:    Sub(idx_3, idx_4)
+&lt;&#x2F;span&gt;&lt;span&gt;idx_3:    LiteralInt(2)
+&lt;&#x2F;span&gt;&lt;span&gt;idx_4:    LiteralInt(3)
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Cache locality: &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Locality_of_reference&quot;&gt;Locality of reference&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Topological_sorting&quot;&gt;Topological sorting&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Functor_(functional_programming)&quot;&gt;Functor (functional programming)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;recursion.wtf&#x2F;posts&#x2F;rust_schemes&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Brandur Blog: Soft Deletion Probably Isn&#x27;t Worth It</title>
 		<published>2022-07-20T00:00:00+00:00</published>
 		<updated>2022-07-20T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220720-brandur/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220720-brandur/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220720-brandur/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Code leakage&lt;&#x2F;strong&gt;: The first is that soft deletion logic bleeds out into all parts of your code. And forgetting that extra predicate on &lt;code&gt;deleted_at&lt;&#x2F;code&gt; can have dangerous consequences as it accidentally returns data that’s no longer meant to be seen.&lt;&#x2F;p&gt;
@@ -48,7 +85,7 @@
 		<title>Stack Overflow Blog: How observability is redefining the roles of developers</title>
 		<published>2022-07-19T00:00:00+00:00</published>
 		<updated>2022-07-19T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220719-stackoverflow/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220719-stackoverflow/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220719-stackoverflow/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Developer observability is a new pillar of observability adapted for the needs of developers. Unlike typical observability solutions, it’s aimed directly at developers and not at DevOps. As such, it provides a direct connection between the source code and the observable production.&lt;&#x2F;p&gt;
@@ -66,7 +103,7 @@
 		<title>matklad: Why LSP?</title>
 		<published>2022-07-15T00:00:00+00:00</published>
 		<updated>2022-07-15T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220715-matklad/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220715-matklad/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220715-matklad/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;The (big) ball on the left is rust-analyzer — a language server. The similarly sized ball on the right is VS Code — an editor. And the small ball in the center is the code to glue them together, &lt;em&gt;including&lt;&#x2F;em&gt; LSP implementations.&lt;&#x2F;p&gt;
@@ -87,7 +124,7 @@
 		<title>Read the Tea Leaves: The collapse of complex software</title>
 		<published>2022-07-15T00:00:00+00:00</published>
 		<updated>2022-07-15T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220715-nolanlawson/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220715-nolanlawson/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220715-nolanlawson/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;During the boom, software companies can keep hiring new headcount to manage their existing software (i.e. more engineers to understand more boxes and arrows), but if their labor force is forced to contract, then that same system may become unmaintainable. A rapid and permanent reduction in complexity may be the only long-term solution.&lt;&#x2F;p&gt;
@@ -105,7 +142,7 @@
 		<title>Wandering Thoughts: Some things that make shell scripts have performance issues</title>
 		<published>2022-07-15T00:00:00+00:00</published>
 		<updated>2022-07-15T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220715-utoronto/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220715-utoronto/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220715-utoronto/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;One thing that does not make shell scripts slow is the basic Unix commands themselves that you use in shell scripts. Those Unix commands generally perform pretty well, and their processing speed is probably close to the fastest you could get if you wrote what they&#x27;re doing in your language of choice. Your program is unlikely to improve on the sorting performance of sort, the text transformation performance of sed, and so on. And the shell itself generally performs internal things more than fast enough for most cases. Instead, &lt;strong&gt;what causes shell scripts problems is the cost of starting separate programs&lt;&#x2F;strong&gt;. Sed may transform text very fast and sort may sort data very fast, but starting sed or sort is comparatively expensive. The more times you start programs and the more programs you have to start for each thing you want to do, the slower your shell script will run.&lt;&#x2F;p&gt;
@@ -128,7 +165,7 @@
 		<title>Government Digital Service: Why we’ve decided to decommission GOV.UK PaaS (Platform as a Service)</title>
 		<published>2022-07-13T00:00:00+00:00</published>
 		<updated>2022-07-13T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220713-gds/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220713-gds/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220713-gds/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Our growth strategy is obviously not about making profit, but we are a small team at the centre of government and we need to make sure our people and our money are focused on services that have the biggest reach and the most impact.&lt;&#x2F;p&gt;
@@ -142,7 +179,7 @@
 		<title>YKarroum: The true cost of linked lists</title>
 		<published>2022-07-13T00:00:00+00:00</published>
 		<updated>2022-07-13T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220713-ykarroum/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220713-ykarroum/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220713-ykarroum/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Linked lists are often overused in introductory algorithmics courses, due to a heavy focus on theorical complexities. Unfortunatly, in practice, computers are complex beasts. They don’t execute instructions sequentially with the same cost. This means that a data structure with faster theorical complexities does not necessarily translate to a more efficient data structure in practice.&lt;&#x2F;p&gt;
@@ -162,7 +199,7 @@
 		<title>Rust: 上手和提升</title>
 		<published>2022-07-11T00:00:00+00:00</published>
 		<updated>2022-07-11T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/posts/20220711-rust-onboarding/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/posts/20220711-rust-onboarding/" type="text/html"/>
 		<id>https://blog.vac.fun/posts/20220711-rust-onboarding/</id>
 		<content type="html">&lt;h2 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h2&gt;
 &lt;p&gt;前段时间因为项目需要短期内上手了 Rust，也顺便逛了一圈 Rust 的生态，这里记录一下学习的经验。&lt;&#x2F;p&gt;
@@ -355,7 +392,7 @@
 		<title>FS Blog: How to Fail at Almost Everything and Still Win Big</title>
 		<published>2022-07-11T00:00:00+00:00</published>
 		<updated>2022-07-11T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220711-fs/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220711-fs/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220711-fs/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;1. Do Creative Work First&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
@@ -391,7 +428,7 @@
 		<title>Irrational Exuberance: How to safely think in systems</title>
 		<published>2022-07-10T00:00:00+00:00</published>
 		<updated>2022-07-10T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220710-irrational-exuberance/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220710-irrational-exuberance/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220710-irrational-exuberance/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;ul&gt;
@@ -413,7 +450,7 @@
 		<title>Honeycomb Blog: Tracking On-Call Health</title>
 		<published>2022-07-09T00:00:00+00:00</published>
 		<updated>2022-07-09T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220709-honeycomb/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220709-honeycomb/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220709-honeycomb/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;ul&gt;
@@ -449,7 +486,7 @@ constraints, new opportunities, or changing operating conditions.&lt;&#x2F;p&gt;
 		<title>GitLab Blog: We are splitting our database into Main and CI &amp; Why we&#x27;re sticking with Ruby on Rails</title>
 		<published>2022-07-07T00:00:00+00:00</published>
 		<updated>2022-07-07T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220707-gitlab/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220707-gitlab/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220707-gitlab/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;We are splitting our database into Main and CI to improve the scalability and reliability of GitLab.com.&lt;&#x2F;p&gt;
@@ -481,7 +518,7 @@ constraints, new opportunities, or changing operating conditions.&lt;&#x2F;p&gt;
 		<title>Honeycomb Blog: We Learn Systems by Changing Them</title>
 		<published>2022-07-07T00:00:00+00:00</published>
 		<updated>2022-07-07T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/prism/20220707-honeycomb/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220707-honeycomb/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220707-honeycomb/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;It is only possible to come to an understanding of a system of interest by trying to change it.&lt;&#x2F;p&gt;
@@ -496,7 +533,7 @@ constraints, new opportunities, or changing operating conditions.&lt;&#x2F;p&gt;
 		<title>致敬 hello, world</title>
 		<published>2022-07-06T00:00:00+00:00</published>
 		<updated>2022-07-06T00:00:00+00:00</updated>
-		<link href="https://blog.vac.fun/posts/20220706-hello-world/" type="text/html"/>
+		<link rel="alternate" href="https://blog.vac.fun/posts/20220706-hello-world/" type="text/html"/>
 		<id>https://blog.vac.fun/posts/20220706-hello-world/</id>
 		<content type="html">&lt;h2 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h2&gt;
 &lt;p&gt;和大学同学聊天偶然提到写博客，我决定尝试写写看。由于平时工作比较忙，所以不太有时间写专业性很强的长篇内容，博客主要会以原创和分享为主，记录自己的学习过程，也顺便练习下表达能力。&lt;&#x2F;p&gt;

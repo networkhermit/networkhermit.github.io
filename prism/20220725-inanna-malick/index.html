@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        Inanna Malick Blog: Elegant and performant recursion in Rust
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Inanna Malick Blog: Elegant and performant recursion in Rust<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+            
+                <div class="meta">
+                    Posted on 2022-07-25
+
+                    
+                </div>
+            
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <p><code>1 * (2 - 3)</code></p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span>ExprBoxed</span><span style="color:#81a1c1;">::</span><span>Mul {
+</span><span>    a</span><span style="color:#eceff4;">: </span><span style="color:#8fbcbb;">Box</span><span style="color:#81a1c1;">::</span><span>new(ExprBoxed</span><span style="color:#81a1c1;">::</span><span>LiteralInt { literal</span><span style="color:#eceff4;">: </span><span style="color:#b48ead;">1 </span><span>})</span><span style="color:#eceff4;">,
+</span><span>    b</span><span style="color:#eceff4;">: </span><span style="color:#8fbcbb;">Box</span><span style="color:#81a1c1;">::</span><span>new(ExprBoxed</span><span style="color:#81a1c1;">::</span><span>Sub {
+</span><span>        a</span><span style="color:#eceff4;">: </span><span style="color:#8fbcbb;">Box</span><span style="color:#81a1c1;">::</span><span>new(ExprBoxed</span><span style="color:#81a1c1;">::</span><span>LiteralInt { literal</span><span style="color:#eceff4;">: </span><span style="color:#b48ead;">2 </span><span>})</span><span style="color:#eceff4;">,
+</span><span>        b</span><span style="color:#eceff4;">: </span><span style="color:#8fbcbb;">Box</span><span style="color:#81a1c1;">::</span><span>new(ExprBoxed</span><span style="color:#81a1c1;">::</span><span>LiteralInt { literal</span><span style="color:#eceff4;">: </span><span style="color:#b48ead;">3 </span><span>})</span><span style="color:#eceff4;">,
+</span><span>    })</span><span style="color:#eceff4;">,
+</span><span>}
+</span></code></pre>
+<pre data-lang="text" style="background-color:#2e3440;color:#d8dee9;" class="language-text "><code class="language-text" data-lang="text"><span>[
+</span><span>idx_0:    Mul(idx_1, idx_2)
+</span><span>idx_1:    LiteralInt(1)
+</span><span>idx_2:    Sub(idx_3, idx_4)
+</span><span>idx_3:    LiteralInt(2)
+</span><span>idx_4:    LiteralInt(3)
+</span><span>]
+</span></code></pre>
+<ul>
+<li>
+<p>Cache locality: <a href="https://en.wikipedia.org/wiki/Locality_of_reference">Locality of reference</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Topological_sorting">Topological sorting</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Functor_(functional_programming)">Functor (functional programming)</a></p>
+</li>
+</ul>
+<p><a href="https://recursion.wtf/posts/rust_schemes/">Link</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
