@@ -1,5 +1,4 @@
 +++
-date = "2014-10-24"
 path = "about"
 title = "About"
 +++
