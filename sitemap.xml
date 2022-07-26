@@ -13,6 +13,9 @@
         <loc>https://blog.vac.fun/page/2/</loc>
     </url>
     <url>
+        <loc>https://blog.vac.fun/page/3/</loc>
+    </url>
+    <url>
         <loc>https://blog.vac.fun/posts/</loc>
     </url>
     <url>
@@ -80,6 +83,14 @@
     <url>
         <loc>https://blog.vac.fun/prism/20220725-inanna-malick/</loc>
         <lastmod>2022-07-25</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220726-isovalent/</loc>
+        <lastmod>2022-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220726-stackoverflow/</loc>
+        <lastmod>2022-07-26</lastmod>
     </url>
     <url>
         <loc>https://blog.vac.fun/prism/page/1/</loc>

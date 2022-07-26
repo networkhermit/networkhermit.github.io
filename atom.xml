@@ -4,8 +4,72 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-25T00:00:00+00:00</updated>
+	<updated>2022-07-26T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Isovalent Blog: Cilium Service Mesh – Everything You Need to Know</title>
+		<published>2022-07-26T00:00:00+00:00</published>
+		<updated>2022-07-26T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220726-isovalent/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220726-isovalent/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Looking at the feature set of a service mesh today, it can be summarized as follows:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Resilient Connectivity&lt;&#x2F;strong&gt;: Service to service communication must be possible across boundaries such as clouds, clusters, and premises. Communication must be resilient and fault tolerant.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;L7 Traffic Management&lt;&#x2F;strong&gt;: Load balancing, rate limiting, and resiliency must be L7-aware (HTTP, REST, gRPC, WebSocket, …).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Identity-based Security&lt;&#x2F;strong&gt;: Relying on network identifiers to achieve security is no longer sufficient, both the sending and receiving services must be able to authenticate each other based on identities instead of a network identifier.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Observability &amp;amp; Tracing&lt;&#x2F;strong&gt;: Observability in the form of tracing and metrics is critical to understanding, monitoring, and troubleshooting application stability, performance, and availability.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Transparency&lt;&#x2F;strong&gt;: The functionality must be available to applications in a transparent manner, i.e. without requiring to change application code.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;eBPF-Native When Possible&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If eBPF is not capable of processing the request, for example when connections need to be spliced, requests need to be rate-limited, or TLS termination is required, the handling falls back to Envoy running in either a sidecar or sidecar-free model. This gives the best of both worlds – eBPF processing when possible for increased performance and reduced latency, with the ability always to fall back to Envoy as needed.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;mTLS for Any Network Protocol&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;By splitting the authentication handshake from the payload transport, we can use TLS 1.3 as the handshake protocol while relying on IPsec or WireGuard as a better-performing, more transparent payload channel.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;cilium-service-mesh&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;2021-12-08-ebpf-servicemesh&#x2F;&quot;&gt;How eBPF will solve Service Mesh – Goodbye Sidecars&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;2022-05-03-servicemesh-security&#x2F;&quot;&gt;Next-Generation Mutual Authentication with Cilium Service Mesh&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Stack Overflow Blog: Design patterns for asynchronous API communication</title>
+		<published>2022-07-26T00:00:00+00:00</published>
+		<updated>2022-07-26T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220726-stackoverflow/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220726-stackoverflow/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Entity topics: The source of truth&lt;&#x2F;p&gt;
+&lt;p&gt;“this is the current state of X”&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Event topics: Record of fact&lt;&#x2F;p&gt;
+&lt;p&gt;“X happened”&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Request and response topics: Async API&lt;&#x2F;p&gt;
+&lt;p&gt;“Please do X” → “X has been done”&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.blog&#x2F;2022&#x2F;07&#x2F;21&#x2F;event-driven-topic-design-using-kafka&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Inanna Malick Blog: Elegant and performant recursion in Rust</title>
 		<published>2022-07-25T00:00:00+00:00</published>
@@ -38,6 +102,9 @@
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Functor_(functional_programming)&quot;&gt;Functor (functional programming)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Property_testing&quot;&gt;Property testing&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;recursion.wtf&#x2F;posts&#x2F;rust_schemes&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -94,7 +161,7 @@
 &lt;p&gt;A good analogy would be that developer observability is like a debugger whereas current observability tools are like a profiler. When you run with a debugger, it doesn’t do much until you add breakpoints to extract information. A profiler constantly gets information while running. Both are very useful and both serve different use cases.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Some of you might have read this article thinking about remote debugging. This has many drawbacks&#x2F;problems but one shines above all. Imagine a developer in your company placing a breakpoint on the user authentication code and siphoning off user credentials. &lt;&#x2F;p&gt;
+&lt;p&gt;Some of you might have read this article thinking about remote debugging. This has many drawbacks&#x2F;problems but one shines above all. Imagine a developer in your company placing a breakpoint on the user authentication code and siphoning off user credentials.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.blog&#x2F;2022&#x2F;07&#x2F;18&#x2F;how-observability-is-redefining-the-roles-of-developers&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>

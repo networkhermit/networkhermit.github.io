@@ -9,7 +9,7 @@
     
     
     <title>
-        Stack Overflow Blog: How observability is redefining the roles of developers
+        Stack Overflow Blog: Design patterns for asynchronous API communication
     </title>
     
 
@@ -70,13 +70,13 @@
             
             
     <div class="page-header">
-        Stack Overflow Blog: How observability is redefining the roles of developers<span class="primary-color" style="font-size: 1.6em">.</span>
+        Stack Overflow Blog: Design patterns for asynchronous API communication<span class="primary-color" style="font-size: 1.6em">.</span>
     </div>
 
 
             
                 <div class="meta">
-                    Posted on 2022-07-19
+                    Posted on 2022-07-26
 
                     
                 </div>
@@ -90,15 +90,22 @@
 
         <section class="body">
             <blockquote>
-<p>Developer observability is a new pillar of observability adapted for the needs of developers. Unlike typical observability solutions, it’s aimed directly at developers and not at DevOps. As such, it provides a direct connection between the source code and the observable production.</p>
+<ul>
+<li>
+<p>Entity topics: The source of truth</p>
+<p>“this is the current state of X”</p>
+</li>
+<li>
+<p>Event topics: Record of fact</p>
+<p>“X happened”</p>
+</li>
+<li>
+<p>Request and response topics: Async API</p>
+<p>“Please do X” → “X has been done”</p>
+</li>
+</ul>
 </blockquote>
-<blockquote>
-<p>A good analogy would be that developer observability is like a debugger whereas current observability tools are like a profiler. When you run with a debugger, it doesn’t do much until you add breakpoints to extract information. A profiler constantly gets information while running. Both are very useful and both serve different use cases.</p>
-</blockquote>
-<blockquote>
-<p>Some of you might have read this article thinking about remote debugging. This has many drawbacks/problems but one shines above all. Imagine a developer in your company placing a breakpoint on the user authentication code and siphoning off user credentials.</p>
-</blockquote>
-<p><a href="https://stackoverflow.blog/2022/07/18/how-observability-is-redefining-the-roles-of-developers/">Link</a></p>
+<p><a href="https://stackoverflow.blog/2022/07/21/event-driven-topic-design-using-kafka/">Link</a></p>
 
         </section>
 
