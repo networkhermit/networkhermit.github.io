@@ -647,4 +647,19 @@ the end.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 </content>
 	</entry>
+	<entry xml:lang="en">
+		<title>About</title>
+		<published>2014-10-24T00:00:00+00:00</published>
+		<updated>2014-10-24T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/about/" type="text/html"/>
+		<id>https://blog.vac.fun/about/</id>
+		<content type="html">&lt;p&gt;嘿！😝&lt;&#x2F;p&gt;
+&lt;p&gt;I’m &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;networkhermit&quot;&gt;vac&lt;&#x2F;a&gt;, a programmer who loves elegant code
+and programming, currently focused on &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Go_(programming_language)&quot;&gt;Go&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Rust_(programming_language)&quot;&gt;Rust&lt;&#x2F;a&gt;,
+and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Python_(programming_language)&quot;&gt;Python&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.vac.fun&#x2F;atom.xml&quot;&gt;Atom feed&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 </feed>
