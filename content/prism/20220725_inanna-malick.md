@@ -31,4 +31,6 @@ idx_4:    LiteralInt(3)
 
 * [Functor (functional programming)](https://en.wikipedia.org/wiki/Functor_(functional_programming))
 
+* [Property testing](https://en.wikipedia.org/wiki/Property_testing)
+
 [Link](https://recursion.wtf/posts/rust_schemes/)
