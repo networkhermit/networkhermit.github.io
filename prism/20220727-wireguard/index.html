@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        WireGuard Interworkings: Routing &amp; Network Namespace Integration
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        WireGuard Interworkings: Routing &amp; Network Namespace Integration<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+            
+                <div class="meta">
+                    Posted on 2022-07-27
+
+                    
+                </div>
+            
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<p><strong>Routing All Your Traffic</strong></p>
+<ul>
+<li>The Classic Solutions</li>
+</ul>
+<p>Overriding The Default Route</p>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#88c0d0;">ip</span><span> route add 0.0.0.0/1 dev wg0
+</span><span style="color:#88c0d0;">ip</span><span> route add 128.0.0.0/1 dev wg0
+</span><span style="color:#88c0d0;">ip</span><span> route add 163.172.161.0/32 via 192.168.1.1 dev eth0
+</span></code></pre>
+<p>Rule-based Routing</p>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#88c0d0;">wg</span><span> set wg0 fwmark 1234
+</span><span style="color:#88c0d0;">ip</span><span> route add default dev wg0 table 2468
+</span><span style="color:#88c0d0;">ip</span><span> rule add not fwmark 1234 table 2468
+</span><span style="color:#88c0d0;">ip</span><span> rule add table main suppress_prefixlength 0
+</span></code></pre>
+<ul>
+<li>The New Namespace Solution</li>
+</ul>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#88c0d0;">ip</span><span> netns add physical
+</span><span>
+</span><span style="color:#88c0d0;">ip</span><span> link set eth0 netns physical
+</span><span style="color:#88c0d0;">iw</span><span> phy phy0 set netns name physical
+</span><span>
+</span><span style="color:#88c0d0;">ip</span><span> -n physical link add wg0 type wireguard
+</span><span>
+</span><span style="color:#88c0d0;">ip</span><span> -n physical link set wg0 netns 1
+</span><span>
+</span><span style="color:#88c0d0;">ip</span><span> netns exec physical dhcpcd wlan0
+</span><span style="color:#88c0d0;">ip</span><span> netns exec physical wpa_supplicant -iwlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf
+</span><span style="color:#88c0d0;">ip</span><span> -n physical addr add 192.168.12.52/24 dev eth0
+</span><span>
+</span><span style="color:#88c0d0;">wg</span><span> setconf wg0 /etc/wireguard/wg0.conf
+</span><span style="color:#88c0d0;">ip</span><span> addr add 10.2.4.5/32 dev wg0
+</span><span style="color:#88c0d0;">ip</span><span> link set wg0 up
+</span><span style="color:#88c0d0;">ip</span><span> route add default dev wg0
+</span></code></pre>
+</blockquote>
+<p><a href="https://www.wireguard.com/netns/">Link</a></p>
+<p><a href="https://iximiuz.com/en/posts/container-networking-is-simple/">Container Networking Is Simple</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>

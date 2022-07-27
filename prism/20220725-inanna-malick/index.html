@@ -89,7 +89,11 @@
         
 
         <section class="body">
-            <p><code>1 * (2 - 3)</code></p>
+            <blockquote>
+<p><strong>Evaluating an expression language: <code>1 * (2 - 3)</code></strong></p>
+<ul>
+<li>boxed pointer traversal</li>
+</ul>
 <pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span>ExprBoxed</span><span style="color:#81a1c1;">::</span><span>Mul {
 </span><span>    a</span><span style="color:#eceff4;">: </span><span style="color:#8fbcbb;">Box</span><span style="color:#81a1c1;">::</span><span>new(ExprBoxed</span><span style="color:#81a1c1;">::</span><span>LiteralInt { literal</span><span style="color:#eceff4;">: </span><span style="color:#b48ead;">1 </span><span>})</span><span style="color:#eceff4;">,
 </span><span>    b</span><span style="color:#eceff4;">: </span><span style="color:#8fbcbb;">Box</span><span style="color:#81a1c1;">::</span><span>new(ExprBoxed</span><span style="color:#81a1c1;">::</span><span>Sub {
@@ -98,6 +102,9 @@
 </span><span>    })</span><span style="color:#eceff4;">,
 </span><span>}
 </span></code></pre>
+<ul>
+<li>cache-local reverse topological fold</li>
+</ul>
 <pre data-lang="text" style="background-color:#2e3440;color:#d8dee9;" class="language-text "><code class="language-text" data-lang="text"><span>[
 </span><span>idx_0:    Mul(idx_1, idx_2)
 </span><span>idx_1:    LiteralInt(1)
@@ -106,6 +113,7 @@
 </span><span>idx_4:    LiteralInt(3)
 </span><span>]
 </span></code></pre>
+</blockquote>
 <ul>
 <li>
 <p>Cache locality: <a href="https://en.wikipedia.org/wiki/Locality_of_reference">Locality of reference</a></p>

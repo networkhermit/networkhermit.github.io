@@ -4,8 +4,56 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-26T00:00:00+00:00</updated>
+	<updated>2022-07-27T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>WireGuard Interworkings: Routing &amp; Network Namespace Integration</title>
+		<published>2022-07-27T00:00:00+00:00</published>
+		<updated>2022-07-27T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220727-wireguard/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220727-wireguard/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Routing All Your Traffic&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Classic Solutions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Overriding The Default Route&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add 0.0.0.0&#x2F;1 dev wg0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add 128.0.0.0&#x2F;1 dev wg0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add 163.172.161.0&#x2F;32 via 192.168.1.1 dev eth0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Rule-based Routing&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;wg&lt;&#x2F;span&gt;&lt;span&gt; set wg0 fwmark 1234
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add default dev wg0 table 2468
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; rule add not fwmark 1234 table 2468
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; rule add table main suppress_prefixlength 0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;The New Namespace Solution&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; netns add physical
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; link set eth0 netns physical
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;iw&lt;&#x2F;span&gt;&lt;span&gt; phy phy0 set netns name physical
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; -n physical link add wg0 type wireguard
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; -n physical link set wg0 netns 1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; netns exec physical dhcpcd wlan0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; netns exec physical wpa_supplicant -iwlan0 -c&#x2F;etc&#x2F;wpa_supplicant&#x2F;wpa_supplicant.conf
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; -n physical addr add 192.168.12.52&#x2F;24 dev eth0
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;wg&lt;&#x2F;span&gt;&lt;span&gt; setconf wg0 &#x2F;etc&#x2F;wireguard&#x2F;wg0.conf
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; addr add 10.2.4.5&#x2F;32 dev wg0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; link set wg0 up
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add default dev wg0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.wireguard.com&#x2F;netns&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;container-networking-is-simple&#x2F;&quot;&gt;Container Networking Is Simple&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Isovalent Blog: Cilium Service Mesh – Everything You Need to Know</title>
 		<published>2022-07-26T00:00:00+00:00</published>
@@ -76,7 +124,11 @@
 		<updated>2022-07-25T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220725-inanna-malick/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220725-inanna-malick/</id>
-		<content type="html">&lt;p&gt;&lt;code&gt;1 * (2 - 3)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Evaluating an expression language: &lt;code&gt;1 * (2 - 3)&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;boxed pointer traversal&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;Mul {
 &lt;&#x2F;span&gt;&lt;span&gt;    a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;LiteralInt { literal&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
 &lt;&#x2F;span&gt;&lt;span&gt;    b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;Sub {
@@ -85,6 +137,9 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;cache-local reverse topological fold&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;[
 &lt;&#x2F;span&gt;&lt;span&gt;idx_0:    Mul(idx_1, idx_2)
 &lt;&#x2F;span&gt;&lt;span&gt;idx_1:    LiteralInt(1)
@@ -93,6 +148,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;idx_4:    LiteralInt(3)
 &lt;&#x2F;span&gt;&lt;span&gt;]
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Cache locality: &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Locality_of_reference&quot;&gt;Locality of reference&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
