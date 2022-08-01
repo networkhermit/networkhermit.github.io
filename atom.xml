@@ -4,8 +4,28 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-29T00:00:00+00:00</updated>
+	<updated>2022-08-01T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Ivan Velichko: How Kubernetes Reinvented Virtual Machines (in a good sense)</title>
+		<published>2022-08-01T00:00:00+00:00</published>
+		<updated>2022-08-01T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220801-iximiuz/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220801-iximiuz/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;We should differentiate between the complexity of driving a car and the complexity of repairing it. Many of us can drive cars, but very few are good at fixing engines.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Early-stage startups shouldn&#x27;t run on Kubernetes yet.&lt;&#x2F;p&gt;
+&lt;p&gt;But eventually, growth-stage and large companies &lt;em&gt;should&lt;&#x2F;em&gt; be running on Kubernetes in some form.&lt;&#x2F;p&gt;
+&lt;p&gt;Infrastructure should progressively grow with your workloads and team.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matt-rickard.com&#x2F;dont-use-kubernetes-yet&quot;&gt;Don&#x27;t Use Kubernetes, Yet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;kubernetes-vs-virtual-machines&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>stuff by danvet: Locking Engineering Principles</title>
 		<published>2022-07-29T00:00:00+00:00</published>
