@@ -35,3 +35,5 @@ title = "Inanna Malick Blog: Elegant and performant recursion in Rust"
 * [Property testing](https://en.wikipedia.org/wiki/Property_testing)
 
 [Link](https://recursion.wtf/posts/rust_schemes/)
+
+[Fully generic recursion in Rust](https://recursion.wtf/posts/rust_schemes_2/)
