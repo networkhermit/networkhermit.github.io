@@ -4,8 +4,27 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-09T00:00:00+00:00</updated>
+	<updated>2022-08-10T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Super Fast Python: How to Choose the Right Python Concurrency API</title>
+		<published>2022-08-10T00:00:00+00:00</published>
+		<updated>2022-08-10T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220810-superfastpython/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220810-superfastpython/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Coroutine-based&lt;&#x2F;li&gt;
+&lt;li&gt;Thread-based&lt;&#x2F;li&gt;
+&lt;li&gt;Process-based&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Global_interpreter_lock&quot;&gt;Global interpreter lock&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;superfastpython.com&#x2F;python-concurrency-choose-api&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Andrew Gallant&#x27;s Blog: Using unwrap() in Rust is Okay</title>
 		<published>2022-08-09T00:00:00+00:00</published>
@@ -434,26 +453,6 @@
 &lt;p&gt;GOV.UK PaaS has not seen the rapid and continued growth that we’ve seen with some of our other platform products, and is now at a point where we either invest heavily in some significant technical architecture changes, or we make the difficult decision to sunset the product.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gds.blog.gov.uk&#x2F;2022&#x2F;07&#x2F;12&#x2F;why-weve-decided-to-decommission-gov-uk-paas-platform-as-a-service&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>YKarroum: The true cost of linked lists</title>
-		<published>2022-07-13T00:00:00+00:00</published>
-		<updated>2022-07-13T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220713-ykarroum/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220713-ykarroum/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Linked lists are often overused in introductory algorithmics courses, due to a heavy focus on theorical complexities. Unfortunatly, in practice, computers are complex beasts. They don’t execute instructions sequentially with the same cost. This means that a data structure with faster theorical complexities does not necessarily translate to a more efficient data structure in practice.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;CPU cache miss: &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Locality_of_reference&quot;&gt;Locality of reference&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Memory allocation cost: &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Region-based_memory_management&quot;&gt;Region-based memory management&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ykarroum.com&#x2F;2022&#x2F;05&#x2F;30&#x2F;true-cost-list&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>
