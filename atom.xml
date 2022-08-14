@@ -4,8 +4,21 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-10T00:00:00+00:00</updated>
+	<updated>2022-08-14T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Python⇒Speed: Finding performance problems: profiling or logging?</title>
+		<published>2022-08-14T00:00:00+00:00</published>
+		<updated>2022-08-14T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220814-pythonspeed/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220814-pythonspeed/</id>
+		<content type="html">&lt;ul&gt;
+&lt;li&gt;tracing&lt;&#x2F;li&gt;
+&lt;li&gt;profiling&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pythonspeed.com&#x2F;articles&#x2F;logging-vs-profiling&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Super Fast Python: How to Choose the Right Python Concurrency API</title>
 		<published>2022-08-10T00:00:00+00:00</published>
@@ -439,20 +452,6 @@
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;utcc.utoronto.ca&#x2F;%7Ecks&#x2F;space&#x2F;blog&#x2F;programming&#x2F;ShellScriptsAndSpeed&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Government Digital Service: Why we’ve decided to decommission GOV.UK PaaS (Platform as a Service)</title>
-		<published>2022-07-13T00:00:00+00:00</published>
-		<updated>2022-07-13T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220713-gds/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220713-gds/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Our growth strategy is obviously not about making profit, but we are a small team at the centre of government and we need to make sure our people and our money are focused on services that have the biggest reach and the most impact.&lt;&#x2F;p&gt;
-&lt;p&gt;The big cloud providers (AWS, Azure, GCP and others) have upped their game and reduced the barriers to entry for digital teams.&lt;&#x2F;p&gt;
-&lt;p&gt;GOV.UK PaaS has not seen the rapid and continued growth that we’ve seen with some of our other platform products, and is now at a point where we either invest heavily in some significant technical architecture changes, or we make the difficult decision to sunset the product.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gds.blog.gov.uk&#x2F;2022&#x2F;07&#x2F;12&#x2F;why-weve-decided-to-decommission-gov-uk-paas-platform-as-a-service&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>

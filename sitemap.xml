@@ -16,6 +16,9 @@
         <loc>https://blog.vac.fun/page/3/</loc>
     </url>
     <url>
+        <loc>https://blog.vac.fun/page/4/</loc>
+    </url>
+    <url>
         <loc>https://blog.vac.fun/posts/</loc>
     </url>
     <url>
@@ -119,6 +122,10 @@
     <url>
         <loc>https://blog.vac.fun/prism/20220810-superfastpython/</loc>
         <lastmod>2022-08-10</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220814-pythonspeed/</loc>
+        <lastmod>2022-08-14</lastmod>
     </url>
     <url>
         <loc>https://blog.vac.fun/prism/page/1/</loc>
