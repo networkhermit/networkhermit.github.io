@@ -8,17 +8,18 @@ title = "Go: 认识内存一致性模型"
 
 memory model
 * address space layout
-* memory layout
 * memory ordering
 * memory segmentation
+* object model
+* type layout
 
-memory consistency model: two-layer contract
-* hardware <-> compilers <-> programmers
+memory consistency model:
+* cross-disciplinary contract: hardware <-> compilers <-> programmers
 * the main issue is the visibility and consistency of changes to data stored in memory
 
 *valid optimizations do not change the behavior of valid programs*
-* processor optimizations: out-of-order execution
-* compiler optimizations: reorder operations
+* processor optimizations: largely revolves around how writes are propagated to other threads
+* compiler optimizations: largely revolves around reordering of instructions
 
 ## 参考资料
 
@@ -27,6 +28,11 @@ memory consistency model: two-layer contract
   2. [Programming Language Memory Models](https://research.swtch.com/plmm)
   3. [Updating the Go Memory Model](https://research.swtch.com/gomm)
 * [The Go Memory Model](https://go.dev/ref/mem)
+* Standard library:
+    * Go: [atomic](https://pkg.go.dev/sync/atomic), [sync](https://pkg.go.dev/sync)
+    * Rust: [atomic](https://doc.rust-lang.org/stable/std/sync/atomic/), [sync](https://doc.rust-lang.org/stable/std/sync/)
+    * C: [atomic](https://en.cppreference.com/w/c/atomic)
+    * C++: [atomic](https://en.cppreference.com/w/cpp/atomic)
 
 ## 笔记整理
 
@@ -57,12 +63,12 @@ memory consistency model: two-layer contract
 * DRF-SC
   * happens-before relation through synchronization operations
   * total order with interleaved execution
-* atomics
+* atomics (atomic variables or atomic operations)
   * non-synchronizing
-    * relaxed: for hiding races
+    * relaxed: for hiding races, cannot be used to build new synchronization primitives
   * synchronizing (message receive/message send)
     * sequentially consistent (strong)
-    * acquire/release (weak): coherence-only
+    * acquire/release (weak): coherence-only, do not provide DRF-SC
 * memory barriers/fences
 * high-level synchronization mechanisms
   * semaphore
@@ -75,20 +81,21 @@ memory consistency model: two-layer contract
   * channel
   * atomic reference counting
   * once
+  * sequence lock
   * read-copy-update
 * semantics for racy programs
   * defines the behavior and possible results
   * as undefined behavior: DRF-SC or Catch Fire
-* distinguish between allowed and disallowed compiler optimizations
-* handle paradoxes like acausality/out-of-thin-air values
+* distinguish invalid compiler optimizations
+* prohibit paradoxes like out-of-thin-air values (acausality)
 
 ### 关键原子指令
 
-* read–modify–write
+* read–modify–write (RMW)
 * compare-and-swap (CAS)
 * load-linked/store-conditional (LL/SC) / load-reserved/store-conditional (LR/SC)
 * load-acquire/store-release (LDAR/STLR)
 
 ## 写在最后
 
-> When it comes to programs with races, both programmers and compilers should remember the advice: don't be clever.
+> When it comes to programs with races, both programmers and compilers should remember the advice: don't be clever. (Clear is better than clever.)
