@@ -6,20 +6,12 @@ title = "Go: 认识内存一致性模型"
 
 ## 前言
 
-memory model
+memory model:
 * address space layout
 * memory ordering
 * memory segmentation
 * object model
 * type layout
-
-memory consistency model:
-* cross-disciplinary contract: hardware <-> compilers <-> programmers
-* the main issue is the visibility and consistency of changes to data stored in memory
-
-*valid optimizations do not change the behavior of valid programs*
-* processor optimizations: largely revolves around how writes are propagated to other threads
-* compiler optimizations: largely revolves around reordering of instructions
 
 ## 参考资料
 
@@ -28,13 +20,22 @@ memory consistency model:
   2. [Programming Language Memory Models](https://research.swtch.com/plmm)
   3. [Updating the Go Memory Model](https://research.swtch.com/gomm)
 * [The Go Memory Model](https://go.dev/ref/mem)
+* [Linux-Kernel Memory Model (LKMM)](https://github.com/torvalds/linux/tree/master/tools/memory-model/Documentation)
 * Standard library:
     * Go: [atomic](https://pkg.go.dev/sync/atomic), [sync](https://pkg.go.dev/sync)
     * Rust: [atomic](https://doc.rust-lang.org/stable/std/sync/atomic/), [sync](https://doc.rust-lang.org/stable/std/sync/)
-    * C: [atomic](https://en.cppreference.com/w/c/atomic)
-    * C++: [atomic](https://en.cppreference.com/w/cpp/atomic)
+    * C++: [atomic](https://en.cppreference.com/w/cpp/atomic), [sync](https://en.cppreference.com/w/cpp/thread)
+    * C: [atomic](https://en.cppreference.com/w/c/atomic), [sync](https://en.cppreference.com/w/c/thread)
 
 ## 笔记整理
+
+memory consistency model:
+* cross-disciplinary contract: hardware <-> compilers <-> programmers
+* the main issue is the visibility and consistency of changes to data stored in memory
+
+*valid optimizations do not change the behavior of valid programs*
+* processor optimizations: largely revolves around how writes are propagated to other threads
+* compiler optimizations: largely revolves around reordering of instructions
 
 ### Data Race, Happens-before
 
@@ -71,16 +72,19 @@ memory consistency model:
     * acquire/release (weak): coherence-only, do not provide DRF-SC
 * memory barriers/fences
 * high-level synchronization mechanisms
-  * semaphore
+  * semaphore (binary semaphore and counting semaphore)
   * spinlock
   * barrier
   * mutex
   * readers–writer lock
-  * condition variable
+  * condition variable (signal/notify_one and broadcast/notify_all)
   * monitor
-  * channel
+  * channel (buffered and unbuffered)
   * atomic reference counting
   * once
+  * pool
+  * future (implicit or explicit)
+  * futex
   * sequence lock
   * read-copy-update
 * semantics for racy programs
