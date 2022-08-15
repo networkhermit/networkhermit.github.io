@@ -4,8 +4,20 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-14T00:00:00+00:00</updated>
+	<updated>2022-08-15T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>architecture notes: Redis Explained</title>
+		<published>2022-08-15T00:00:00+00:00</published>
+		<updated>2022-08-15T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220815-architecturenotes/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220815-architecturenotes/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;As a general rule, it is essential to have an odd number of primary nodes and two replicas each for the most robust setup. (&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Split-brain_(computing)&quot;&gt;Split-brain (computing)&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;architecturenotes.co&#x2F;redis&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Python⇒Speed: Finding performance problems: profiling or logging?</title>
 		<published>2022-08-14T00:00:00+00:00</published>
@@ -429,29 +441,6 @@
 &lt;p&gt;Just keep doing the best you can, and try to have a healthy degree of skepticism when some wild-eyed architect wheels out a big diagram with a lot of boxes and arrows.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nolanlawson.com&#x2F;2022&#x2F;06&#x2F;09&#x2F;the-collapse-of-complex-software&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Wandering Thoughts: Some things that make shell scripts have performance issues</title>
-		<published>2022-07-15T00:00:00+00:00</published>
-		<updated>2022-07-15T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220715-utoronto/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220715-utoronto/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;One thing that does not make shell scripts slow is the basic Unix commands themselves that you use in shell scripts. Those Unix commands generally perform pretty well, and their processing speed is probably close to the fastest you could get if you wrote what they&#x27;re doing in your language of choice. Your program is unlikely to improve on the sorting performance of sort, the text transformation performance of sed, and so on. And the shell itself generally performs internal things more than fast enough for most cases. Instead, &lt;strong&gt;what causes shell scripts problems is the cost of starting separate programs&lt;&#x2F;strong&gt;. Sed may transform text very fast and sort may sort data very fast, but starting sed or sort is comparatively expensive. The more times you start programs and the more programs you have to start for each thing you want to do, the slower your shell script will run.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Shell_builtin&quot;&gt;Shell builtin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pipeline_(Unix)&quot;&gt;Pipeline (Unix)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;BusyBox#Single_binary&quot;&gt;BusyBox&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;utcc.utoronto.ca&#x2F;%7Ecks&#x2F;space&#x2F;blog&#x2F;programming&#x2F;ShellScriptsAndSpeed&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>
