@@ -69,7 +69,7 @@ memory consistency model:
     * relaxed: for hiding races, cannot be used to build new synchronization primitives
   * synchronizing (message receive/message send)
     * sequentially consistent (strong)
-    * acquire/release (weak): coherence-only, do not provide DRF-SC
+    * acquire/release (weak): coherence-only, create happens-before relation but do not provide DRF-SC
 * memory barriers/fences
 * high-level synchronization mechanisms
   * semaphore (binary semaphore and counting semaphore)
