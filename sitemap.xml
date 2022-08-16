@@ -132,6 +132,18 @@
         <lastmod>2022-08-15</lastmod>
     </url>
     <url>
+        <loc>https://blog.vac.fun/prism/20220816-fs/</loc>
+        <lastmod>2022-08-16</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220816-neon/</loc>
+        <lastmod>2022-08-16</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220816-upbound/</loc>
+        <lastmod>2022-08-16</lastmod>
+    </url>
+    <url>
         <loc>https://blog.vac.fun/prism/page/1/</loc>
     </url>
     <url>
@@ -139,5 +151,8 @@
     </url>
     <url>
         <loc>https://blog.vac.fun/prism/page/3/</loc>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/page/4/</loc>
     </url>
 </urlset>
