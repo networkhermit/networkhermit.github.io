@@ -92,7 +92,7 @@
             <h2 id="qian-yan">前言</h2>
 <p>前段时间因为项目需要短期内上手了 Rust，也顺便逛了一圈 Rust 的生态，这里记录一下学习的经验。</p>
 <h2 id="shi-yao-shi-rust">什么是 Rust？</h2>
-<p>一门<a href="https://en.wikipedia.org/wiki/Programming_language">编程语言</a>, <em><a href="https://en.wikipedia.org/wiki/Memory_safety">memory safe</a> without <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">garbage collection</a></em></p>
+<p>一门<a href="https://en.wikipedia.org/wiki/Programming_language">编程语言</a>, <em><a href="https://en.wikipedia.org/wiki/Memory_safety">memory safe</a> without <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">garbage collection</a></em>, <em>fearless <a href="https://en.wikipedia.org/wiki/Concurrent_computing">concurrency</a> without <a href="https://en.wikipedia.org/wiki/Race_condition#Data_race">data race</a></em></p>
 <blockquote>
 <p>Technology from the past come to save the future from itself</p>
 <ul>
@@ -247,12 +247,13 @@
 </ul>
 <p>你需要磨合一段时间才能适应 Rust 特有的 <em><code>Ownership</code></em> 和 <em><code>Borrow Checker</code></em>，其他对你而言陌生的概念也需要时间去熟悉，根据项目需求着手一些实际的功能，模仿、借鉴和延伸接触的 demo 和例子，注意模块划分、错误处理、架构抽象，花上点心思不用多久就可以上手 Rust 开发。</p>
 <h2 id="rust-sheng-tai-bei-jing">Rust 生态背景</h2>
-<p>我一直提倡不要孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史渊源和演进过程，这对你的长期技术成长大有裨益。下面是我推荐的一些信息来源：</p>
+<p>我一直提倡不要孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史渊源和演进过程，这对你长期的技术成长大有裨益。比如你可能不知道 Rust 最初也支持 <a href="https://rust-lang.github.io/rfcs/0230-remove-runtime.html">M:N (hybrid) threading model</a>，以及 Go 语言和 <a href="https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs">Plan 9</a> 之间惊人的联系。</p>
+<p>下面是我推荐的一些信息来源：</p>
 <ul>
 <li><a href="https://blog.rust-lang.org">Rust Blog</a></li>
 <li><a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md">Releases</a>, <a href="https://rust-lang.github.io/rfcs/">RFCs</a></li>
 <li><a href="https://this-week-in-rust.org">This Week in Rust</a> <sup class="footnote-reference"><a href="#3">3</a></sup></li>
-<li><a href="https://github.com">GitHub</a>, <a href="https://news.ycombinator.com">Hacker News</a></li>
+<li><a href="https://github.com">GitHub</a>, <a href="https://news.ycombinator.com">Hacker News</a>, <a href="https://lwn.net">LWN</a></li>
 </ul>
 <h2 id="rust-jin-jie">Rust 进阶</h2>
 <p>不管你最终能走多远，只要是尝试了我都认可你：</p>
@@ -262,7 +263,8 @@
 <li>源码阅读: <a href="https://github.com/rust-lang/rust">rust</a>, <a href="https://github.com/tokio-rs/tokio">tokio</a></li>
 </ul>
 <h2 id="xie-zai-zui-hou">写在最后</h2>
-<p>没有事物是完美的，Rust 也一样，不要陷入无谓的语言之争，很多技术都得看场景和环境。我用一句古文结束这篇博客：</p>
+<p>值得一提的是，Rust 并不能避免内存泄漏、死锁、竞争条件，但没有事物是完美的，不要陷入无谓的语言之争，很多技术都得看场景和环境。</p>
+<p>我用一句古文结束这篇博客：</p>
 <p><strong>“它山之石，可以攻玉”</strong></p>
 <hr />
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>

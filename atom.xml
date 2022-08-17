@@ -4,8 +4,106 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-16T00:00:00+00:00</updated>
+	<updated>2022-08-17T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>LWN: The seven deadly sins of software deployment</title>
+		<published>2022-08-17T00:00:00+00:00</published>
+		<updated>2022-08-17T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220817-lwn/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220817-lwn/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;The odds of deployment failure approach 100% as the number of distinct change sets approaches seven.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If three or more things have gone wrong, roll back.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Three Strikes Rule&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;562333&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Objective Analysis White Paper: The Future of the Data Center: Memory and Storage Take on an Increasing Role</title>
+		<published>2022-08-17T00:00:00+00:00</published>
+		<updated>2022-08-17T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220817-objective-analysis/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220817-objective-analysis/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;reducing data movement&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;offloading processing&lt;&#x2F;strong&gt; (In-Situ Processing)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Processor in Memory&#x2F;Computational Storage&lt;&#x2F;li&gt;
+&lt;li&gt;Edge and Endpoint Processing&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Near Memory&#x2F;Storage &#x2F; Far Memory&#x2F;Storage&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As computers share an increasing number of resources, memory has been given a new role. It is no longer simply a fast place to temporarily save code and data for a single processor, but is now blossoming into a role in which it also rapidly shares data between processors.&lt;&#x2F;p&gt;
+&lt;p&gt;This changes the memory’s role from fast temporary storage to one in which it serves as a communications medium. If we add in situ processing to that we find that memory begins to take on roles once devoted to processing and storage.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Compute_Express_Link&quot;&gt;Compute Express Link&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;objective-analysis.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;08&#x2F;Objective-Analysis-Brief-The-Future-of-the-Data-Center.pdf&quot;&gt;Link [pdf]&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Uber Engineering Paper: A Study of Real-World Data Races in Golang</title>
+		<published>2022-08-17T00:00:00+00:00</published>
+		<updated>2022-08-17T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220817-uber/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220817-uber/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Observation&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Developers using Go employ significantly more concurrency and synchronization constructs than in Java.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Developers using Go for programming microservices expose significantly more runtime concurrency than other languages such as Java, Python, and NodeJS used for the same purpose.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Transparent capture-by-reference of free variables in goroutines is a recipe for data races.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Slices are highly confusing types that create subtle and hard to diagnose data races.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Built-in maps in Go make them commonly used. The array-style syntax of map accesses provides a false illusion of disjoint accesses of elements. However, map implementation is thread-unsafe in Go causing frequent data races.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Pass-by-value semantics are recommended in Go because it simplifies escape analysis and gives variables a better chance to be allocated on the stack, which reduces pressure on the garbage collector. Developers often err on the side of pass-by-value (or methods over values), which can cause non-trivial data races.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Mixed use of message passing (channels) and shared memory makes code complex and susceptible to data races.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Go offers more leeway in its group synchronization construct sync.WaitGroup. The number of participants is dynamic. Incorrect placement of Add and Done methods of a sync.WaitGroup lead to data races.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Running tests in parallel for Go’s table-driven test suite idiom can often cause data races, either in the product or test code.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Incorrect use of mutual exclusion primitives leads to data races.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Remark&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Future programming language designers should carefully weigh different language features and coding idioms with their potential to create common or arcane concurrency bugs.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Explicit is better than implicit.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2204.00764&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.uber.com&#x2F;blog&#x2F;dynamic-data-race-detection-in-go-code&#x2F;&quot;&gt;Dynamic Data Race Detection in Go Code&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.uber.com&#x2F;blog&#x2F;data-race-patterns-in-go&#x2F;&quot;&gt;Data Race Patterns in Go&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>FS Blog: Focused and Diffuse: Two Modes of Thinking</title>
 		<published>2022-08-16T00:00:00+00:00</published>
@@ -359,118 +457,6 @@
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;cilium-service-mesh&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;2021-12-08-ebpf-servicemesh&#x2F;&quot;&gt;How eBPF will solve Service Mesh – Goodbye Sidecars&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;2022-05-03-servicemesh-security&#x2F;&quot;&gt;Next-Generation Mutual Authentication with Cilium Service Mesh&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Stack Overflow Blog: Design patterns for asynchronous API communication</title>
-		<published>2022-07-26T00:00:00+00:00</published>
-		<updated>2022-07-26T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220726-stackoverflow/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220726-stackoverflow/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Entity topics: The source of truth&lt;&#x2F;p&gt;
-&lt;p&gt;“this is the current state of X”&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Event topics: Record of fact&lt;&#x2F;p&gt;
-&lt;p&gt;“X happened”&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Request and response topics: Async API&lt;&#x2F;p&gt;
-&lt;p&gt;“Please do X” → “X has been done”&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.blog&#x2F;2022&#x2F;07&#x2F;21&#x2F;event-driven-topic-design-using-kafka&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Inanna Malick Blog: Elegant and performant recursion in Rust</title>
-		<published>2022-07-25T00:00:00+00:00</published>
-		<updated>2022-07-25T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220725-inanna-malick/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220725-inanna-malick/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Evaluating an expression language: &lt;code&gt;1 * (2 - 3)&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;boxed pointer traversal&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;Mul {
-&lt;&#x2F;span&gt;&lt;span&gt;    a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;LiteralInt { literal&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;    b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;Sub {
-&lt;&#x2F;span&gt;&lt;span&gt;        a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;LiteralInt { literal&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;        b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;Box&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;new(ExprBoxed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;::&lt;&#x2F;span&gt;&lt;span&gt;LiteralInt { literal&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;3 &lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;    })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;ul&gt;
-&lt;li&gt;cache-local reverse topological fold&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;[
-&lt;&#x2F;span&gt;&lt;span&gt;idx_0:    Mul(idx_1, idx_2)
-&lt;&#x2F;span&gt;&lt;span&gt;idx_1:    LiteralInt(1)
-&lt;&#x2F;span&gt;&lt;span&gt;idx_2:    Sub(idx_3, idx_4)
-&lt;&#x2F;span&gt;&lt;span&gt;idx_3:    LiteralInt(2)
-&lt;&#x2F;span&gt;&lt;span&gt;idx_4:    LiteralInt(3)
-&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Cache locality: &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Locality_of_reference&quot;&gt;Locality of reference&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Topological_sorting&quot;&gt;Topological sorting&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Functor_(functional_programming)&quot;&gt;Functor (functional programming)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Property_testing&quot;&gt;Property testing&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;recursion.wtf&#x2F;posts&#x2F;rust_schemes&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;recursion.wtf&#x2F;posts&#x2F;rust_schemes_2&#x2F;&quot;&gt;Fully generic recursion in Rust&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Brandur Blog: Soft Deletion Probably Isn&#x27;t Worth It</title>
-		<published>2022-07-20T00:00:00+00:00</published>
-		<updated>2022-07-20T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220720-brandur/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220720-brandur/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Code leakage&lt;&#x2F;strong&gt;: The first is that soft deletion logic bleeds out into all parts of your code. And forgetting that extra predicate on &lt;code&gt;deleted_at&lt;&#x2F;code&gt; can have dangerous consequences as it accidentally returns data that’s no longer meant to be seen.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Losing foreign keys&lt;&#x2F;strong&gt;: Another consequence of soft deletion is that foreign keys are effectively lost. The major benefit of foreign keys is that they guarantee referential integrity. But with soft deletion, this goes out the window. A customer may be soft deleted with its &lt;code&gt;deleted_at&lt;&#x2F;code&gt; flag set, but we’re now back to being able to forget do the same for its invoices.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Pruning data is hard&lt;&#x2F;strong&gt;: You may eventually find yourself writing a hard deletion process which looks at soft deleted records beyond a certain horizon and permanently deletes them from the database. But the same foreign keys that soft deletion rendered mostly useless now make this job more difficult because a record can’t be removed without also making sure that all its dependencies are removed as well. And even with liberal testing, this kind of query can still end up being a reliability problem because in case a new dependency is added in the future but an update to the query is forgotten, it’ll suddenly start failing after a year’s (or whatever the hard delete horizon is) delay.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Discouraged and rarely used&lt;&#x2F;strong&gt;: Once again, soft deletion is theoretically a hedge against accidental data loss. As a last argument against it, I’d ask you to consider, realistically, whether undeletion is something that’s ever actually done. The biggest reason for that is that almost always, data deletion also has non-data side effects. Calls may have been made to foreign systems to archive records there, objects may have been removed in blob stores, or servers spun down. The process can’t simply be reversed by setting &lt;code&gt;NULL&lt;&#x2F;code&gt; on &lt;code&gt;deleted_at&lt;&#x2F;code&gt; – equivalent undos need to exist for all those other operations too, and they rarely do.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Alternative - A deleted records table&lt;&#x2F;strong&gt;: Although I’ve never seen an undelete work in practice, soft deletion wasn’t completely useless because we would occasionally use it to refer to deleted data – usually a manual process where someone wanted to see to a deleted object for purposes of assisting with a support ticket or trying to squash a bug. And while I’d argue against the traditional soft deletion pattern due to the downsides listed above, luckily there’s a compromise. Instead of keeping deleted data in the same tables from which it was deleted from, there can be a new relation specifically for storing all deleted data, and with a flexible &lt;code&gt;jsonb&lt;&#x2F;code&gt; column so that it can capture the properties of any other table.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Queries for normal, non-deleted data no longer need to include &lt;code&gt;deleted_at IS NULL&lt;&#x2F;code&gt; everywhere.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Foreign keys still work. Attempting to remove a record without also getting its dependencies is an error.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Hard deleting old records for regulatory requirements gets really, really easy: &lt;code&gt;DELETE FROM deleted_record WHERE deleted_at &amp;lt; now() - &#x27;1 year&#x27;::interval&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Deleted data is a little harder to get at, but not by much, and is still kept around in case someone needs to look at it.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;brandur.org&#x2F;soft-deletion&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>

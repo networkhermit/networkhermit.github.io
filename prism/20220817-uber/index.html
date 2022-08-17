@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        Uber Engineering Paper: A Study of Real-World Data Races in Golang
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Uber Engineering Paper: A Study of Real-World Data Races in Golang<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+            
+                <div class="meta">
+                    Posted on 2022-08-17
+
+                    
+                </div>
+            
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<p><strong>Observation</strong></p>
+<ul>
+<li>
+<p>Developers using Go employ significantly more concurrency and synchronization constructs than in Java.</p>
+</li>
+<li>
+<p>Developers using Go for programming microservices expose significantly more runtime concurrency than other languages such as Java, Python, and NodeJS used for the same purpose.</p>
+</li>
+<li>
+<p>Transparent capture-by-reference of free variables in goroutines is a recipe for data races.</p>
+</li>
+<li>
+<p>Slices are highly confusing types that create subtle and hard to diagnose data races.</p>
+</li>
+<li>
+<p>Built-in maps in Go make them commonly used. The array-style syntax of map accesses provides a false illusion of disjoint accesses of elements. However, map implementation is thread-unsafe in Go causing frequent data races.</p>
+</li>
+<li>
+<p>Pass-by-value semantics are recommended in Go because it simplifies escape analysis and gives variables a better chance to be allocated on the stack, which reduces pressure on the garbage collector. Developers often err on the side of pass-by-value (or methods over values), which can cause non-trivial data races.</p>
+</li>
+<li>
+<p>Mixed use of message passing (channels) and shared memory makes code complex and susceptible to data races.</p>
+</li>
+<li>
+<p>Go offers more leeway in its group synchronization construct sync.WaitGroup. The number of participants is dynamic. Incorrect placement of Add and Done methods of a sync.WaitGroup lead to data races.</p>
+</li>
+<li>
+<p>Running tests in parallel for Go’s table-driven test suite idiom can often cause data races, either in the product or test code.</p>
+</li>
+<li>
+<p>Incorrect use of mutual exclusion primitives leads to data races.</p>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Remark</strong></p>
+<p>Future programming language designers should carefully weigh different language features and coding idioms with their potential to create common or arcane concurrency bugs.</p>
+</blockquote>
+<ul>
+<li>Explicit is better than implicit.</li>
+</ul>
+<p><a href="https://arxiv.org/abs/2204.00764">Link</a></p>
+<p><a href="https://www.uber.com/blog/dynamic-data-race-detection-in-go-code/">Dynamic Data Race Detection in Go Code</a></p>
+<p><a href="https://www.uber.com/blog/data-race-patterns-in-go/">Data Race Patterns in Go</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
