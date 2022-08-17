@@ -9,7 +9,7 @@ title = "Rust: 上手和提升"
 
 ## 什么是 Rust？
 
-一门[编程语言](https://en.wikipedia.org/wiki/Programming_language), *[memory safe](https://en.wikipedia.org/wiki/Memory_safety) without [garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science))*
+一门[编程语言](https://en.wikipedia.org/wiki/Programming_language), *[memory safe](https://en.wikipedia.org/wiki/Memory_safety) without [garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science))*, *fearless [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing) without [data race](https://en.wikipedia.org/wiki/Race_condition#Data_race)*
 
 > Technology from the past come to save the future from itself
 > - Graydon Hoare (Rust 创始人)
@@ -130,12 +130,14 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 
 ## Rust 生态背景
 
-我一直提倡不要孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史渊源和演进过程，这对你的长期技术成长大有裨益。下面是我推荐的一些信息来源：
+我一直提倡不要孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史渊源和演进过程，这对你长期的技术成长大有裨益。比如你可能不知道 Rust 最初也支持 [M:N (hybrid) threading model](https://rust-lang.github.io/rfcs/0230-remove-runtime.html)，以及 Go 语言和 [Plan 9](https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs) 之间惊人的联系。
+
+下面是我推荐的一些信息来源：
 
 * [Rust Blog](https://blog.rust-lang.org)
 * [Releases](https://github.com/rust-lang/rust/blob/master/RELEASES.md), [RFCs](https://rust-lang.github.io/rfcs/)
 * [This Week in Rust](https://this-week-in-rust.org) [^3]
-* [GitHub](https://github.com), [Hacker News](https://news.ycombinator.com)
+* [GitHub](https://github.com), [Hacker News](https://news.ycombinator.com), [LWN](https://lwn.net)
 
 ## Rust 进阶
 
@@ -147,7 +149,9 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 
 ## 写在最后
 
-没有事物是完美的，Rust 也一样，不要陷入无谓的语言之争，很多技术都得看场景和环境。我用一句古文结束这篇博客：
+值得一提的是，Rust 并不能避免内存泄漏、死锁、竞争条件，但没有事物是完美的，不要陷入无谓的语言之争，很多技术都得看场景和环境。
+
+我用一句古文结束这篇博客：
 
 **“它山之石，可以攻玉”**
 
