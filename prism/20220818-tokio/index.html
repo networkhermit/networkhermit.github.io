@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        Tokio Blog: Making the Tokio scheduler 10x faster
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Tokio Blog: Making the Tokio scheduler 10x faster<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+            
+                <div class="meta">
+                    Posted on 2022-08-18
+
+                    
+                </div>
+            
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<p>The major theme is &quot;reduce.&quot; After all, there is no code faster than no code!</p>
+<ul>
+<li>reducing allocation</li>
+<li>reducing copying</li>
+<li>reducing data movement</li>
+<li>reducing cache miss</li>
+<li>reducing synchronization</li>
+<li>reducing contention</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Scheduling_(computing)">Scheduling (computing)</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Thread_(computing)#M:N_(hybrid_threading)">M:N (hybrid) threading model</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Thread_pool">Thread pool</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Work_stealing">Work stealing</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Fork%E2%80%93join_model">Fork–join model</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Asynchronous_I/O">Asynchronous I/O</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Cooperative_multitasking">Cooperative multitasking</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Preemption_(computing)">Preemption (computing)</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Thrashing_(computer_science)">Thrashing (computer science)</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Cache_coherence#Coherence_protocols">Cache coherence protocol</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Resource_contention">Resource contention</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Thundering_herd_problem">Thundering herd problem</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Permutation_test">Permutation test</a></p>
+</li>
+</ul>
+<p><a href="https://tokio.rs/blog/2019-10-scheduler">Link</a></p>
+<p><a href="https://tokio.rs/blog/2020-04-preemption">Reducing tail latencies with automatic cooperative task yielding</a></p>
+<blockquote>
+<p>Async code should never spend a long time without reaching an .await.</p>
+<p>A good rule of thumb is no more than 10 to 100 microseconds between each .await. That said, this depends on the kind of application you are writing.</p>
+</blockquote>
+<p><a href="https://ryhl.io/blog/async-what-is-blocking/">Async: What is blocking?</a></p>
+<p><a href="https://rust-lang.github.io/rfcs/0230-remove-runtime.html">Rust RFC 0230 - remove runtime</a>, <a href="https://rust-lang.github.io/rfcs/2394-async_await.html">Rust RFC 2394 - async await</a>, <a href="https://rust-lang.github.io/rfcs/2592-futures.html">Rust RFC 2592 - futures</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>

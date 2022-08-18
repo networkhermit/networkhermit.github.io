@@ -4,8 +4,91 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-17T00:00:00+00:00</updated>
+	<updated>2022-08-18T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>linusw: Rust in Perspective</title>
+		<published>2022-08-18T00:00:00+00:00</published>
+		<updated>2022-08-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220818-linusw/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220818-linusw/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Rust is attempting to raise the abstraction in the programming language and ultimately to join computer science and software engineering into one single discipline, an ambition that has been around since these disciplines were created.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What is unique about Rust is that it fuses “impure” functional programming with imperative programming, and compiled to target machine code from day one.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;people.kernel.org&#x2F;linusw&#x2F;rust-in-perspective&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Tokio Blog: Making the Tokio scheduler 10x faster</title>
+		<published>2022-08-18T00:00:00+00:00</published>
+		<updated>2022-08-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220818-tokio/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220818-tokio/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;The major theme is &amp;quot;reduce.&amp;quot; After all, there is no code faster than no code!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;reducing allocation&lt;&#x2F;li&gt;
+&lt;li&gt;reducing copying&lt;&#x2F;li&gt;
+&lt;li&gt;reducing data movement&lt;&#x2F;li&gt;
+&lt;li&gt;reducing cache miss&lt;&#x2F;li&gt;
+&lt;li&gt;reducing synchronization&lt;&#x2F;li&gt;
+&lt;li&gt;reducing contention&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Scheduling_(computing)&quot;&gt;Scheduling (computing)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Thread_(computing)#M:N_(hybrid_threading)&quot;&gt;M:N (hybrid) threading model&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Thread_pool&quot;&gt;Thread pool&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Work_stealing&quot;&gt;Work stealing&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fork%E2%80%93join_model&quot;&gt;Fork–join model&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Asynchronous_I&#x2F;O&quot;&gt;Asynchronous I&#x2F;O&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Cooperative_multitasking&quot;&gt;Cooperative multitasking&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Preemption_(computing)&quot;&gt;Preemption (computing)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Thrashing_(computer_science)&quot;&gt;Thrashing (computer science)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Cache_coherence#Coherence_protocols&quot;&gt;Cache coherence protocol&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Resource_contention&quot;&gt;Resource contention&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Thundering_herd_problem&quot;&gt;Thundering herd problem&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Permutation_test&quot;&gt;Permutation test&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2019-10-scheduler&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2020-04-preemption&quot;&gt;Reducing tail latencies with automatic cooperative task yielding&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Async code should never spend a long time without reaching an .await.&lt;&#x2F;p&gt;
+&lt;p&gt;A good rule of thumb is no more than 10 to 100 microseconds between each .await. That said, this depends on the kind of application you are writing.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ryhl.io&#x2F;blog&#x2F;async-what-is-blocking&#x2F;&quot;&gt;Async: What is blocking?&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;0230-remove-runtime.html&quot;&gt;Rust RFC 0230 - remove runtime&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2394-async_await.html&quot;&gt;Rust RFC 2394 - async await&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2592-futures.html&quot;&gt;Rust RFC 2592 - futures&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>LWN: The seven deadly sins of software deployment</title>
 		<published>2022-08-17T00:00:00+00:00</published>
@@ -370,93 +453,6 @@
 &lt;p&gt;A common pitfall is to design locking by looking at the code, perhaps just sprinkling locking calls over it until it feels like it’s good enough. The right approach is to design locking for the data structures, which means specifying for each structure or member field how it is protected against concurrent changes, and how the necessary amount of consistency is maintained across the entire data structure with rules that stay invariant, irrespective of how code operates on the data.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.ffwll.ch&#x2F;2022&#x2F;07&#x2F;locking-engineering.html&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>WireGuard Interworkings: Routing &amp; Network Namespace Integration</title>
-		<published>2022-07-27T00:00:00+00:00</published>
-		<updated>2022-07-27T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220727-wireguard/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220727-wireguard/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Routing All Your Traffic&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;The Classic Solutions&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Overriding The Default Route&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add 0.0.0.0&#x2F;1 dev wg0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add 128.0.0.0&#x2F;1 dev wg0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add 163.172.161.0&#x2F;32 via 192.168.1.1 dev eth0
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Rule-based Routing&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;wg&lt;&#x2F;span&gt;&lt;span&gt; set wg0 fwmark 1234
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add default dev wg0 table 2468
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; rule add not fwmark 1234 table 2468
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; rule add table main suppress_prefixlength 0
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;ul&gt;
-&lt;li&gt;The New Namespace Solution&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; netns add physical
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; link set eth0 netns physical
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;iw&lt;&#x2F;span&gt;&lt;span&gt; phy phy0 set netns name physical
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; -n physical link add wg0 type wireguard
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; -n physical link set wg0 netns 1
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; netns exec physical dhcpcd wlan0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; netns exec physical wpa_supplicant -iwlan0 -c&#x2F;etc&#x2F;wpa_supplicant&#x2F;wpa_supplicant.conf
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; -n physical addr add 192.168.12.52&#x2F;24 dev eth0
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;wg&lt;&#x2F;span&gt;&lt;span&gt; setconf wg0 &#x2F;etc&#x2F;wireguard&#x2F;wg0.conf
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; addr add 10.2.4.5&#x2F;32 dev wg0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; link set wg0 up
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;ip&lt;&#x2F;span&gt;&lt;span&gt; route add default dev wg0
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.wireguard.com&#x2F;netns&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;container-networking-is-simple&#x2F;&quot;&gt;Container Networking Is Simple&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Isovalent Blog: Cilium Service Mesh – Everything You Need to Know</title>
-		<published>2022-07-26T00:00:00+00:00</published>
-		<updated>2022-07-26T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220726-isovalent/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220726-isovalent/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Looking at the feature set of a service mesh today, it can be summarized as follows:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Resilient Connectivity&lt;&#x2F;strong&gt;: Service to service communication must be possible across boundaries such as clouds, clusters, and premises. Communication must be resilient and fault tolerant.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;L7 Traffic Management&lt;&#x2F;strong&gt;: Load balancing, rate limiting, and resiliency must be L7-aware (HTTP, REST, gRPC, WebSocket, …).&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Identity-based Security&lt;&#x2F;strong&gt;: Relying on network identifiers to achieve security is no longer sufficient, both the sending and receiving services must be able to authenticate each other based on identities instead of a network identifier.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Observability &amp;amp; Tracing&lt;&#x2F;strong&gt;: Observability in the form of tracing and metrics is critical to understanding, monitoring, and troubleshooting application stability, performance, and availability.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Transparency&lt;&#x2F;strong&gt;: The functionality must be available to applications in a transparent manner, i.e. without requiring to change application code.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;eBPF-Native When Possible&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;If eBPF is not capable of processing the request, for example when connections need to be spliced, requests need to be rate-limited, or TLS termination is required, the handling falls back to Envoy running in either a sidecar or sidecar-free model. This gives the best of both worlds – eBPF processing when possible for increased performance and reduced latency, with the ability always to fall back to Envoy as needed.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;mTLS for Any Network Protocol&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;By splitting the authentication handshake from the payload transport, we can use TLS 1.3 as the handshake protocol while relying on IPsec or WireGuard as a better-performing, more transparent payload channel.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;cilium-service-mesh&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;2021-12-08-ebpf-servicemesh&#x2F;&quot;&gt;How eBPF will solve Service Mesh – Goodbye Sidecars&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;2022-05-03-servicemesh-security&#x2F;&quot;&gt;Next-Generation Mutual Authentication with Cilium Service Mesh&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>
