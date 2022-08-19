@@ -4,8 +4,37 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-18T00:00:00+00:00</updated>
+	<updated>2022-08-19T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>LWN: C library system-call wrappers, or the lack thereof</title>
+		<published>2022-08-19T00:00:00+00:00</published>
+		<updated>2022-08-19T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220819-lwn/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220819-lwn/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Calling into the kernel is not like calling a normal function; a special trap into the kernel must be triggered with the system-call arguments placed as the kernel expects. At a minimum, the system-call &amp;quot;wrapper&amp;quot; provided by the C library must set up this trap. In many cases, more work than that is required; the functionality provided by the kernel does not always exactly match what the application (or the relevant standards) will expect. Features like POSIX threads further complicate the situation. The end result is that a lot of work can be happening between the application and the kernel when a system call is made. Doing that work is, in most cases, delegated to the C library.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Free-software projects tend to value their independence; their developers have little time for others who would tell them what to do. But few projects truly stand alone. Whenever developers decide to cooperate more fully with related projects, the result tends to be better software for the community as a whole. The design and delivery of system calls would appear to be one of those places where a higher level of communication and cooperation would be a healthy thing. That, rather than trying to absorb low-level wrappers into the kernel project, seems like the proper long-term solution to this problem.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;771441&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Tokio Blog: Diagnostics with Tracing</title>
+		<published>2022-08-19T00:00:00+00:00</published>
+		<updated>2022-08-19T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220819-tokio/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220819-tokio/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Effectively developing systems and operating them in production requires visibility into their behavior at runtime.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2019-08-tracing&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2021-12-announcing-tokio-console&quot;&gt;Announcing Tokio Console 0.1&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2022-02-announcing-tokio-metrics&quot;&gt;Announcing Tokio Metrics 0.1&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>linusw: Rust in Perspective</title>
 		<published>2022-08-18T00:00:00+00:00</published>
@@ -58,6 +87,12 @@
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Asynchronous_I&#x2F;O&quot;&gt;Asynchronous I&#x2F;O&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Coroutine&quot;&gt;Coroutine&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Async&#x2F;await&quot;&gt;Async&#x2F;await&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Cooperative_multitasking&quot;&gt;Cooperative multitasking&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
@@ -80,13 +115,14 @@
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2019-10-scheduler&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2018-03-timers&quot;&gt;New Timer implementation&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2020-04-preemption&quot;&gt;Reducing tail latencies with automatic cooperative task yielding&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Async code should never spend a long time without reaching an .await.&lt;&#x2F;p&gt;
 &lt;p&gt;A good rule of thumb is no more than 10 to 100 microseconds between each .await. That said, this depends on the kind of application you are writing.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ryhl.io&#x2F;blog&#x2F;async-what-is-blocking&#x2F;&quot;&gt;Async: What is blocking?&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;0230-remove-runtime.html&quot;&gt;Rust RFC 0230 - remove runtime&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2394-async_await.html&quot;&gt;Rust RFC 2394 - async await&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2592-futures.html&quot;&gt;Rust RFC 2592 - futures&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Rust RFC &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;0230-remove-runtime.html&quot;&gt;0230 - remove runtime&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2394-async_await.html&quot;&gt;2394 - async await&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2592-futures.html&quot;&gt;2592 - futures&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -392,67 +428,6 @@
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tls13.xargs.org&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;quic.xargs.org&quot;&gt;The Illustrated QUIC Connection&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Ivan Velichko: How Kubernetes Reinvented Virtual Machines (in a good sense)</title>
-		<published>2022-08-01T00:00:00+00:00</published>
-		<updated>2022-08-01T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220801-iximiuz/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220801-iximiuz/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;We should differentiate between the complexity of driving a car and the complexity of repairing it. Many of us can drive cars, but very few are good at fixing engines.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Early-stage startups shouldn&#x27;t run on Kubernetes yet.&lt;&#x2F;p&gt;
-&lt;p&gt;But eventually, growth-stage and large companies &lt;em&gt;should&lt;&#x2F;em&gt; be running on Kubernetes in some form.&lt;&#x2F;p&gt;
-&lt;p&gt;Infrastructure should progressively grow with your workloads and team.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matt-rickard.com&#x2F;dont-use-kubernetes-yet&quot;&gt;Don&#x27;t Use Kubernetes, Yet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;kubernetes-vs-virtual-machines&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>stuff by danvet: Locking Engineering Principles</title>
-		<published>2022-07-29T00:00:00+00:00</published>
-		<updated>2022-07-29T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220729-ffwll/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220729-ffwll/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Priorities in Locking Engineering&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Make it Dumb&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Designing a correct locking scheme is hard, validating that your code actually implements your design is harder, and then debugging when - not if! - you screwed up is even worse. Therefore the absolute most important rule in locking engineering, at least if you want to have any chance at winning this game, is to make the design as simple and dumb as possible.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Make it Correct&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Validating locking by hand against all the other locking designs and nesting rules the kernel has overall is nigh impossible, extremely slow, something only few people can do with any chance of success and hence in almost all cases a complete waste of time. We need tools to automate this, and in the Linux kernel this is lockdep.&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Never invent your own locking primitives, you’ll get them wrong, or at least build something that’s slow. The kernel’s locks are built and tuned by people who’ve done nothing else their entire career, you wont beat them except in bug count, and that by a lot.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;The same holds for synchronization primitives.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Finally at the intersection of “make it dumb” and “make it correct”, pick the simplest lock that works, like a normal mutex instead of an read-write semaphore. This is because in general, stricter rules catch bugs and design issues quicker, hence picking a very fancy “anything goes” locking primitives is a bad choice.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;ul&gt;
-&lt;li&gt;Make it Fast&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Speed doesn’t matter if you don’t understand the design anymore in the future, you need simplicity first.&lt;&#x2F;p&gt;
-&lt;p&gt;Speed doesn’t matter if all you’re doing is crashing faster. You need correctness before speed.&lt;&#x2F;p&gt;
-&lt;p&gt;Finally speed doesn’t matter where users don’t notice it. If you micro-optimize a path that doesn’t even show up in real world workloads users care about, all you’ve done is wasted time and committed to future maintenance pain for no gain at all.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Protect Data, not Code&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;A common pitfall is to design locking by looking at the code, perhaps just sprinkling locking calls over it until it feels like it’s good enough. The right approach is to design locking for the data structures, which means specifying for each structure or member field how it is protected against concurrent changes, and how the necessary amount of consistency is maintained across the entire data structure with rules that stay invariant, irrespective of how code operates on the data.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.ffwll.ch&#x2F;2022&#x2F;07&#x2F;locking-engineering.html&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>

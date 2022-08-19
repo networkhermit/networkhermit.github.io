@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        LWN: C library system-call wrappers, or the lack thereof
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        LWN: C library system-call wrappers, or the lack thereof<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+            
+                <div class="meta">
+                    Posted on 2022-08-19
+
+                    
+                </div>
+            
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<p>Calling into the kernel is not like calling a normal function; a special trap into the kernel must be triggered with the system-call arguments placed as the kernel expects. At a minimum, the system-call &quot;wrapper&quot; provided by the C library must set up this trap. In many cases, more work than that is required; the functionality provided by the kernel does not always exactly match what the application (or the relevant standards) will expect. Features like POSIX threads further complicate the situation. The end result is that a lot of work can be happening between the application and the kernel when a system call is made. Doing that work is, in most cases, delegated to the C library.</p>
+</blockquote>
+<blockquote>
+<p>Free-software projects tend to value their independence; their developers have little time for others who would tell them what to do. But few projects truly stand alone. Whenever developers decide to cooperate more fully with related projects, the result tends to be better software for the community as a whole. The design and delivery of system calls would appear to be one of those places where a higher level of communication and cooperation would be a healthy thing. That, rather than trying to absorb low-level wrappers into the kernel project, seems like the proper long-term solution to this problem.</p>
+</blockquote>
+<p><a href="https://lwn.net/Articles/771441/">Link</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>

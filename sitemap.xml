@@ -167,6 +167,14 @@
         <lastmod>2022-08-18</lastmod>
     </url>
     <url>
+        <loc>https://blog.vac.fun/prism/20220819-lwn/</loc>
+        <lastmod>2022-08-19</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220819-tokio/</loc>
+        <lastmod>2022-08-19</lastmod>
+    </url>
+    <url>
         <loc>https://blog.vac.fun/prism/page/1/</loc>
     </url>
     <url>
@@ -177,5 +185,8 @@
     </url>
     <url>
         <loc>https://blog.vac.fun/prism/page/4/</loc>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/page/5/</loc>
     </url>
 </urlset>
