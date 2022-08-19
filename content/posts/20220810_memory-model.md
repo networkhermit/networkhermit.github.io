@@ -10,9 +10,9 @@ memory model:
 * address space layout
 * memory addressing scheme
 * memory allocation scheme
+* memory object model
 * memory ordering
 * memory segmentation
-* object model
 * type layout
 
 ## 参考资料

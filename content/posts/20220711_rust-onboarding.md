@@ -145,7 +145,7 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 
 * [reference](https://doc.rust-lang.org/stable/reference/): Rust 语言参考
 * [nomicon](https://doc.rust-lang.org/stable/nomicon/): `The Dark Arts of Advanced and Unsafe Rust Programming`
-* 源码阅读: [rust](https://github.com/rust-lang/rust), [mio](https://github.com/tokio-rs/mio), [tokio](https://github.com/tokio-rs/tokio), [axum](https://github.com/tokio-rs/axum)/[tonic](https://github.com/hyperium/tonic), [tracing](https://github.com/tokio-rs/tracing)
+* 源码阅读: [rust](https://github.com/rust-lang/rust), [mio](https://github.com/tokio-rs/mio)/[io-uring](https://github.com/tokio-rs/io-uring)/[aya](https://github.com/aya-rs/aya), [tokio](https://github.com/tokio-rs/tokio), [axum](https://github.com/tokio-rs/axum)/[tonic](https://github.com/hyperium/tonic), [tracing](https://github.com/tokio-rs/tracing)
 
 ## 写在最后
 
