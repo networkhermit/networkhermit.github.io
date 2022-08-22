@@ -4,8 +4,33 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-19T00:00:00+00:00</updated>
+	<updated>2022-08-22T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Bell Labs: Notes on Programming in C</title>
+		<published>2022-08-22T00:00:00+00:00</published>
+		<updated>2022-08-22T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220822-cat-v/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220822-cat-v/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Rule 1. You can&#x27;t tell where a program is going to spend its time. Bottlenecks occur in surprising places, so don&#x27;t try to second guess and put in a speed hack until you&#x27;ve proven that&#x27;s where the bottleneck is.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 2. Measure. Don&#x27;t tune for speed until you&#x27;ve measured, and even then don&#x27;t unless one part of the code overwhelms the rest.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 3. Fancy algorithms are slow when n is small, and n is usually small. Fancy algorithms have big constants. Until you know that n is frequently going to be big, don&#x27;t get fancy. (Even if n does get big, use Rule 2 first.) For example, binary trees are always faster than splay trees for workaday problems.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 4. Fancy algorithms are buggier than simple ones, and they&#x27;re much harder to implement. Use simple algorithms as well as simple data structures.&lt;&#x2F;p&gt;
+&lt;p&gt;The following data structures are a complete list for almost all practical programs:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;array&lt;&#x2F;li&gt;
+&lt;li&gt;linked list&lt;&#x2F;li&gt;
+&lt;li&gt;hash table&lt;&#x2F;li&gt;
+&lt;li&gt;binary tree&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Of course, you must also be prepared to collect these into compound data structures. For instance, a symbol table might be implemented as a hash table containing linked lists of arrays of characters.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 5. Data dominates. If you&#x27;ve chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 6. There is no Rule 6.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.cat-v.org&#x2F;bell_labs&#x2F;pikestyle&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>LWN: C library system-call wrappers, or the lack thereof</title>
 		<published>2022-08-19T00:00:00+00:00</published>
@@ -415,19 +440,6 @@
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.ffwll.ch&#x2F;2022&#x2F;08&#x2F;locking-hierarchy.html&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;844224&#x2F;&quot;&gt;An introduction to lockless algorithms&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Aiken &amp; Driscoll: The Illustrated TLS 1.3 Connection</title>
-		<published>2022-08-04T00:00:00+00:00</published>
-		<updated>2022-08-04T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220804-xargs/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220804-xargs/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;In this demonstration a client connects to a server, negotiates a TLS 1.3 session, sends &amp;quot;ping&amp;quot;, receives &amp;quot;pong&amp;quot;, and then terminates the session.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tls13.xargs.org&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;quic.xargs.org&quot;&gt;The Illustrated QUIC Connection&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>
