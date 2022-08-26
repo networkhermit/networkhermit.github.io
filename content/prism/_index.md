@@ -1,5 +1,5 @@
 +++
-paginate_by = 8
+paginate_by = 16
 path = "prism"
 sort_by = "date"
 template = "posts.html"
