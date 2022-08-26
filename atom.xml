@@ -4,8 +4,101 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-22T00:00:00+00:00</updated>
+	<updated>2022-08-26T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Die wunderbare Welt von Isotopp: fork, exec, wait and exit</title>
+		<published>2022-08-26T00:00:00+00:00</published>
+		<updated>2022-08-26T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220826-koehntopp/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220826-koehntopp/</id>
+		<content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fork_(system_call)&quot;&gt;fork (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Exec_(system_call)&quot;&gt;exec (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Wait_(system_call)&quot;&gt;wait (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Exit_(system_call)&quot;&gt;exit (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dup_(system_call)&quot;&gt;dup (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pipeline_(Unix)&quot;&gt;Pipeline (Unix)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Spawn_(computing)&quot;&gt;Spawn (computing)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fork%E2%80%93exec&quot;&gt;Fork–exec&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fork_bomb&quot;&gt;Fork bomb&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Process_(computing)&quot;&gt;Process (computing)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Parent_process&quot;&gt;Parent process&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Child_process&quot;&gt;Child process&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Signal_(IPC)&quot;&gt;Signal (IPC)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Orphan_process&quot;&gt;Orphan process&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Zombie_process&quot;&gt;Zombie process&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Process_group&quot;&gt;Process group&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.koehntopp.info&#x2F;2020&#x2F;12&#x2F;28&#x2F;fork-exec-wait-and-exit.html&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;how-to-on-processes&#x2F;&quot;&gt;How to on starting processes (mostly in Linux)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>LWN: Docker and the OCI container ecosystem &amp; The container orchestrator landscape</title>
+		<published>2022-08-26T00:00:00+00:00</published>
+		<updated>2022-08-26T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220826-lwn/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220826-lwn/</id>
+		<content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Linux_namespaces&quot;&gt;Linux namespaces&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Cgroups&quot;&gt;cgroups&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Union_mount&quot;&gt;Union mount&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Seccomp&quot;&gt;seccomp&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;OCI &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;runtime-spec&quot;&gt;Runtime&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;image-spec&quot;&gt;Image&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;distribution-spec&quot;&gt;Distribution&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kubernetes&#x2F;cri-api&quot;&gt;CRI&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;containernetworking&#x2F;cni&quot;&gt;CNI&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;container-storage-interface&#x2F;spec&quot;&gt;CSI&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;902049&#x2F;&quot;&gt;Docker and the OCI container ecosystem&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;905164&#x2F;&quot;&gt;The container orchestrator landscape&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;containers-vs-pods&#x2F;&quot;&gt;Containers vs. Pods - Taking a Deeper Look&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;kubernetes-ephemeral-containers&#x2F;&quot;&gt;Kubernetes Ephemeral Containers and kubectl debug Command&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Bell Labs: Notes on Programming in C</title>
 		<published>2022-08-22T00:00:00+00:00</published>
@@ -377,69 +470,6 @@
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Global_interpreter_lock&quot;&gt;Global interpreter lock&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;superfastpython.com&#x2F;python-concurrency-choose-api&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Andrew Gallant&#x27;s Blog: Using unwrap() in Rust is Okay</title>
-		<published>2022-08-09T00:00:00+00:00</published>
-		<updated>2022-08-09T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220809-burntsushi/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220809-burntsushi/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;don’t use panicking as an error handling strategy&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;don’t let perfect be the enemy of the good&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Panics are the singular reason why bugs often don’t require running Rust programs in a debugger.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.burntsushi.net&#x2F;unwrap&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>stuff by danvet: Locking Engineering Hierarchy</title>
-		<published>2022-08-04T00:00:00+00:00</published>
-		<updated>2022-08-04T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220804-ffwll/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220804-ffwll/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;This part goes through a pile of locking patterns and designs, from most favourable and easiest to adjust and hence resulting in a long term maintainable code base, to the least favourable since hardest to ensure it works correctly and stays that way while the code evolves.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Level 0: No Locking&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Locking Pattern: Immutable State&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Pattern: Single Owner&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Pattern: Reference Counting&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Level 1: Big Dumb Lock&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Level 2: Fine-grained Locking&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Locking Pattern: Object Tracking Lists&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Pattern: Interrupt Handler State&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Pattern: Async Processing&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Pattern: Weak References&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Antipattern: Confusing Object Lifetime and Data Consistency&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Level 2.5: Splitting Locks for Performance Reasons&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;We’ve looked at a pile of functional reasons for complicating the locking design, but sometimes you need to add more fine-grained locking for performance reasons. This is already getting dangerous, because it’s very tempting to tune some microbenchmark just because we can, or maybe delude ourselves that it will be needed in the future. Therefore only complicate your locking if:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;You have actual real world benchmarks with workloads relevant to users that show measurable gains outside of statistical noise.&lt;&#x2F;li&gt;
-&lt;li&gt;You’ve fully exhausted architectural changes to outright avoid the overhead, like io_uring pre-registering file descriptors locally to avoid manipulating the file descriptor table.&lt;&#x2F;li&gt;
-&lt;li&gt;You’ve fully exhausted algorithm improvements like batching up operations to amortize locking overhead better.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Only then make your future maintenance pain guaranteed worse by applying more tricky locking than the bare minimum necessary for correctness. Still, go with the simplest approach, often converting a lock to its read-write variant is good enough.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Level 3: Lockless Tricks&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Locking Antipattern: Using RCU&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Antipattern: Atomics&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Antipattern: &lt;code&gt;preempt&#x2F;local_irq&#x2F;bh_disable()&lt;&#x2F;code&gt; and Friends …&lt;&#x2F;li&gt;
-&lt;li&gt;Locking Antipattern: Memory Barriers&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Closing Thoughts&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Simple, dumb locking is good locking, since with that you have a fighting chance to make it correct locking.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.ffwll.ch&#x2F;2022&#x2F;08&#x2F;locking-hierarchy.html&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;844224&#x2F;&quot;&gt;An introduction to lockless algorithms&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>

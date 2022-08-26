@@ -16,12 +16,6 @@
         <loc>https://blog.vac.fun/page/3/</loc>
     </url>
     <url>
-        <loc>https://blog.vac.fun/page/4/</loc>
-    </url>
-    <url>
-        <loc>https://blog.vac.fun/page/5/</loc>
-    </url>
-    <url>
         <loc>https://blog.vac.fun/posts/</loc>
     </url>
     <url>
@@ -179,6 +173,14 @@
         <lastmod>2022-08-22</lastmod>
     </url>
     <url>
+        <loc>https://blog.vac.fun/prism/20220826-koehntopp/</loc>
+        <lastmod>2022-08-26</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220826-lwn/</loc>
+        <lastmod>2022-08-26</lastmod>
+    </url>
+    <url>
         <loc>https://blog.vac.fun/prism/page/1/</loc>
     </url>
     <url>
@@ -186,11 +188,5 @@
     </url>
     <url>
         <loc>https://blog.vac.fun/prism/page/3/</loc>
-    </url>
-    <url>
-        <loc>https://blog.vac.fun/prism/page/4/</loc>
-    </url>
-    <url>
-        <loc>https://blog.vac.fun/prism/page/5/</loc>
     </url>
 </urlset>
