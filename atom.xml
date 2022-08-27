@@ -4,8 +4,24 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-26T00:00:00+00:00</updated>
+	<updated>2022-08-27T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Ivan Velichko: Reverse Proxy, HTTP Keep-Alive Timeout, and sporadic HTTP 502s - How HTTP Keep-Alive can cause TCP race condition</title>
+		<published>2022-08-27T00:00:00+00:00</published>
+		<updated>2022-08-27T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220827-iximiuz/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220827-iximiuz/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;HTTP Keep-Alive between a reverse proxy and an upstream server combined with some misfortunate downstream- and upstream-side timeout settings can make clients receiving HTTP 502s from the proxy.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;HTTP_persistent_connection&quot;&gt;HTTP persistent connection&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;reverse-proxy-http-keep-alive-and-502s&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.tessian.com&#x2F;blog&#x2F;how-to-fix-http-502-errors&#x2F;&quot;&gt;A Solution to HTTP 502 Errors with AWS ALB&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Die wunderbare Welt von Isotopp: fork, exec, wait and exit</title>
 		<published>2022-08-26T00:00:00+00:00</published>
@@ -451,25 +467,6 @@
 &lt;li&gt;profiling&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pythonspeed.com&#x2F;articles&#x2F;logging-vs-profiling&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Super Fast Python: How to Choose the Right Python Concurrency API</title>
-		<published>2022-08-10T00:00:00+00:00</published>
-		<updated>2022-08-10T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220810-superfastpython/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220810-superfastpython/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Coroutine-based&lt;&#x2F;li&gt;
-&lt;li&gt;Thread-based&lt;&#x2F;li&gt;
-&lt;li&gt;Process-based&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Global_interpreter_lock&quot;&gt;Global interpreter lock&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;superfastpython.com&#x2F;python-concurrency-choose-api&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>
