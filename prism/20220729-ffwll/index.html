@@ -116,8 +116,7 @@
 <p>Speed doesn’t matter if you don’t understand the design anymore in the future, you need simplicity first.</p>
 <p>Speed doesn’t matter if all you’re doing is crashing faster. You need correctness before speed.</p>
 <p>Finally speed doesn’t matter where users don’t notice it. If you micro-optimize a path that doesn’t even show up in real world workloads users care about, all you’ve done is wasted time and committed to future maintenance pain for no gain at all.</p>
-</blockquote>
-<blockquote>
+<hr />
 <p><strong>Protect Data, not Code</strong></p>
 <p>A common pitfall is to design locking by looking at the code, perhaps just sprinkling locking calls over it until it feels like it’s good enough. The right approach is to design locking for the data structures, which means specifying for each structure or member field how it is protected against concurrent changes, and how the necessary amount of consistency is maintained across the entire data structure with rules that stay invariant, irrespective of how code operates on the data.</p>
 </blockquote>

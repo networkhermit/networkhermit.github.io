@@ -92,6 +92,8 @@
             <blockquote>
 <p>One thing that does not make shell scripts slow is the basic Unix commands themselves that you use in shell scripts. Those Unix commands generally perform pretty well, and their processing speed is probably close to the fastest you could get if you wrote what they're doing in your language of choice. Your program is unlikely to improve on the sorting performance of sort, the text transformation performance of sed, and so on. And the shell itself generally performs internal things more than fast enough for most cases. Instead, <strong>what causes shell scripts problems is the cost of starting separate programs</strong>. Sed may transform text very fast and sort may sort data very fast, but starting sed or sort is comparatively expensive. The more times you start programs and the more programs you have to start for each thing you want to do, the slower your shell script will run.</p>
 </blockquote>
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/ShellScriptsAndSpeed">Link</a></p>
+<hr />
 <ul>
 <li>
 <p><a href="https://en.wikipedia.org/wiki/Shell_builtin">Shell builtin</a></p>
@@ -103,8 +105,6 @@
 <p><a href="https://en.wikipedia.org/wiki/BusyBox#Single_binary">BusyBox</a></p>
 </li>
 </ul>
-<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/ShellScriptsAndSpeed">Link</a></p>
-<hr />
 <blockquote>
 <p>the shell is not a general purpose language, it's a special purpose language for running commands</p>
 </blockquote>
