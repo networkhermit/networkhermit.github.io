@@ -3,6 +3,12 @@ date = "2022-08-26"
 title = "Die wunderbare Welt von Isotopp: fork, exec, wait and exit"
 +++
 
+[Link](https://blog.koehntopp.info/2020/12/28/fork-exec-wait-and-exit.html)
+
+[How to on starting processes (mostly in Linux)](https://iximiuz.com/en/posts/how-to-on-processes/)
+
+---
+
 * [fork (system call)](https://en.wikipedia.org/wiki/Fork_(system_call))
 
 * [exec (system call)](https://en.wikipedia.org/wiki/Exec_(system_call))
@@ -34,7 +40,3 @@ title = "Die wunderbare Welt von Isotopp: fork, exec, wait and exit"
 * [Zombie process](https://en.wikipedia.org/wiki/Zombie_process)
 
 * [Process group](https://en.wikipedia.org/wiki/Process_group)
-
-[Link](https://blog.koehntopp.info/2020/12/28/fork-exec-wait-and-exit.html)
-
-[How to on starting processes (mostly in Linux)](https://iximiuz.com/en/posts/how-to-on-processes/)

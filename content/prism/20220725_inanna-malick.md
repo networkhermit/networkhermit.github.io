@@ -26,6 +26,12 @@ title = "Inanna Malick Blog: Elegant and performant recursion in Rust"
 > ]
 > ```
 
+[Link](https://recursion.wtf/posts/rust_schemes/)
+
+[Fully generic recursion in Rust](https://recursion.wtf/posts/rust_schemes_2/)
+
+---
+
 * Cache locality: [Locality of reference](https://en.wikipedia.org/wiki/Locality_of_reference)
 
 * [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting)
@@ -33,7 +39,3 @@ title = "Inanna Malick Blog: Elegant and performant recursion in Rust"
 * [Functor (functional programming)](https://en.wikipedia.org/wiki/Functor_(functional_programming))
 
 * [Property testing](https://en.wikipedia.org/wiki/Property_testing)
-
-[Link](https://recursion.wtf/posts/rust_schemes/)
-
-[Fully generic recursion in Rust](https://recursion.wtf/posts/rust_schemes_2/)

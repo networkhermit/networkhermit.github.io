@@ -14,11 +14,15 @@ title = "Isovalent Blog: Cilium Service Mesh – Everything You Need to Know"
 > * **Observability & Tracing**: Observability in the form of tracing and metrics is critical to understanding, monitoring, and troubleshooting application stability, performance, and availability.
 >
 > * **Transparency**: The functionality must be available to applications in a transparent manner, i.e. without requiring to change application code.
-
+>
+> ---
+>
 > **eBPF-Native When Possible**
 >
 > If eBPF is not capable of processing the request, for example when connections need to be spliced, requests need to be rate-limited, or TLS termination is required, the handling falls back to Envoy running in either a sidecar or sidecar-free model. This gives the best of both worlds – eBPF processing when possible for increased performance and reduced latency, with the ability always to fall back to Envoy as needed.
-
+>
+> ---
+>
 > **mTLS for Any Network Protocol**
 >
 > By splitting the authentication handshake from the payload transport, we can use TLS 1.3 as the handshake protocol while relying on IPsec or WireGuard as a better-performing, more transparent payload channel.
