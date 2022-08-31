@@ -16,7 +16,7 @@ title = "Inanna Malick Blog: Elegant and performant recursion in Rust"
 > }
 > ```
 > * cache-local reverse topological fold
-> ```text
+> ```txt
 > [
 > idx_0:    Mul(idx_1, idx_2)
 > idx_1:    LiteralInt(1)

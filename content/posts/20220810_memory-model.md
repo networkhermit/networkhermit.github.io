@@ -39,11 +39,16 @@ memory consistency model:
 * processor optimizations: largely revolves around how writes are propagated to other threads
 * compiler optimizations: largely revolves around reordering of instructions
 
-### Data Race, Happens-before
+### Data Race ∈ Race Condition
 
 > Every race involves at least one write: two uncoordinated reads do not race with each other.
 
-> The total order over all the synchronizing operations is separate from the happens-before relationship. It is *not* true that there is a happens-before edge in one direction or the other between every lock, unlock, or volatile variable access in a program: you only get a happens-before edge from a write to a read that observes the write.
+### SCPV (sequential consistency per variable), AT (Atomicity), HB (Happens-before), PB (Propagates-before)
+
+> The total order over all the synchronizing operations is separate from the happens-before
+> relationship. It is *not* true that there is a happens-before edge in one direction or the other
+> between every lock, unlock, or volatile variable access in a program: you only get a
+> happens-before edge from a write to a read that observes the write.
 
 ### 关键原子指令
 
@@ -60,25 +65,36 @@ memory consistency model:
 * Relaxed Consistency: `ARM`
 * Data-Race-Free Sequential Consistency (DRF-SC): current consensus
 
-> The gap between what is allowed and what is observed makes for unfortunate future surprises: hardware implementing a stronger model than technically guaranteed encourages dependence on the stronger behavior and means that future, weaker hardware will break programs, validly or not.
+> The gap between what is allowed and what is observed makes for unfortunate future surprises:
+> hardware implementing a stronger model than technically guaranteed encourages dependence on the
+> stronger behavior and means that future, weaker hardware will break programs, validly or not.
 
 ### 编程语言内存模型 (Concurrency)
 
-> All modern hardware guarantees coherence, which can also be viewed as sequential consistency for the operations on a single memory location. It turns out that, because of program reordering during compilation, modern languages do not even provide coherence.
+> All modern hardware guarantees coherence, which can also be viewed as sequential consistency for
+> the operations on a single memory location. It turns out that, because of program reordering
+> during compilation, modern languages do not even provide coherence.
 
-> Coherence is easier for hardware to provide than for compilers because hardware can apply dynamic optimizations: it can adjust the optimization paths based on the exact addresses involved in a given sequence of memory reads and writes. In contrast, compilers can only apply static optimizations: they have to write out, ahead of time, an instruction sequence that will be correct no matter what addresses and values are involved.
+> Coherence is easier for hardware to provide than for compilers because hardware can apply dynamic
+> optimizations: it can adjust the optimization paths based on the exact addresses involved in a
+> given sequence of memory reads and writes. In contrast, compilers can only apply static
+> optimizations: they have to write out, ahead of time, an instruction sequence that will be correct
+> no matter what addresses and values are involved.
 
-> *Threads Cannot Be Implemented As a Library*: languages cannot be silent about the semantics of multithreaded execution.
+> *Threads Cannot Be Implemented As a Library*: languages cannot be silent about the semantics of
+> multithreaded execution.
 
 * DRF-SC
   * happens-before relation through synchronization operations
   * total order with interleaved execution
 * atomics (atomic variables/atomic operations)
   * non-synchronizing
-    * relaxed: for hiding races, provide no ordering, cannot be used to build new synchronization primitives
+    * relaxed: for hiding races, provide no ordering, cannot be used to build new synchronization
+      primitives
   * synchronizing (message receive/message send)
     * sequentially consistent (strong)
-    * acquire/release (weak): coherence-only, provide limited ordering, create happens-before relation but do not provide DRF-SC
+    * acquire/release (weak): coherence-only, provide limited ordering, create happens-before
+      relation but do not provide DRF-SC
 * memory barriers/fences
 * high-level synchronization mechanisms
   * semaphore (binary semaphore/counting semaphore)
@@ -104,4 +120,5 @@ memory consistency model:
 
 ## 写在最后
 
-> When it comes to programs with races, both programmers and compilers should remember the advice: don't be clever. (Clear is better than clever.)
+> When it comes to programs with races, both programmers and compilers should remember the advice:
+> don't be clever. (Clear is better than clever.)
