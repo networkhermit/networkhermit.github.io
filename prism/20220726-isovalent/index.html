@@ -15,7 +15,7 @@
 
     
     
-        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
     
 
     
@@ -74,13 +74,13 @@
     </div>
 
 
-            
                 <div class="meta">
-                    Posted on 2022-07-26
+                    
+                        Posted on <time>2022-07-26</time>
+                    
 
                     
                 </div>
-            
         </div>
 
         
@@ -93,27 +93,40 @@
 <p>Looking at the feature set of a service mesh today, it can be summarized as follows:</p>
 <ul>
 <li>
-<p><strong>Resilient Connectivity</strong>: Service to service communication must be possible across boundaries such as clouds, clusters, and premises. Communication must be resilient and fault tolerant.</p>
+<p><strong>Resilient Connectivity</strong>: Service to service communication must be possible across boundaries
+such as clouds, clusters, and premises. Communication must be resilient and fault tolerant.</p>
 </li>
 <li>
-<p><strong>L7 Traffic Management</strong>: Load balancing, rate limiting, and resiliency must be L7-aware (HTTP, REST, gRPC, WebSocket, …).</p>
+<p><strong>L7 Traffic Management</strong>: Load balancing, rate limiting, and resiliency must be L7-aware (HTTP,
+REST, gRPC, WebSocket, …).</p>
 </li>
 <li>
-<p><strong>Identity-based Security</strong>: Relying on network identifiers to achieve security is no longer sufficient, both the sending and receiving services must be able to authenticate each other based on identities instead of a network identifier.</p>
+<p><strong>Identity-based Security</strong>: Relying on network identifiers to achieve security is no longer
+sufficient, both the sending and receiving services must be able to authenticate each other
+based on identities instead of a network identifier.</p>
 </li>
 <li>
-<p><strong>Observability &amp; Tracing</strong>: Observability in the form of tracing and metrics is critical to understanding, monitoring, and troubleshooting application stability, performance, and availability.</p>
+<p><strong>Observability &amp; Tracing</strong>: Observability in the form of tracing and metrics is critical to
+understanding, monitoring, and troubleshooting application stability, performance, and
+availability.</p>
 </li>
 <li>
-<p><strong>Transparency</strong>: The functionality must be available to applications in a transparent manner, i.e. without requiring to change application code.</p>
+<p><strong>Transparency</strong>: The functionality must be available to applications in a transparent manner,
+i.e. without requiring to change application code.</p>
 </li>
 </ul>
 <hr />
 <p><strong>eBPF-Native When Possible</strong></p>
-<p>If eBPF is not capable of processing the request, for example when connections need to be spliced, requests need to be rate-limited, or TLS termination is required, the handling falls back to Envoy running in either a sidecar or sidecar-free model. This gives the best of both worlds – eBPF processing when possible for increased performance and reduced latency, with the ability always to fall back to Envoy as needed.</p>
+<p>If eBPF is not capable of processing the request, for example when connections need to be spliced,
+requests need to be rate-limited, or TLS termination is required, the handling falls back to Envoy
+running in either a sidecar or sidecar-free model. This gives the best of both worlds – eBPF
+processing when possible for increased performance and reduced latency, with the ability always to
+fall back to Envoy as needed.</p>
 <hr />
 <p><strong>mTLS for Any Network Protocol</strong></p>
-<p>By splitting the authentication handshake from the payload transport, we can use TLS 1.3 as the handshake protocol while relying on IPsec or WireGuard as a better-performing, more transparent payload channel.</p>
+<p>By splitting the authentication handshake from the payload transport, we can use TLS 1.3 as the
+handshake protocol while relying on IPsec or WireGuard as a better-performing, more transparent
+payload channel.</p>
 </blockquote>
 <p><a href="https://isovalent.com/blog/post/cilium-service-mesh/">Link</a></p>
 <p><a href="https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh/">How eBPF will solve Service Mesh – Goodbye Sidecars</a></p>

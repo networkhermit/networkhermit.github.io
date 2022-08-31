@@ -15,7 +15,7 @@
 
     
     
-        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
     
 
     
@@ -74,13 +74,13 @@
     </div>
 
 
-            
                 <div class="meta">
-                    Posted on 2022-08-17
+                    
+                        Posted on <time>2022-08-17</time>
+                    
 
                     
                 </div>
-            
         </div>
 
         
@@ -93,10 +93,12 @@
 <p><strong>Observation</strong></p>
 <ul>
 <li>
-<p>Developers using Go employ significantly more concurrency and synchronization constructs than in Java.</p>
+<p>Developers using Go employ significantly more concurrency and synchronization constructs than in
+Java.</p>
 </li>
 <li>
-<p>Developers using Go for programming microservices expose significantly more runtime concurrency than other languages such as Java, Python, and NodeJS used for the same purpose.</p>
+<p>Developers using Go for programming microservices expose significantly more runtime concurrency
+than other languages such as Java, Python, and NodeJS used for the same purpose.</p>
 </li>
 <li>
 <p>Transparent capture-by-reference of free variables in goroutines is a recipe for data races.</p>
@@ -105,26 +107,36 @@
 <p>Slices are highly confusing types that create subtle and hard to diagnose data races.</p>
 </li>
 <li>
-<p>Built-in maps in Go make them commonly used. The array-style syntax of map accesses provides a false illusion of disjoint accesses of elements. However, map implementation is thread-unsafe in Go causing frequent data races.</p>
+<p>Built-in maps in Go make them commonly used. The array-style syntax of map accesses provides a
+false illusion of disjoint accesses of elements. However, map implementation is thread-unsafe in
+Go causing frequent data races.</p>
 </li>
 <li>
-<p>Pass-by-value semantics are recommended in Go because it simplifies escape analysis and gives variables a better chance to be allocated on the stack, which reduces pressure on the garbage collector. Developers often err on the side of pass-by-value (or methods over values), which can cause non-trivial data races.</p>
+<p>Pass-by-value semantics are recommended in Go because it simplifies escape analysis and gives
+variables a better chance to be allocated on the stack, which reduces pressure on the garbage
+collector. Developers often err on the side of pass-by-value (or methods over values), which can
+cause non-trivial data races.</p>
 </li>
 <li>
-<p>Mixed use of message passing (channels) and shared memory makes code complex and susceptible to data races.</p>
+<p>Mixed use of message passing (channels) and shared memory makes code complex and susceptible to
+data races.</p>
 </li>
 <li>
-<p>Go offers more leeway in its group synchronization construct sync.WaitGroup. The number of participants is dynamic. Incorrect placement of Add and Done methods of a sync.WaitGroup lead to data races.</p>
+<p>Go offers more leeway in its group synchronization construct sync.WaitGroup. The number of
+participants is dynamic. Incorrect placement of Add and Done methods of a sync.WaitGroup lead to
+data races.</p>
 </li>
 <li>
-<p>Running tests in parallel for Go’s table-driven test suite idiom can often cause data races, either in the product or test code.</p>
+<p>Running tests in parallel for Go’s table-driven test suite idiom can often cause data races,
+either in the product or test code.</p>
 </li>
 <li>
 <p>Incorrect use of mutual exclusion primitives leads to data races.</p>
 </li>
 </ul>
 <p><strong>Remark</strong></p>
-<p>Future programming language designers should carefully weigh different language features and coding idioms with their potential to create common or arcane concurrency bugs.</p>
+<p>Future programming language designers should carefully weigh different language features and
+coding idioms with their potential to create common or arcane concurrency bugs.</p>
 </blockquote>
 <p><a href="https://arxiv.org/abs/2204.00764">Link</a></p>
 <p><a href="https://www.uber.com/blog/dynamic-data-race-detection-in-go-code/">Dynamic Data Race Detection in Go Code</a></p>
@@ -136,6 +148,9 @@
 </li>
 <li>
 <p><a href="https://en.wikipedia.org/wiki/Free_variables_and_bound_variables">Free variables and bound variables</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_value">Call by value</a></p>
 </li>
 </ul>
 <blockquote>

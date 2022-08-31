@@ -15,7 +15,7 @@
 
     
     
-        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
     
 
     
@@ -74,13 +74,13 @@
     </div>
 
 
-            
                 <div class="meta">
-                    Posted on 2022-08-04
+                    
+                        Posted on <time>2022-08-04</time>
+                    
 
                     
                 </div>
-            
         </div>
 
         
@@ -90,7 +90,9 @@
 
         <section class="body">
             <blockquote>
-<p>This part goes through a pile of locking patterns and designs, from most favourable and easiest to adjust and hence resulting in a long term maintainable code base, to the least favourable since hardest to ensure it works correctly and stays that way while the code evolves.</p>
+<p>This part goes through a pile of locking patterns and designs, from most favourable and easiest to
+adjust and hence resulting in a long term maintainable code base, to the least favourable since
+hardest to ensure it works correctly and stays that way while the code evolves.</p>
 <p><strong>Level 0: No Locking</strong></p>
 <ul>
 <li>Locking Pattern: Immutable State</li>
@@ -107,13 +109,21 @@
 <li>Locking Antipattern: Confusing Object Lifetime and Data Consistency</li>
 </ul>
 <p><strong>Level 2.5: Splitting Locks for Performance Reasons</strong></p>
-<p>We’ve looked at a pile of functional reasons for complicating the locking design, but sometimes you need to add more fine-grained locking for performance reasons. This is already getting dangerous, because it’s very tempting to tune some microbenchmark just because we can, or maybe delude ourselves that it will be needed in the future. Therefore only complicate your locking if:</p>
+<p>We’ve looked at a pile of functional reasons for complicating the locking design, but sometimes
+you need to add more fine-grained locking for performance reasons. This is already getting
+dangerous, because it’s very tempting to tune some microbenchmark just because we can, or maybe
+delude ourselves that it will be needed in the future. Therefore only complicate your locking if:</p>
 <ul>
-<li>You have actual real world benchmarks with workloads relevant to users that show measurable gains outside of statistical noise.</li>
-<li>You’ve fully exhausted architectural changes to outright avoid the overhead, like io_uring pre-registering file descriptors locally to avoid manipulating the file descriptor table.</li>
-<li>You’ve fully exhausted algorithm improvements like batching up operations to amortize locking overhead better.</li>
+<li>You have actual real world benchmarks with workloads relevant to users that show measurable
+gains outside of statistical noise.</li>
+<li>You’ve fully exhausted architectural changes to outright avoid the overhead, like io_uring
+pre-registering file descriptors locally to avoid manipulating the file descriptor table.</li>
+<li>You’ve fully exhausted algorithm improvements like batching up operations to amortize locking
+overhead better.</li>
 </ul>
-<p>Only then make your future maintenance pain guaranteed worse by applying more tricky locking than the bare minimum necessary for correctness. Still, go with the simplest approach, often converting a lock to its read-write variant is good enough.</p>
+<p>Only then make your future maintenance pain guaranteed worse by applying more tricky locking than
+the bare minimum necessary for correctness. Still, go with the simplest approach, often converting
+a lock to its read-write variant is good enough.</p>
 <p><strong>Level 3: Lockless Tricks</strong></p>
 <ul>
 <li>Locking Antipattern: Using RCU</li>
@@ -122,7 +132,8 @@
 <li>Locking Antipattern: Memory Barriers</li>
 </ul>
 <p><strong>Closing Thoughts</strong></p>
-<p>Simple, dumb locking is good locking, since with that you have a fighting chance to make it correct locking.</p>
+<p>Simple, dumb locking is good locking, since with that you have a fighting chance to make it
+correct locking.</p>
 </blockquote>
 <p><a href="https://blog.ffwll.ch/2022/08/locking-hierarchy.html">Link</a></p>
 <p><a href="https://lwn.net/Articles/844224/">An introduction to lockless algorithms</a></p>

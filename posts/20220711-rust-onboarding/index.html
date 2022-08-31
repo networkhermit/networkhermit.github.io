@@ -15,7 +15,7 @@
 
     
     
-        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
     
 
     
@@ -74,13 +74,13 @@
     </div>
 
 
-            
                 <div class="meta">
-                    Posted on 2022-07-11
+                    
+                        Posted on <time>2022-07-11</time>
+                    
 
                     
                 </div>
-            
         </div>
 
         
@@ -92,7 +92,9 @@
             <h2 id="qian-yan">前言</h2>
 <p>前段时间由于项目需求短期内上手了 Rust，也顺便逛了一圈 Rust 的生态，这里记录一下学习的经验。</p>
 <h2 id="shi-yao-shi-rust">什么是 Rust？</h2>
-<p>一门<a href="https://en.wikipedia.org/wiki/Programming_language">编程语言</a>, <em><a href="https://en.wikipedia.org/wiki/Memory_safety">memory safe</a> without <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">garbage collection</a></em>, <em>fearless <a href="https://en.wikipedia.org/wiki/Concurrent_computing">concurrency</a> without <a href="https://en.wikipedia.org/wiki/Race_condition#Data_race">data race</a></em></p>
+<p>一门<a href="https://en.wikipedia.org/wiki/Programming_language">编程语言</a>,
+<em><a href="https://en.wikipedia.org/wiki/Memory_safety">memory safe</a> without <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">garbage collection</a></em>,
+<em>fearless <a href="https://en.wikipedia.org/wiki/Concurrent_computing">concurrency</a> without <a href="https://en.wikipedia.org/wiki/Race_condition#Data_race">data race</a></em></p>
 <blockquote>
 <p>Technology from the past come to save the future from itself. - Graydon Hoare (Rust 创始人)</p>
 </blockquote>
@@ -101,12 +103,14 @@
 <li><a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">维基百科</a></li>
 <li><a href="https://github.com/rust-lang/rust">GitHub</a></li>
 <li><a href="https://doc.rust-lang.org/stable/reference/influences.html">Influenced by</a></li>
+<li><a href="https://plv.mpi-sws.org/rustbelt/">RustBelt</a></li>
 </ul>
 <p>和 <a href="https://en.wikipedia.org/wiki/Go_(programming_language)">Go</a> 一样，我觉得它们都很现代。</p>
 <p>如果听腻了 <code>Performance</code>, <code>Reliability</code>, <code>Productivity</code>，我告诉你一个我在 Rust 上学到的新词：</p>
 <p><em><strong>Ergonomic</strong></em></p>
 <blockquote>
-<p><strong>Ergonomics</strong> is a measure of the friction you experience when trying to get things done with a tool.</p>
+<p><strong>Ergonomics</strong> is a measure of the friction you experience when trying to get things done with a
+tool.</p>
 </blockquote>
 <ul>
 <li><a href="https://blog.rust-lang.org/2017/03/02/lang-ergonomics.html">Rust's language ergonomics initiative</a></li>
@@ -118,7 +122,8 @@
 <li><a href="https://rust-lang.github.io/rfcs/0141-lifetime-elision.html">Rust RFC 0141 - lifetime elision</a></li>
 </ul>
 <blockquote>
-<p>This proposal will improve the <strong>ergonomics</strong> of the Rust language for development of command-line tools and &quot;back end&quot; / &quot;computational kernel&quot; programs.</p>
+<p>This proposal will improve the <strong>ergonomics</strong> of the Rust language for development of command-line
+tools and &quot;back end&quot; / &quot;computational kernel&quot; programs.</p>
 </blockquote>
 <ul>
 <li><a href="https://rust-lang.github.io/rfcs/1869-eprintln.html">Rust RFC 1869 - eprintln</a></li>
@@ -136,7 +141,8 @@
 <li><a href="https://rust-lang.github.io/rfcs/2394-async_await.html">Rust RFC 2394 - async await</a></li>
 </ul>
 <blockquote>
-<p>The main motivation for this RFC is improving readability, <strong>ergonomics</strong>, and reducing paper cuts.</p>
+<p>The main motivation for this RFC is improving readability, <strong>ergonomics</strong>, and reducing paper
+cuts.</p>
 </blockquote>
 <ul>
 <li><a href="https://rust-lang.github.io/rfcs/2497-if-let-chains.html">Rust RFC 2497 - if let chains</a></li>
@@ -149,7 +155,8 @@
 </ul>
 <blockquote>
 <p>async fn(Request) -&gt; Result&lt;Response, Error&gt;</p>
-<p>Tower is a library of modular and reusable components for building robust networking clients and servers.</p>
+<p>Tower is a library of modular and reusable components for building robust networking clients and
+servers.</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/tower-rs/tower">Tower</a></li>
@@ -179,8 +186,9 @@
 </blockquote>
 </li>
 </ul>
-<p>让自己对这门语言关键的概念有个印象，避免刻意套用以往的编程经验，试着去认识 Rust 的独特之处，入个门没那么难。把 <code>rustlings</code> 的全部小练习完成后，就可以算是初步入门了，下面是我通关时出现的彩蛋 <sup class="footnote-reference"><a href="#1">1</a></sup>。</p>
-<pre data-lang="text" style="background-color:#2e3440;color:#d8dee9;" class="language-text "><code class="language-text" data-lang="text"><span>🎉 All exercises completed! 🎉
+<p>让自己对这门语言关键的概念有个印象，避免刻意套用以往的编程经验，试着去认识 Rust 的独特之处，入个门没
+那么难。把 <code>rustlings</code> 的全部小练习完成后，就可以算是初步入门了，下面是我通关时出现的彩蛋 <sup class="footnote-reference"><a href="#1">1</a></sup>。</p>
+<pre data-lang="txt" style="background-color:#2e3440;color:#d8dee9;" class="language-txt "><code class="language-txt" data-lang="txt"><span>🎉 All exercises completed! 🎉
 </span><span>
 </span><span>+----------------------------------------------------+
 </span><span>|          You made it to the Fe-nish line!          |
@@ -216,7 +224,8 @@
 <p>Language Server 支持: <a href="https://rust-analyzer.github.io">rust-analyzer</a></p>
 </li>
 <li>
-<p>代码质量必备：<a href="https://github.com/rust-lang/rustfmt">rustfmt</a>, <a href="https://github.com/rust-lang/rust-clippy">clippy</a>, 使用如下配置</p>
+<p>代码质量必备：<a href="https://github.com/rust-lang/rustfmt">rustfmt</a>, <a href="https://github.com/rust-lang/rust-clippy">clippy</a>,
+使用如下配置</p>
 </li>
 </ul>
 <pre data-lang="json" style="background-color:#2e3440;color:#d8dee9;" class="language-json "><code class="language-json" data-lang="json"><span>{
@@ -231,20 +240,26 @@
 <p>依赖安全：<a href="https://github.com/RustSec/cargo-audit">cargo-audit</a>, <a href="https://github.com/kbknapp/cargo-outdated">cargo-outdated</a></p>
 </li>
 <li>
-<p>额外推荐：<a href="https://github.com/rui314/mold">mold</a>（一款现代链接器）, <a href="https://github.com/mozilla/sccache">sccache</a>（编译缓存）</p>
+<p>额外推荐：<a href="https://github.com/rui314/mold">mold</a>（一款现代链接器）, <a href="https://github.com/mozilla/sccache">sccache</a>
+（编译缓存）</p>
 </li>
 </ul>
 <h2 id="rust-shi-ji-kai-fa">Rust 实际开发</h2>
-<p>这个阶段是最难熬的，除了善用<a href="https://en.wikipedia.org/wiki/Comparison_of_web_search_engines">搜索引擎</a>和 <a href="https://stackoverflow.com">Stack Overflow</a>，这里再增加一些参考资源：</p>
+<p>这个阶段是最难熬的，除了善用<a href="https://en.wikipedia.org/wiki/Comparison_of_web_search_engines">搜索引擎</a>
+和 <a href="https://stackoverflow.com">Stack Overflow</a>，这里再增加一些参考资源：</p>
 <ul>
 <li><a href="https://doc.rust-lang.org/stable/std/">std</a>: Rust 标准库</li>
 <li><a href="https://crates.io">crates.io</a> 和 <a href="https://docs.rs">docs.rs</a>: 官方软件仓库及其在线文档</li>
 <li><a href="https://rust-lang.github.io/api-guidelines/">api guidelines</a>: Rust API 风格指南</li>
 <li><a href="https://cheats.rs">cheats.rs</a>: Rust 速查表</li>
 </ul>
-<p>适应 Rust 特有的 <code>Ownership</code> 和 <code>Borrow Checker</code> 需要时间去磨合，根据项目需求着手一些实际的功能，模仿和延伸接触到的 demo 或例子，关注数据结构、模块划分、错误处理、并发模型和设计模式，花上点心思不用多久就能上手 Rust 开发。</p>
+<p>适应 Rust 特有的 <code>Ownership</code> 和 <code>Borrow Checker</code> 需要时间去磨合，根据项目需求着手一些实际的功能，模
+仿和延伸接触到的 demo 或例子，关注数据结构、模块划分、错误处理、并发模型和设计模式，花上点心思不用多
+久就能上手 Rust 开发。</p>
 <h2 id="rust-sheng-tai-bei-jing">Rust 生态背景</h2>
-<p>我一直比较排斥孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史背景和演进过程，这对你长期的技术成长大有裨益。比如你可能不知道 Rust 最初也支持 <a href="https://rust-lang.github.io/rfcs/0230-remove-runtime.html">M:N (hybrid) threading model</a>，以及 Go 语言和 <a href="https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs">Plan 9</a> 之间惊人的联系。</p>
+<p>我一直比较排斥孤立地看待一门编程语言，了解这门语言所围绕的生态，认识它的历史背景和演进过程，这对你长
+期的技术成长大有裨益。比如你可能不知道 Rust 最初也支持 <a href="https://rust-lang.github.io/rfcs/0230-remove-runtime.html">M:N (hybrid) threading model</a>，
+以及 Go 语言和 <a href="https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs">Plan 9</a> 之间惊人的联系。</p>
 <p>下面是我推荐的一些信息来源：</p>
 <ul>
 <li><a href="https://blog.rust-lang.org">Rust Blog</a></li>
@@ -255,13 +270,19 @@
 <h2 id="rust-jin-jie">Rust 进阶</h2>
 <p>不管最终能达到什么深度，只要是坚持涉猎都值得被认可：</p>
 <ul>
-<li>源码阅读: <a href="https://github.com/rust-lang/rust">rust</a>, <a href="https://github.com/tokio-rs/mio">mio</a>/<a href="https://github.com/tokio-rs/io-uring">io-uring</a>/<a href="https://github.com/aya-rs/aya">aya</a>, <a href="https://github.com/tokio-rs/tokio">tokio</a>/<a href="https://github.com/rayon-rs/rayon">rayon</a>, <a href="https://github.com/tokio-rs/axum">axum</a>/<a href="https://github.com/hyperium/tonic">tonic</a>, <a href="https://github.com/tokio-rs/tracing">tracing</a></li>
+<li>源码阅读: <a href="https://github.com/rust-lang/rust">rust</a>,
+<a href="https://github.com/tokio-rs/mio">mio</a>/<a href="https://github.com/tokio-rs/io-uring">io-uring</a>/<a href="https://github.com/aya-rs/aya">aya</a>,
+<a href="https://github.com/tokio-rs/tokio">tokio</a>/<a href="https://github.com/rayon-rs/rayon">rayon</a>,
+<a href="https://github.com/tokio-rs/axum">axum</a>/<a href="https://github.com/hyperium/tonic">tonic</a>,
+<a href="https://github.com/tokio-rs/tracing">tracing</a>/<a href="https://github.com/open-telemetry/opentelemetry-rust">opentelemetry</a></li>
 <li><a href="https://doc.rust-lang.org/stable/reference/">reference</a>: Rust 语言参考</li>
 <li><a href="https://doc.rust-lang.org/stable/nomicon/">nomicon</a>: <code>The Dark Arts of Advanced and Unsafe Rust Programming</code></li>
 <li>网络协议：<a href="https://www.rfc-editor.org/rfc/rfc9293.html">Transmission Control Protocol (TCP)</a></li>
 </ul>
 <h2 id="xie-zai-zui-hou">写在最后</h2>
-<p>技术圈里没有事物是完美的，Rust 同样也不是 <a href="https://en.wikipedia.org/wiki/No_Silver_Bullet">Silver Bullet</a> —— <em>Safe Rust</em> 并不能避免死锁、竞争条件、内存泄漏，而且 <em>Unsafe Rust</em> 的可靠性依赖于人为约束，<em>Sync Rust</em> 和 <em>Async Rust</em> 分化的生态具有迷惑性，但很多技术都得看场景和环境，不要陷入无谓的语言之争。</p>
+<p>技术圈里没有事物是完美的，Rust 同样也不是 <a href="https://en.wikipedia.org/wiki/No_Silver_Bullet">Silver Bullet</a> ——
+<em>Safe Rust</em> 并不能避免死锁、竞争条件、内存泄漏，而且 <em>Unsafe Rust</em> 的可靠性依赖于人为约束，<em>Sync
+Rust</em> 和 <em>Async Rust</em> 分化的生态具有迷惑性，但很多技术都得看场景和环境，不要陷入无谓的语言之争。</p>
 <p>我用一句古文结束这篇博客：</p>
 <p><strong>“它山之石，可以攻玉”</strong></p>
 <hr />

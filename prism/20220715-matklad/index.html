@@ -15,7 +15,7 @@
 
     
     
-        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
     
 
     
@@ -74,13 +74,13 @@
     </div>
 
 
-            
                 <div class="meta">
-                    Posted on 2022-07-15
+                    
+                        Posted on <time>2022-07-15</time>
+                    
 
                     
                 </div>
-            
         </div>
 
         
@@ -90,12 +90,19 @@
 
         <section class="body">
             <blockquote>
-<p>The (big) ball on the left is rust-analyzer — a language server. The similarly sized ball on the right is VS Code — an editor. And the small ball in the center is the code to glue them together, <em>including</em> LSP implementations.</p>
-<p>That code is relatively and absolutely tiny. The codebases behind either the language server or the editor are enormous.</p>
+<p>The (big) ball on the left is rust-analyzer — a language server. The similarly sized ball on the
+right is VS Code — an editor. And the small ball in the center is the code to glue them together,
+<em>including</em> LSP implementations.</p>
+<p>That code is relatively and absolutely tiny. The codebases behind either the language server or
+the editor are enormous.</p>
 <hr />
-<p>To sum the above succinctly, the problem with decent IDE support was not of N * M, but rather of an inadequate equilibrium of a two-sided market.</p>
-<p>Language vendors were reluctant to create language servers, because it was hard, the demand was low (= no competition from other languages), and, even if one creates a language server, one would find a dozen editors absolutely unprepared to serve as a host for a smart server.</p>
-<p>On the editor’s side, there was little incentive for adding high-level APIs needed for IDEs, because there were no potential providers for those APIs.</p>
+<p>To sum the above succinctly, the problem with decent IDE support was not of N * M, but rather of
+an inadequate equilibrium of a two-sided market.</p>
+<p>Language vendors were reluctant to create language servers, because it was hard, the demand was
+low (= no competition from other languages), and, even if one creates a language server, one would
+find a dozen editors absolutely unprepared to serve as a host for a smart server.</p>
+<p>On the editor’s side, there was little incentive for adding high-level APIs needed for IDEs,
+because there were no potential providers for those APIs.</p>
 <hr />
 <p>Action Item for Everyone: Please demand better IDE support!</p>
 </blockquote>

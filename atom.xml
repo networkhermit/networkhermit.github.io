@@ -4,16 +4,33 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-27T00:00:00+00:00</updated>
+	<updated>2022-08-31T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
 	<entry xml:lang="en">
-		<title>Ivan Velichko: Reverse Proxy, HTTP Keep-Alive Timeout, and sporadic HTTP 502s - How HTTP Keep-Alive can cause TCP race condition</title>
+		<title>ASPLOS Paper: Frightening Small Children and Disconcerting Grown-ups: Concurrency in the Linux Kernel</title>
+		<published>2022-08-31T00:00:00+00:00</published>
+		<updated>2022-08-31T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220831-asplos/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220831-asplos/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;All in all, our LK model specifies the cumulative effect of a language-level model (the subset of
+C specific to the LK) and the hardware models targeted by the LK.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;3173162.3177156&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1608.07531&quot;&gt;Syntax and semantics of the weak consistency model specification language cat&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1308.6810&quot;&gt;Herding Cats: Modelling, Simulation, Testing, and Data Mining for Weak Memory&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Ivan Velichko: Reverse Proxy, HTTP Keep-Alive Timeout, and sporadic HTTP 502s</title>
 		<published>2022-08-27T00:00:00+00:00</published>
 		<updated>2022-08-27T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220827-iximiuz/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220827-iximiuz/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;HTTP Keep-Alive between a reverse proxy and an upstream server combined with some misfortunate downstream- and upstream-side timeout settings can make clients receiving HTTP 502s from the proxy.&lt;&#x2F;p&gt;
+&lt;p&gt;HTTP Keep-Alive between a reverse proxy and an upstream server combined with some misfortunate
+downstream- and upstream-side timeout settings can make clients receiving HTTP 502s from the
+proxy.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;reverse-proxy-http-keep-alive-and-502s&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.tessian.com&#x2F;blog&#x2F;how-to-fix-http-502-errors&#x2F;&quot;&gt;A Solution to HTTP 502 Errors with AWS ALB&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -109,25 +126,34 @@
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Seccomp&quot;&gt;seccomp&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;OCI &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;runtime-spec&quot;&gt;Runtime&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;image-spec&quot;&gt;Image&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;distribution-spec&quot;&gt;Distribution&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;OCI &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;runtime-spec&quot;&gt;Runtime&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;image-spec&quot;&gt;Image&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;distribution-spec&quot;&gt;Distribution&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kubernetes&#x2F;cri-api&quot;&gt;CRI&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;containernetworking&#x2F;cni&quot;&gt;CNI&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;container-storage-interface&#x2F;spec&quot;&gt;CSI&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kubernetes&#x2F;cri-api&quot;&gt;CRI&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;containernetworking&#x2F;cni&quot;&gt;CNI&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;container-storage-interface&#x2F;spec&quot;&gt;CSI&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Bell Labs: Notes on Programming in C</title>
+		<title>Cat-v Archive: Notes on Programming in C</title>
 		<published>2022-08-22T00:00:00+00:00</published>
 		<updated>2022-08-22T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220822-cat-v/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220822-cat-v/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Rule 1. You can&#x27;t tell where a program is going to spend its time. Bottlenecks occur in surprising places, so don&#x27;t try to second guess and put in a speed hack until you&#x27;ve proven that&#x27;s where the bottleneck is.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 2. Measure. Don&#x27;t tune for speed until you&#x27;ve measured, and even then don&#x27;t unless one part of the code overwhelms the rest.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 3. Fancy algorithms are slow when n is small, and n is usually small. Fancy algorithms have big constants. Until you know that n is frequently going to be big, don&#x27;t get fancy. (Even if n does get big, use Rule 2 first.) For example, binary trees are always faster than splay trees for workaday problems.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 4. Fancy algorithms are buggier than simple ones, and they&#x27;re much harder to implement. Use simple algorithms as well as simple data structures.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 1. You can&#x27;t tell where a program is going to spend its time. Bottlenecks occur in surprising
+places, so don&#x27;t try to second guess and put in a speed hack until you&#x27;ve proven that&#x27;s where the
+bottleneck is.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 2. Measure. Don&#x27;t tune for speed until you&#x27;ve measured, and even then don&#x27;t unless one part
+of the code overwhelms the rest.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 3. Fancy algorithms are slow when n is small, and n is usually small. Fancy algorithms have
+big constants. Until you know that n is frequently going to be big, don&#x27;t get fancy. (Even if n
+does get big, use Rule 2 first.) For example, binary trees are always faster than splay trees for
+workaday problems.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 4. Fancy algorithms are buggier than simple ones, and they&#x27;re much harder to implement. Use
+simple algorithms as well as simple data structures.&lt;&#x2F;p&gt;
 &lt;p&gt;The following data structures are a complete list for almost all practical programs:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;array&lt;&#x2F;li&gt;
@@ -135,8 +161,12 @@
 &lt;li&gt;hash table&lt;&#x2F;li&gt;
 &lt;li&gt;binary tree&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;Of course, you must also be prepared to collect these into compound data structures. For instance, a symbol table might be implemented as a hash table containing linked lists of arrays of characters.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 5. Data dominates. If you&#x27;ve chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming.&lt;&#x2F;p&gt;
+&lt;p&gt;Of course, you must also be prepared to collect these into compound data structures. For instance,
+a symbol table might be implemented as a hash table containing linked lists of arrays of
+characters.&lt;&#x2F;p&gt;
+&lt;p&gt;Rule 5. Data dominates. If you&#x27;ve chosen the right data structures and organized things well, the
+algorithms will almost always be self-evident. Data structures, not algorithms, are central to
+programming.&lt;&#x2F;p&gt;
 &lt;p&gt;Rule 6. There is no Rule 6.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.cat-v.org&#x2F;bell_labs&#x2F;pikestyle&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -149,9 +179,22 @@
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220819-lwn/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220819-lwn/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Calling into the kernel is not like calling a normal function; a special trap into the kernel must be triggered with the system-call arguments placed as the kernel expects. At a minimum, the system-call &amp;quot;wrapper&amp;quot; provided by the C library must set up this trap. In many cases, more work than that is required; the functionality provided by the kernel does not always exactly match what the application (or the relevant standards) will expect. Features like POSIX threads further complicate the situation. The end result is that a lot of work can be happening between the application and the kernel when a system call is made. Doing that work is, in most cases, delegated to the C library.&lt;&#x2F;p&gt;
+&lt;p&gt;Calling into the kernel is not like calling a normal function; a special trap into the kernel
+must be triggered with the system-call arguments placed as the kernel expects. At a minimum, the
+system-call &amp;quot;wrapper&amp;quot; provided by the C library must set up this trap. In many cases, more work
+than that is required; the functionality provided by the kernel does not always exactly match
+what the application (or the relevant standards) will expect. Features like POSIX threads further
+complicate the situation. The end result is that a lot of work can be happening between the
+application and the kernel when a system call is made. Doing that work is, in most cases,
+delegated to the C library.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;Free-software projects tend to value their independence; their developers have little time for others who would tell them what to do. But few projects truly stand alone. Whenever developers decide to cooperate more fully with related projects, the result tends to be better software for the community as a whole. The design and delivery of system calls would appear to be one of those places where a higher level of communication and cooperation would be a healthy thing. That, rather than trying to absorb low-level wrappers into the kernel project, seems like the proper long-term solution to this problem.&lt;&#x2F;p&gt;
+&lt;p&gt;Free-software projects tend to value their independence; their developers have little time for
+others who would tell them what to do. But few projects truly stand alone. Whenever developers
+decide to cooperate more fully with related projects, the result tends to be better software for
+the community as a whole. The design and delivery of system calls would appear to be one of those
+places where a higher level of communication and cooperation would be a healthy thing. That,
+rather than trying to absorb low-level wrappers into the kernel project, seems like the proper
+long-term solution to this problem.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;771441&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
@@ -163,7 +206,8 @@
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220819-tokio/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220819-tokio/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Effectively developing systems and operating them in production requires visibility into their behavior at runtime.&lt;&#x2F;p&gt;
+&lt;p&gt;Effectively developing systems and operating them in production requires visibility into their
+behavior at runtime.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2019-08-tracing&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2021-12-announcing-tokio-console&quot;&gt;Announcing Tokio Console 0.1&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -177,9 +221,12 @@
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220818-linusw/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220818-linusw/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Rust is attempting to raise the abstraction in the programming language and ultimately to join computer science and software engineering into one single discipline, an ambition that has been around since these disciplines were created.&lt;&#x2F;p&gt;
+&lt;p&gt;Rust is attempting to raise the abstraction in the programming language and ultimately to join
+computer science and software engineering into one single discipline, an ambition that has been
+around since these disciplines were created.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;What is unique about Rust is that it fuses “impure” functional programming with imperative programming, and compiled to target machine code from day one.&lt;&#x2F;p&gt;
+&lt;p&gt;What is unique about Rust is that it fuses “impure” functional programming with imperative
+programming, and compiled to target machine code from day one.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;people.kernel.org&#x2F;linusw&#x2F;rust-in-perspective&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
@@ -206,10 +253,13 @@
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&#x2F;blog&#x2F;2020-04-preemption&quot;&gt;Reducing tail latencies with automatic cooperative task yielding&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Async code should never spend a long time without reaching an .await.&lt;&#x2F;p&gt;
-&lt;p&gt;A good rule of thumb is no more than 10 to 100 microseconds between each .await. That said, this depends on the kind of application you are writing.&lt;&#x2F;p&gt;
+&lt;p&gt;A good rule of thumb is no more than 10 to 100 microseconds between each .await. That said, this
+depends on the kind of application you are writing.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ryhl.io&#x2F;blog&#x2F;async-what-is-blocking&#x2F;&quot;&gt;Async: What is blocking?&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Rust RFC &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;0230-remove-runtime.html&quot;&gt;0230 - remove runtime&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2394-async_await.html&quot;&gt;2394 - async await&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2592-futures.html&quot;&gt;2592 - futures&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Rust RFC &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;0230-remove-runtime.html&quot;&gt;0230 - remove runtime&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2394-async_await.html&quot;&gt;2394 - async&#x2F;await&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rfcs&#x2F;2592-futures.html&quot;&gt;2592 - futures&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -294,7 +344,8 @@
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220817-lwn/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220817-lwn/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;The odds of deployment failure approach 100% as the number of distinct change sets approaches seven.&lt;&#x2F;p&gt;
+&lt;p&gt;The odds of deployment failure approach 100% as the number of distinct change sets approaches
+seven.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If three or more things have gone wrong, roll back.&lt;&#x2F;p&gt;
@@ -321,8 +372,12 @@
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Near Memory&#x2F;Storage &amp;amp; Far Memory&#x2F;Storage&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;As computers share an increasing number of resources, memory has been given a new role. It is no longer simply a fast place to temporarily save code and data for a single processor, but is now blossoming into a role in which it also rapidly shares data between processors.&lt;&#x2F;p&gt;
-&lt;p&gt;This changes the memory’s role from fast temporary storage to one in which it serves as a communications medium. If we add in situ processing to that we find that memory begins to take on roles once devoted to processing and storage.&lt;&#x2F;p&gt;
+&lt;p&gt;As computers share an increasing number of resources, memory has been given a new role. It is no
+longer simply a fast place to temporarily save code and data for a single processor, but is now
+blossoming into a role in which it also rapidly shares data between processors.&lt;&#x2F;p&gt;
+&lt;p&gt;This changes the memory’s role from fast temporary storage to one in which it serves as a
+communications medium. If we add in situ processing to that we find that memory begins to take on
+roles once devoted to processing and storage.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;objective-analysis.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;08&#x2F;Objective-Analysis-Brief-The-Future-of-the-Data-Center.pdf&quot;&gt;Link [pdf]&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
@@ -341,10 +396,12 @@
 &lt;p&gt;&lt;strong&gt;Observation&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Developers using Go employ significantly more concurrency and synchronization constructs than in Java.&lt;&#x2F;p&gt;
+&lt;p&gt;Developers using Go employ significantly more concurrency and synchronization constructs than in
+Java.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Developers using Go for programming microservices expose significantly more runtime concurrency than other languages such as Java, Python, and NodeJS used for the same purpose.&lt;&#x2F;p&gt;
+&lt;p&gt;Developers using Go for programming microservices expose significantly more runtime concurrency
+than other languages such as Java, Python, and NodeJS used for the same purpose.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Transparent capture-by-reference of free variables in goroutines is a recipe for data races.&lt;&#x2F;p&gt;
@@ -353,26 +410,36 @@
 &lt;p&gt;Slices are highly confusing types that create subtle and hard to diagnose data races.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Built-in maps in Go make them commonly used. The array-style syntax of map accesses provides a false illusion of disjoint accesses of elements. However, map implementation is thread-unsafe in Go causing frequent data races.&lt;&#x2F;p&gt;
+&lt;p&gt;Built-in maps in Go make them commonly used. The array-style syntax of map accesses provides a
+false illusion of disjoint accesses of elements. However, map implementation is thread-unsafe in
+Go causing frequent data races.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Pass-by-value semantics are recommended in Go because it simplifies escape analysis and gives variables a better chance to be allocated on the stack, which reduces pressure on the garbage collector. Developers often err on the side of pass-by-value (or methods over values), which can cause non-trivial data races.&lt;&#x2F;p&gt;
+&lt;p&gt;Pass-by-value semantics are recommended in Go because it simplifies escape analysis and gives
+variables a better chance to be allocated on the stack, which reduces pressure on the garbage
+collector. Developers often err on the side of pass-by-value (or methods over values), which can
+cause non-trivial data races.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Mixed use of message passing (channels) and shared memory makes code complex and susceptible to data races.&lt;&#x2F;p&gt;
+&lt;p&gt;Mixed use of message passing (channels) and shared memory makes code complex and susceptible to
+data races.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Go offers more leeway in its group synchronization construct sync.WaitGroup. The number of participants is dynamic. Incorrect placement of Add and Done methods of a sync.WaitGroup lead to data races.&lt;&#x2F;p&gt;
+&lt;p&gt;Go offers more leeway in its group synchronization construct sync.WaitGroup. The number of
+participants is dynamic. Incorrect placement of Add and Done methods of a sync.WaitGroup lead to
+data races.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Running tests in parallel for Go’s table-driven test suite idiom can often cause data races, either in the product or test code.&lt;&#x2F;p&gt;
+&lt;p&gt;Running tests in parallel for Go’s table-driven test suite idiom can often cause data races,
+either in the product or test code.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Incorrect use of mutual exclusion primitives leads to data races.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;strong&gt;Remark&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Future programming language designers should carefully weigh different language features and coding idioms with their potential to create common or arcane concurrency bugs.&lt;&#x2F;p&gt;
+&lt;p&gt;Future programming language designers should carefully weigh different language features and
+coding idioms with their potential to create common or arcane concurrency bugs.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2204.00764&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.uber.com&#x2F;blog&#x2F;dynamic-data-race-detection-in-go-code&#x2F;&quot;&gt;Dynamic Data Race Detection in Go Code&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -384,6 +451,9 @@
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_variables_and_bound_variables&quot;&gt;Free variables and bound variables&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Evaluation_strategy#Call_by_value&quot;&gt;Call by value&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;blockquote&gt;
@@ -398,27 +468,39 @@
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220816-fs/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220816-fs/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;As she lost consciousness of outer things … her mind kept throwing up from its depths, scenes, and names, and sayings, and memories and ideas, like a fountain spurting.&lt;&#x2F;p&gt;
+&lt;p&gt;As she lost consciousness of outer things … her mind kept throwing up from its depths, scenes, and
+names, and sayings, and memories and ideas, like a fountain spurting.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Virginia Woolf, To the Lighthouse&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;consciousness… ebbs like a breaking wave, outwardly expanding and then inwardly retreating. This perennial rhythm of the mind—extracting information from the external world, withdrawing to inner musings, and then returning to the outer realm—defines mental life.&lt;&#x2F;p&gt;
+&lt;p&gt;consciousness… ebbs like a breaking wave, outwardly expanding and then inwardly retreating. This
+perennial rhythm of the mind—extracting information from the external world, withdrawing to inner
+musings, and then returning to the outer realm—defines mental life.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;The Middle Way: Finding the Balance between Mindfulness and Mind-Wandering&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;Both modes of thinking are equally valuable, but it’s the harmony between them that matters. Learning a complex skill —a language, a musical instrument, chess, a mental model—requires both modes to work together. We master the details in focused mode, then comprehend how everything fits together in diffuse mode. It’s about combining creativity with execution.&lt;&#x2F;p&gt;
+&lt;p&gt;Both modes of thinking are equally valuable, but it’s the harmony between them that matters.
+Learning a complex skill —a language, a musical instrument, chess, a mental model—requires both
+modes to work together. We master the details in focused mode, then comprehend how everything fits
+together in diffuse mode. It’s about combining creativity with execution.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;History is peppered with examples of serendipitous discoveries and ideas that combined diffuse and focused thinking. In many cases, the broad insight came during diffuse thinking periods, while the concrete development work was accomplished in focused mode.&lt;&#x2F;p&gt;
+&lt;p&gt;History is peppered with examples of serendipitous discoveries and ideas that combined diffuse and
+focused thinking. In many cases, the broad insight came during diffuse thinking periods, while the
+concrete development work was accomplished in focused mode.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fs.blog&#x2F;focused-diffuse-thinking&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Slack consists of excess resources: excess capacity allowing for responsiveness and flexibility. It is the time when reinvention happens.&lt;&#x2F;p&gt;
+&lt;p&gt;Slack consists of excess resources: excess capacity allowing for responsiveness and flexibility.
+It is the time when reinvention happens.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fs.blog&#x2F;slack&#x2F;&quot;&gt;Efficiency is the Enemy&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Speeding up often results in poor decisions that create future problems. While experience and education can grant you the pattern-matching abilities to make some kinds of decisions using intuition, you’re still going to run into decisions that require you to sit and consider the problem from multiple angles.&lt;&#x2F;p&gt;
+&lt;p&gt;Speeding up often results in poor decisions that create future problems. While experience and
+education can grant you the pattern-matching abilities to make some kinds of decisions using
+intuition, you’re still going to run into decisions that require you to sit and consider the
+problem from multiple angles.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fs.blog&#x2F;thinking-rate-fixed&#x2F;&quot;&gt;Your Thinking Rate Is Fixed&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
@@ -441,7 +523,10 @@
 &lt;li&gt;etcd, ZooKeeper, or Consul&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;Raft and Paxos operate under the following assumptions: computers can crash or restart and lose in-memory state, but the disk state will be preserved upon restart; the network may lose or duplicate messages but can&#x27;t generate them out of thin air, and eventually, some messages would be delivered.&lt;&#x2F;p&gt;
+&lt;p&gt;Raft and Paxos operate under the following assumptions: computers can crash or restart and lose
+in-memory state, but the disk state will be preserved upon restart; the network may lose or
+duplicate messages but can&#x27;t generate them out of thin air, and eventually, some messages would be
+delivered.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;neon.tech&#x2F;blog&#x2F;paxos&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
@@ -483,26 +568,14 @@
 		<link rel="alternate" href="https://blog.vac.fun/prism/20220815-architecturenotes/" type="text/html"/>
 		<id>https://blog.vac.fun/prism/20220815-architecturenotes/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;As a general rule, it is essential to have an odd number of primary nodes and two replicas each for the most robust setup.&lt;&#x2F;p&gt;
+&lt;p&gt;As a general rule, it is essential to have an odd number of primary nodes and two replicas each
+for the most robust setup.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;architecturenotes.co&#x2F;redis&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Split-brain_(computing)&quot;&gt;Split-brain (computing)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Python⇒Speed: Finding performance problems: profiling or logging?</title>
-		<published>2022-08-14T00:00:00+00:00</published>
-		<updated>2022-08-14T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220814-pythonspeed/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220814-pythonspeed/</id>
-		<content type="html">&lt;ul&gt;
-&lt;li&gt;tracing&lt;&#x2F;li&gt;
-&lt;li&gt;profiling&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pythonspeed.com&#x2F;articles&#x2F;logging-vs-profiling&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>

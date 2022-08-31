@@ -15,7 +15,7 @@
 
     
     
-        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
     
 
     
@@ -74,13 +74,13 @@
     </div>
 
 
-            
                 <div class="meta">
-                    Posted on 2022-07-29
+                    
+                        Posted on <time>2022-07-29</time>
+                    
 
                     
                 </div>
-            
         </div>
 
         
@@ -94,31 +94,50 @@
 <ul>
 <li>Make it Dumb</li>
 </ul>
-<p>Designing a correct locking scheme is hard, validating that your code actually implements your design is harder, and then debugging when - not if! - you screwed up is even worse. Therefore the absolute most important rule in locking engineering, at least if you want to have any chance at winning this game, is to make the design as simple and dumb as possible.</p>
+<p>Designing a correct locking scheme is hard, validating that your code actually implements your
+design is harder, and then debugging when - not if! - you screwed up is even worse. Therefore the
+absolute most important rule in locking engineering, at least if you want to have any chance at
+winning this game, is to make the design as simple and dumb as possible.</p>
 <ul>
 <li>Make it Correct</li>
 </ul>
-<p>Validating locking by hand against all the other locking designs and nesting rules the kernel has overall is nigh impossible, extremely slow, something only few people can do with any chance of success and hence in almost all cases a complete waste of time. We need tools to automate this, and in the Linux kernel this is lockdep.</p>
+<p>Validating locking by hand against all the other locking designs and nesting rules the kernel has
+overall is nigh impossible, extremely slow, something only few people can do with any chance of
+success and hence in almost all cases a complete waste of time. We need tools to automate this,
+and in the Linux kernel this is lockdep.</p>
 <ol>
 <li>
-<p>Never invent your own locking primitives, you’ll get them wrong, or at least build something that’s slow. The kernel’s locks are built and tuned by people who’ve done nothing else their entire career, you wont beat them except in bug count, and that by a lot.</p>
+<p>Never invent your own locking primitives, you’ll get them wrong, or at least build something
+that’s slow. The kernel’s locks are built and tuned by people who’ve done nothing else their
+entire career, you wont beat them except in bug count, and that by a lot.</p>
 </li>
 <li>
 <p>The same holds for synchronization primitives.</p>
 </li>
 <li>
-<p>Finally at the intersection of “make it dumb” and “make it correct”, pick the simplest lock that works, like a normal mutex instead of an read-write semaphore. This is because in general, stricter rules catch bugs and design issues quicker, hence picking a very fancy “anything goes” locking primitives is a bad choice.</p>
+<p>Finally at the intersection of “make it dumb” and “make it correct”, pick the simplest lock
+that works, like a normal mutex instead of an read-write semaphore. This is because in general,
+stricter rules catch bugs and design issues quicker, hence picking a very fancy “anything goes”
+locking primitives is a bad choice.</p>
 </li>
 </ol>
 <ul>
 <li>Make it Fast</li>
 </ul>
-<p>Speed doesn’t matter if you don’t understand the design anymore in the future, you need simplicity first.</p>
+<p>Speed doesn’t matter if you don’t understand the design anymore in the future, you need simplicity
+first.</p>
 <p>Speed doesn’t matter if all you’re doing is crashing faster. You need correctness before speed.</p>
-<p>Finally speed doesn’t matter where users don’t notice it. If you micro-optimize a path that doesn’t even show up in real world workloads users care about, all you’ve done is wasted time and committed to future maintenance pain for no gain at all.</p>
+<p>Finally speed doesn’t matter where users don’t notice it. If you micro-optimize a path that doesn’
+t even show up in real world workloads users care about, all you’ve done is wasted time and
+committed to future maintenance pain for no gain at all.</p>
 <hr />
 <p><strong>Protect Data, not Code</strong></p>
-<p>A common pitfall is to design locking by looking at the code, perhaps just sprinkling locking calls over it until it feels like it’s good enough. The right approach is to design locking for the data structures, which means specifying for each structure or member field how it is protected against concurrent changes, and how the necessary amount of consistency is maintained across the entire data structure with rules that stay invariant, irrespective of how code operates on the data.</p>
+<p>A common pitfall is to design locking by looking at the code, perhaps just sprinkling locking
+calls over it until it feels like it’s good enough. The right approach is to design locking for
+the data structures, which means specifying for each structure or member field how it is protected
+against concurrent changes, and how the necessary amount of consistency is maintained across the
+entire data structure with rules that stay invariant, irrespective of how code operates on the
+data.</p>
 </blockquote>
 <p><a href="https://blog.ffwll.ch/2022/07/locking-engineering.html">Link</a></p>
 
