@@ -4,8 +4,23 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-31T00:00:00+00:00</updated>
+	<updated>2022-09-01T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Felienne Blog: Code Reading Club</title>
+		<published>2022-09-01T00:00:00+00:00</published>
+		<updated>2022-09-01T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220901-felienne/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220901-felienne/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Programmers in generally are really poorly equipped to &lt;em&gt;read&lt;&#x2F;em&gt; code, even their own code, but
+especially code written by others.&lt;&#x2F;p&gt;
+&lt;p&gt;Programmers read code less linearly than natural language; they follow the call stack rather than
+reading from top to bottom.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.felienne.com&#x2F;archives&#x2F;6472&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>ASPLOS Paper: Frightening Small Children and Disconcerting Grown-ups: Concurrency in the Linux Kernel</title>
 		<published>2022-08-31T00:00:00+00:00</published>
@@ -559,23 +574,6 @@ delivered.&lt;&#x2F;p&gt;
 		<id>https://blog.vac.fun/prism/20220816-upbound/</id>
 		<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.upbound.io&#x2F;scaling-kubernetes-to-thousands-of-crds&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;docs&#x2F;concepts&#x2F;cluster-administration&#x2F;flow-control&#x2F;&quot;&gt;API Priority and Fairness&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>architecture notes: Redis Explained</title>
-		<published>2022-08-15T00:00:00+00:00</published>
-		<updated>2022-08-15T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220815-architecturenotes/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220815-architecturenotes/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;As a general rule, it is essential to have an odd number of primary nodes and two replicas each
-for the most robust setup.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;architecturenotes.co&#x2F;redis&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Split-brain_(computing)&quot;&gt;Split-brain (computing)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 </feed>
