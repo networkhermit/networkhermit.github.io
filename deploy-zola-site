@@ -5,7 +5,7 @@ set -o errtrace
 set -o nounset
 set -o pipefail
 
-PAGE=../pages
+PAGE=pages
 
 rm --force --recursive "${PAGE:?}/"*
 zola build --output-dir "${PAGE}/public"

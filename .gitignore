@@ -2,4 +2,5 @@
 *.swp
 
 # generated site
+pages/
 public/
