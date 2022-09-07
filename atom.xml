@@ -4,8 +4,166 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-09-01T00:00:00+00:00</updated>
+	<updated>2022-09-07T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Go: 认识内存一致性模型</title>
+		<published>2022-09-07T00:00:00+00:00</published>
+		<updated>2022-09-07T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/posts/20220907-memory-model/" type="text/html"/>
+		<id>https://blog.vac.fun/posts/20220907-memory-model/</id>
+		<content type="html">&lt;h2 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;Go&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;go.dev&#x2F;doc&#x2F;go1.19&quot;&gt;1.19&lt;&#x2F;a&gt; 发布时更新了内存一致性模型，刚好可以结合 &lt;a href=&quot;https:&#x2F;&#x2F;swtch.com&#x2F;~rsc&#x2F;&quot;&gt;Russ Cox&lt;&#x2F;a&gt; 之前写的科普向文章一起来理解一下，尽管文章里没有讨论 &lt;code&gt;GPU&lt;&#x2F;code&gt; 和 &lt;code&gt;Linux Kernel&lt;&#x2F;code&gt; 的内存一致性模型，但总体上还是有很高的可读性，不记笔记感觉对不起这么好的材料。&lt;&#x2F;p&gt;
+&lt;p&gt;P.S. “内存模型”这个名词有 N 种解释，我个人建议尽量不要滥用。&lt;&#x2F;p&gt;
+&lt;p&gt;memory model:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;address space layout&lt;&#x2F;li&gt;
+&lt;li&gt;memory addressing scheme&lt;&#x2F;li&gt;
+&lt;li&gt;memory allocation scheme&lt;&#x2F;li&gt;
+&lt;li&gt;memory object model&lt;&#x2F;li&gt;
+&lt;li&gt;memory ordering&lt;&#x2F;li&gt;
+&lt;li&gt;memory segmentation&lt;&#x2F;li&gt;
+&lt;li&gt;type layout&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;can-kao-zi-liao&quot;&gt;参考资料&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;research.swtch.com&#x2F;mm&quot;&gt;Memory Models&lt;&#x2F;a&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;research.swtch.com&#x2F;hwmm&quot;&gt;Hardware Memory Models&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;research.swtch.com&#x2F;plmm&quot;&gt;Programming Language Memory Models&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;research.swtch.com&#x2F;gomm&quot;&gt;Updating the Go Memory Model&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;go.dev&#x2F;ref&#x2F;mem&quot;&gt;The Go Memory Model&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;tree&#x2F;master&#x2F;tools&#x2F;memory-model&#x2F;Documentation&quot;&gt;Linux-Kernel Memory Model (LKMM)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Standard library:
+&lt;ul&gt;
+&lt;li&gt;Go: &lt;a href=&quot;https:&#x2F;&#x2F;pkg.go.dev&#x2F;sync&#x2F;atomic&quot;&gt;atomic&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;pkg.go.dev&#x2F;sync&quot;&gt;sync&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Rust: &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;stable&#x2F;std&#x2F;sync&#x2F;atomic&#x2F;&quot;&gt;atomic&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;stable&#x2F;std&#x2F;sync&#x2F;&quot;&gt;sync&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;C++: &lt;a href=&quot;https:&#x2F;&#x2F;en.cppreference.com&#x2F;w&#x2F;cpp&#x2F;atomic&quot;&gt;atomic&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;en.cppreference.com&#x2F;w&#x2F;cpp&#x2F;thread&quot;&gt;sync&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;C: &lt;a href=&quot;https:&#x2F;&#x2F;en.cppreference.com&#x2F;w&#x2F;c&#x2F;atomic&quot;&gt;atomic&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;en.cppreference.com&#x2F;w&#x2F;c&#x2F;thread&quot;&gt;sync&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bi-ji-zheng-li&quot;&gt;笔记整理&lt;&#x2F;h2&gt;
+&lt;p&gt;memory consistency model:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;about the visibility and consistency of memory operations in multithreaded contexts&lt;&#x2F;li&gt;
+&lt;li&gt;cross-disciplinary contract: hardware &amp;lt;-&amp;gt; compilers &amp;lt;-&amp;gt; programmers&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;valid optimizations do not change the behavior of valid programs&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;processor optimizations: largely revolves around how writes are propagated to other threads&lt;&#x2F;li&gt;
+&lt;li&gt;compiler optimizations: largely revolves around reordering of instructions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;data-race-race-condition&quot;&gt;Data Race ∈ Race Condition&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Every race involves at least one write: two uncoordinated reads do not race with each other.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;scpv-sequential-consistency-per-variable-at-atomicity-hb-happens-before-pb-propagates-before&quot;&gt;SCPV (sequential consistency per variable), AT (Atomicity), HB (Happens-before), PB (Propagates-before)&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The total order over all the synchronizing operations is separate from the happens-before
+relationship. It is &lt;em&gt;not&lt;&#x2F;em&gt; true that there is a happens-before edge in one direction or the other
+between every lock, unlock, or volatile variable access in a program: you only get a
+happens-before edge from a write to a read that observes the write.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;guan-jian-yuan-zi-zhi-ling&quot;&gt;关键原子指令&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;read–modify–write (RMW)&lt;&#x2F;li&gt;
+&lt;li&gt;compare-and-swap (CAS)&lt;&#x2F;li&gt;
+&lt;li&gt;load-linked&#x2F;store-conditional (LL&#x2F;SC) &#x2F; load-reserved&#x2F;store-conditional (LR&#x2F;SC)&lt;&#x2F;li&gt;
+&lt;li&gt;load-acquire&#x2F;store-release (LDAR&#x2F;STLR)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;ying-jian-nei-cun-mo-xing-symmetric-multiprocessing&quot;&gt;硬件内存模型 (Symmetric multiprocessing)&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sequential Consistency: the ideal model&lt;&#x2F;li&gt;
+&lt;li&gt;Total Store Order (TSO): &lt;code&gt;x86&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Weak Consistency: &lt;code&gt;RISC-V&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Relaxed Consistency: &lt;code&gt;ARM&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Data-Race-Free Sequential Consistency (DRF-SC): current consensus&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The gap between what is allowed and what is observed makes for unfortunate future surprises:
+hardware implementing a stronger model than technically guaranteed encourages dependence on the
+stronger behavior and means that future, weaker hardware will break programs, validly or not.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;bian-cheng-yu-yan-nei-cun-mo-xing-concurrency&quot;&gt;编程语言内存模型 (Concurrency)&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All modern hardware guarantees coherence, which can also be viewed as sequential consistency for
+the operations on a single memory location. It turns out that, because of program reordering
+during compilation, modern languages do not even provide coherence.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Coherence is easier for hardware to provide than for compilers because hardware can apply dynamic
+optimizations: it can adjust the optimization paths based on the exact addresses involved in a
+given sequence of memory reads and writes. In contrast, compilers can only apply static
+optimizations: they have to write out, ahead of time, an instruction sequence that will be correct
+no matter what addresses and values are involved.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Threads Cannot Be Implemented As a Library&lt;&#x2F;em&gt;: languages cannot be silent about the semantics of
+multithreaded execution.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;DRF-SC
+&lt;ul&gt;
+&lt;li&gt;happens-before relation through synchronization operations&lt;&#x2F;li&gt;
+&lt;li&gt;total order with interleaved execution&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;atomics (atomic variables&#x2F;atomic operations)
+&lt;ul&gt;
+&lt;li&gt;non-synchronizing
+&lt;ul&gt;
+&lt;li&gt;relaxed: for hiding races, provide no ordering, cannot be used to build new synchronization
+primitives&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;synchronizing (message receive&#x2F;message send)
+&lt;ul&gt;
+&lt;li&gt;sequentially consistent (strong)&lt;&#x2F;li&gt;
+&lt;li&gt;acquire&#x2F;release (weak): coherence-only, provide limited ordering, create happens-before
+relation but do not provide DRF-SC&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;memory barriers&#x2F;fences&lt;&#x2F;li&gt;
+&lt;li&gt;high-level synchronization mechanisms
+&lt;ul&gt;
+&lt;li&gt;semaphore (binary semaphore&#x2F;counting semaphore)&lt;&#x2F;li&gt;
+&lt;li&gt;spinlock&lt;&#x2F;li&gt;
+&lt;li&gt;barrier&lt;&#x2F;li&gt;
+&lt;li&gt;mutex&lt;&#x2F;li&gt;
+&lt;li&gt;readers–writer lock&lt;&#x2F;li&gt;
+&lt;li&gt;condition variable (signal&#x2F;notify_one and broadcast&#x2F;notify_all)&lt;&#x2F;li&gt;
+&lt;li&gt;monitor&lt;&#x2F;li&gt;
+&lt;li&gt;channel (buffered&#x2F;unbuffered)&lt;&#x2F;li&gt;
+&lt;li&gt;atomic reference counting&lt;&#x2F;li&gt;
+&lt;li&gt;once&lt;&#x2F;li&gt;
+&lt;li&gt;pool&lt;&#x2F;li&gt;
+&lt;li&gt;future (explicit&#x2F;implicit)&lt;&#x2F;li&gt;
+&lt;li&gt;futex&lt;&#x2F;li&gt;
+&lt;li&gt;sequence lock&lt;&#x2F;li&gt;
+&lt;li&gt;read-copy-update&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;semantics for racy programs
+&lt;ul&gt;
+&lt;li&gt;defines the behavior and possible results&lt;&#x2F;li&gt;
+&lt;li&gt;as undefined behavior: DRF-SC or Catch Fire&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;distinguish invalid compiler optimizations&lt;&#x2F;li&gt;
+&lt;li&gt;prohibit paradoxes like out-of-thin-air values (acausality)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;xie-zai-zui-hou&quot;&gt;写在最后&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When it comes to programs with races, both programmers and compilers should remember the advice:
+don&#x27;t be clever. (Clear is better than clever.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Felienne Blog: Code Reading Club</title>
 		<published>2022-09-01T00:00:00+00:00</published>
@@ -564,16 +722,6 @@ delivered.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Byzantine_fault&quot;&gt;Byzantine fault&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Upbound: Scaling Kubernetes to Thousands of CRDs</title>
-		<published>2022-08-16T00:00:00+00:00</published>
-		<updated>2022-08-16T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220816-upbound/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220816-upbound/</id>
-		<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.upbound.io&#x2F;scaling-kubernetes-to-thousands-of-crds&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;docs&#x2F;concepts&#x2F;cluster-administration&#x2F;flow-control&#x2F;&quot;&gt;API Priority and Fairness&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        Go: 认识内存一致性模型
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Go: 认识内存一致性模型<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2022-09-07</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <h2 id="qian-yan">前言</h2>
+<p><code>Go</code> <a href="https://go.dev/doc/go1.19">1.19</a> 发布时更新了内存一致性模型，刚好可以结合 <a href="https://swtch.com/~rsc/">Russ Cox</a> 之前写的科普向文章一起来理解一下，尽管文章里没有讨论 <code>GPU</code> 和 <code>Linux Kernel</code> 的内存一致性模型，但总体上还是有很高的可读性，不记笔记感觉对不起这么好的材料。</p>
+<p>P.S. “内存模型”这个名词有 N 种解释，我个人建议尽量不要滥用。</p>
+<p>memory model:</p>
+<ul>
+<li>address space layout</li>
+<li>memory addressing scheme</li>
+<li>memory allocation scheme</li>
+<li>memory object model</li>
+<li>memory ordering</li>
+<li>memory segmentation</li>
+<li>type layout</li>
+</ul>
+<h2 id="can-kao-zi-liao">参考资料</h2>
+<ul>
+<li><a href="https://research.swtch.com/mm">Memory Models</a>
+<ol>
+<li><a href="https://research.swtch.com/hwmm">Hardware Memory Models</a></li>
+<li><a href="https://research.swtch.com/plmm">Programming Language Memory Models</a></li>
+<li><a href="https://research.swtch.com/gomm">Updating the Go Memory Model</a></li>
+</ol>
+</li>
+<li><a href="https://go.dev/ref/mem">The Go Memory Model</a></li>
+<li><a href="https://github.com/torvalds/linux/tree/master/tools/memory-model/Documentation">Linux-Kernel Memory Model (LKMM)</a></li>
+<li>Standard library:
+<ul>
+<li>Go: <a href="https://pkg.go.dev/sync/atomic">atomic</a>, <a href="https://pkg.go.dev/sync">sync</a></li>
+<li>Rust: <a href="https://doc.rust-lang.org/stable/std/sync/atomic/">atomic</a>, <a href="https://doc.rust-lang.org/stable/std/sync/">sync</a></li>
+<li>C++: <a href="https://en.cppreference.com/w/cpp/atomic">atomic</a>, <a href="https://en.cppreference.com/w/cpp/thread">sync</a></li>
+<li>C: <a href="https://en.cppreference.com/w/c/atomic">atomic</a>, <a href="https://en.cppreference.com/w/c/thread">sync</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="bi-ji-zheng-li">笔记整理</h2>
+<p>memory consistency model:</p>
+<ul>
+<li>about the visibility and consistency of memory operations in multithreaded contexts</li>
+<li>cross-disciplinary contract: hardware &lt;-&gt; compilers &lt;-&gt; programmers</li>
+</ul>
+<p><em>valid optimizations do not change the behavior of valid programs</em></p>
+<ul>
+<li>processor optimizations: largely revolves around how writes are propagated to other threads</li>
+<li>compiler optimizations: largely revolves around reordering of instructions</li>
+</ul>
+<h3 id="data-race-race-condition">Data Race ∈ Race Condition</h3>
+<blockquote>
+<p>Every race involves at least one write: two uncoordinated reads do not race with each other.</p>
+</blockquote>
+<h3 id="scpv-sequential-consistency-per-variable-at-atomicity-hb-happens-before-pb-propagates-before">SCPV (sequential consistency per variable), AT (Atomicity), HB (Happens-before), PB (Propagates-before)</h3>
+<blockquote>
+<p>The total order over all the synchronizing operations is separate from the happens-before
+relationship. It is <em>not</em> true that there is a happens-before edge in one direction or the other
+between every lock, unlock, or volatile variable access in a program: you only get a
+happens-before edge from a write to a read that observes the write.</p>
+</blockquote>
+<h3 id="guan-jian-yuan-zi-zhi-ling">关键原子指令</h3>
+<ul>
+<li>read–modify–write (RMW)</li>
+<li>compare-and-swap (CAS)</li>
+<li>load-linked/store-conditional (LL/SC) / load-reserved/store-conditional (LR/SC)</li>
+<li>load-acquire/store-release (LDAR/STLR)</li>
+</ul>
+<h3 id="ying-jian-nei-cun-mo-xing-symmetric-multiprocessing">硬件内存模型 (Symmetric multiprocessing)</h3>
+<ul>
+<li>Sequential Consistency: the ideal model</li>
+<li>Total Store Order (TSO): <code>x86</code></li>
+<li>Weak Consistency: <code>RISC-V</code></li>
+<li>Relaxed Consistency: <code>ARM</code></li>
+<li>Data-Race-Free Sequential Consistency (DRF-SC): current consensus</li>
+</ul>
+<blockquote>
+<p>The gap between what is allowed and what is observed makes for unfortunate future surprises:
+hardware implementing a stronger model than technically guaranteed encourages dependence on the
+stronger behavior and means that future, weaker hardware will break programs, validly or not.</p>
+</blockquote>
+<h3 id="bian-cheng-yu-yan-nei-cun-mo-xing-concurrency">编程语言内存模型 (Concurrency)</h3>
+<blockquote>
+<p>All modern hardware guarantees coherence, which can also be viewed as sequential consistency for
+the operations on a single memory location. It turns out that, because of program reordering
+during compilation, modern languages do not even provide coherence.</p>
+</blockquote>
+<blockquote>
+<p>Coherence is easier for hardware to provide than for compilers because hardware can apply dynamic
+optimizations: it can adjust the optimization paths based on the exact addresses involved in a
+given sequence of memory reads and writes. In contrast, compilers can only apply static
+optimizations: they have to write out, ahead of time, an instruction sequence that will be correct
+no matter what addresses and values are involved.</p>
+</blockquote>
+<blockquote>
+<p><em>Threads Cannot Be Implemented As a Library</em>: languages cannot be silent about the semantics of
+multithreaded execution.</p>
+</blockquote>
+<ul>
+<li>DRF-SC
+<ul>
+<li>happens-before relation through synchronization operations</li>
+<li>total order with interleaved execution</li>
+</ul>
+</li>
+<li>atomics (atomic variables/atomic operations)
+<ul>
+<li>non-synchronizing
+<ul>
+<li>relaxed: for hiding races, provide no ordering, cannot be used to build new synchronization
+primitives</li>
+</ul>
+</li>
+<li>synchronizing (message receive/message send)
+<ul>
+<li>sequentially consistent (strong)</li>
+<li>acquire/release (weak): coherence-only, provide limited ordering, create happens-before
+relation but do not provide DRF-SC</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>memory barriers/fences</li>
+<li>high-level synchronization mechanisms
+<ul>
+<li>semaphore (binary semaphore/counting semaphore)</li>
+<li>spinlock</li>
+<li>barrier</li>
+<li>mutex</li>
+<li>readers–writer lock</li>
+<li>condition variable (signal/notify_one and broadcast/notify_all)</li>
+<li>monitor</li>
+<li>channel (buffered/unbuffered)</li>
+<li>atomic reference counting</li>
+<li>once</li>
+<li>pool</li>
+<li>future (explicit/implicit)</li>
+<li>futex</li>
+<li>sequence lock</li>
+<li>read-copy-update</li>
+</ul>
+</li>
+<li>semantics for racy programs
+<ul>
+<li>defines the behavior and possible results</li>
+<li>as undefined behavior: DRF-SC or Catch Fire</li>
+</ul>
+</li>
+<li>distinguish invalid compiler optimizations</li>
+<li>prohibit paradoxes like out-of-thin-air values (acausality)</li>
+</ul>
+<h2 id="xie-zai-zui-hou">写在最后</h2>
+<blockquote>
+<p>When it comes to programs with races, both programmers and compilers should remember the advice:
+don't be clever. (Clear is better than clever.)</p>
+</blockquote>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
