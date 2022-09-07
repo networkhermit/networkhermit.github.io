@@ -13,8 +13,10 @@
 		<link rel="alternate" href="https://blog.vac.fun/posts/20220907-memory-model/" type="text/html"/>
 		<id>https://blog.vac.fun/posts/20220907-memory-model/</id>
 		<content type="html">&lt;h2 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;code&gt;Go&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;go.dev&#x2F;doc&#x2F;go1.19&quot;&gt;1.19&lt;&#x2F;a&gt; 发布时更新了内存一致性模型，刚好可以结合 &lt;a href=&quot;https:&#x2F;&#x2F;swtch.com&#x2F;~rsc&#x2F;&quot;&gt;Russ Cox&lt;&#x2F;a&gt; 之前写的科普向文章一起来理解一下，尽管文章里没有讨论 &lt;code&gt;GPU&lt;&#x2F;code&gt; 和 &lt;code&gt;Linux Kernel&lt;&#x2F;code&gt; 的内存一致性模型，但总体上还是有很高的可读性，不记笔记感觉对不起这么好的材料。&lt;&#x2F;p&gt;
-&lt;p&gt;P.S. “内存模型”这个名词有 N 种解释，我个人建议尽量不要滥用。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Go&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;go.dev&#x2F;doc&#x2F;go1.19&quot;&gt;1.19&lt;&#x2F;a&gt; 发布时更新了内存一致性模型，刚好可以结合 &lt;a href=&quot;https:&#x2F;&#x2F;swtch.com&#x2F;~rsc&#x2F;&quot;&gt;Russ Cox&lt;&#x2F;a&gt;
+之前写的科普向文章一起来理解一下，尽管文章里没有讨论到 &lt;code&gt;GPU&lt;&#x2F;code&gt; 和 &lt;code&gt;Linux Kernel&lt;&#x2F;code&gt; 的内存一致性模型，但
+总体上还是有很高的可读性，不记笔记感觉对不起这么好的材料。&lt;&#x2F;p&gt;
+&lt;p&gt;P.S. “内存模型”这个名词视语境不同可以有完全不同的解释，我个人建议尽量不要滥用。&lt;&#x2F;p&gt;
 &lt;p&gt;memory model:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;address space layout&lt;&#x2F;li&gt;
