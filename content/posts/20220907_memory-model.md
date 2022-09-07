@@ -1,10 +1,13 @@
 +++
-date = "2022-08-10"
-draft = true
+date = "2022-09-07"
 title = "Go: 认识内存一致性模型"
 +++
 
 ## 前言
+
+`Go` [1.19](https://go.dev/doc/go1.19) 发布时更新了内存一致性模型，刚好可以结合 [Russ Cox](https://swtch.com/~rsc/) 之前写的科普向文章一起来理解一下，尽管文章里没有讨论 `GPU` 和 `Linux Kernel` 的内存一致性模型，但总体上还是有很高的可读性，不记笔记感觉对不起这么好的材料。
+
+P.S. “内存模型”这个名词有 N 种解释，我个人建议尽量不要滥用。
 
 memory model:
 * address space layout
