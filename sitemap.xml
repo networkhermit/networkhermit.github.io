@@ -16,6 +16,9 @@
         <loc>https://blog.vac.fun/page/3/</loc>
     </url>
     <url>
+        <loc>https://blog.vac.fun/page/4/</loc>
+    </url>
+    <url>
         <loc>https://blog.vac.fun/posts/</loc>
     </url>
     <url>
@@ -207,6 +210,18 @@
     <url>
         <loc>https://blog.vac.fun/prism/20220910-rosieland/</loc>
         <lastmod>2022-09-10</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220911-cloudflare/</loc>
+        <lastmod>2022-09-11</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220911-codesandbox/</loc>
+        <lastmod>2022-09-11</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20220911-infracloud/</loc>
+        <lastmod>2022-09-11</lastmod>
     </url>
     <url>
         <loc>https://blog.vac.fun/prism/page/1/</loc>
