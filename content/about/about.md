@@ -9,6 +9,8 @@ I’m [vac](https://github.com/networkhermit), a software developer and linux en
 focused on [Go](https://en.wikipedia.org/wiki/Go_(programming_language)), [Rust](https://en.wikipedia.org/wiki/Rust_(programming_language)),
 and [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
+Be aware of the tradeoffs and side effects.
+
 ---
 
 [Atom feed](https://blog.vac.fun/atom.xml)

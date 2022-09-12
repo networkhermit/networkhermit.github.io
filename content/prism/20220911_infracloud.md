@@ -1,6 +1,6 @@
 +++
 date = "2022-09-11"
-title = "InfraCloud:  Securing Kubernetes Cluster using Kubescape and kube-bench"
+title = "InfraCloud Blog:  Securing Kubernetes Cluster using Kubescape and kube-bench"
 +++
 
 > With businesses adopting cloud native technology, Kubernetes has emerged as a primary tool of

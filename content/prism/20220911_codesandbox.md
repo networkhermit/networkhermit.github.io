@@ -1,6 +1,6 @@
 +++
 date = "2022-09-11"
-title = "CodeSandbox: How we clone a running VM in 2 seconds"
+title = "CodeSandbox Blog: How we clone a running VM in 2 seconds"
 +++
 
 > improve memory snapshotting: mmap MAP_SHARED
