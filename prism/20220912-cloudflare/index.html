@@ -9,7 +9,7 @@
     
     
     <title>
-        YKarroum Blog: The true cost of linked lists
+        Cloudflare Blog: The story of one latency spike &amp; The revenge of the listening sockets
     </title>
     
 
@@ -70,13 +70,13 @@
             
             
     <div class="page-header">
-        YKarroum Blog: The true cost of linked lists<span class="primary-color" style="font-size: 1.6em">.</span>
+        Cloudflare Blog: The story of one latency spike &amp; The revenge of the listening sockets<span class="primary-color" style="font-size: 1.6em">.</span>
     </div>
 
 
                 <div class="meta">
                     
-                        Posted on <time>2022-07-13</time>
+                        Posted on <time>2022-09-12</time>
                     
 
                     
@@ -90,22 +90,19 @@
 
         <section class="body">
             <blockquote>
-<p>Linked lists are often overused in introductory algorithmics courses, due to a heavy focus on
-theorical complexities. Unfortunatly, in practice, computers are complex beasts. They don’t
-execute instructions sequentially with the same cost. This means that a data structure with faster
-theorical complexities does not necessarily translate to a more efficient data structure in
-practice.</p>
+<p>Using a large chunk of receive buffer space for the metadata is not really what the programmer
+wants. To counter that, when the socket is under memory pressure complex logic is run with the
+intention of freeing some space. One of the operations is <code>tcp_collapse</code> and it will merge
+adjacent TCP packets into one larger <code>sk_buff</code>. This behavior is pretty much a garbage collection
+(GC)—and as everyone knows, when the garbage collection kicks in, the latency must spike.</p>
 </blockquote>
-<p><a href="http://ykarroum.com/2022/05/30/true-cost-list/">Link</a></p>
-<hr />
-<ul>
-<li>
-<p>CPU cache miss: <a href="https://en.wikipedia.org/wiki/Locality_of_reference">Locality of reference</a></p>
-</li>
-<li>
-<p>Memory allocation cost: <a href="https://en.wikipedia.org/wiki/Region-based_memory_management">Region-based memory management</a></p>
-</li>
-</ul>
+<p><a href="https://blog.cloudflare.com/the-story-of-one-latency-spike/">The story of one latency spike</a></p>
+<blockquote>
+<p>You can't have a very large number of bound TCP sockets and we learned that the hard way. We
+learned a bit about the Linux networking stack: the fact that <code>LHTABLE</code> is fixed size and is
+hashed by destination port only.</p>
+</blockquote>
+<p><a href="https://blog.cloudflare.com/revenge-listening-sockets/">The revenge of the listening sockets</a></p>
 
         </section>
 

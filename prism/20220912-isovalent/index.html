@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        Isovalent Blog: Addressing Bandwidth Exhaustion with Cilium Bandwidth Manager &amp; The Rise of Kubernetes and the End of Networking &amp; Security as You Know It. What’s Next?
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Isovalent Blog: Addressing Bandwidth Exhaustion with Cilium Bandwidth Manager &amp; The Rise of Kubernetes and the End of Networking &amp; Security as You Know It. What’s Next?<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2022-09-12</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<p>Since inception, part of the core characteristics of Kubernetes have been its outstanding
+orchestration and scheduling capabilities. By nature, resources available to the pods are shared
+resources and preventing compute starvation is critical. But if we are capable of preventing
+compute starvation, shouldn’t we also prevent <em>network</em> starvation?</p>
+<hr />
+<ul>
+<li>Cilium removes the need for an IFB (Intermediate Functional Block), therefore reducing the
+latency that was introduced with the CNI plugin implementation</li>
+<li>Cilium leverages multi-core and multi queue capabilities, ensuring rate-limiting is not
+detrimental to performances</li>
+<li>Cilium leverages state-of-the-art and optimal congestion avoidance technologies like Earliest
+Departure Time and Timing Wheel to reduce latency.</li>
+</ul>
+<hr />
+<p>Now – platform operators don’t always care <em>how</em> it’s done – they want to know 1) if it works and
+2) if it’s easy to operate.</p>
+<hr />
+<p>A typical netperf test is called TCP_STREAM and goes from the netperf client to the netperf
+server. Therefore a stream from the netperf server to the client will be STREAM backwards –
+MAERTS. This is how servers typically operate, with larger data flows going from server to client.</p>
+</blockquote>
+<p><a href="https://isovalent.com/blog/post/addressing-bandwidth-exhaustion-with-cilium-bandwidth-manager/">Addressing Bandwidth Exhaustion with Cilium Bandwidth Manager</a></p>
+<hr />
+<blockquote>
+<p>In a few short years, Kubernetes has gone from being a “bleeding edge tech” to the “new enterprise
+standard” for how modern applications are built and operated. Enterprises and telcos are now past
+the initial “Day 1” challenges (e.g., “which Kubernetes distro do I run?”) and are in the deeper
+“Day 2” challenges, with a major focus on how they scalably connect, secure, and observe the
+connectivity between these modern API-driven applications.</p>
+<hr />
+<p>As organizations look for the best way to solve these challenges on modern Kubernetes platforms
+the most obvious technical requirements are:</p>
+<ul>
+<li>Highly distributed &amp; efficient processing to handle the explosion of east-west communication
+(centralized devices become bottlenecks and per-workload “sidecar proxies” are too heavyweight).</li>
+<li>Workload identity and API-layer visibility as a first-class construct for both zero-trust
+security and observability (since IPs and ports are nearly meaningless in a Kubernetes
+environment).</li>
+<li>Configurable via standardized and automation-friendly APIs (e.g., Kubernetes CRDs such as
+Services, Ingress, NetworkPolicy).</li>
+<li>Integrates with legacy networks and legacy workloads running outside of Kubernetes.</li>
+</ul>
+</blockquote>
+<p><a href="https://isovalent.com/blog/post/isovalent-series-b/">The Rise of Kubernetes and the End of Networking &amp; Security as You Know It. What’s Next?</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
