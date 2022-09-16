@@ -4,8 +4,24 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-09-12T00:00:00+00:00</updated>
+	<updated>2022-09-16T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Simme Blog: Observability is becoming mission critical, but who watches the watchmen?</title>
+		<published>2022-09-16T00:00:00+00:00</published>
+		<updated>2022-09-16T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220916-simme/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220916-simme/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;What observes the observability stack? How will we be made aware if it is starting to have issues?&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Alerts not firing&lt;&#x2F;li&gt;
+&lt;li&gt;Telemetry missing&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;simme.dev&#x2F;posts&#x2F;who-watches-the-watchmen&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Cloudflare Blog: The story of one latency spike &amp; The revenge of the listening sockets</title>
 		<published>2022-09-12T00:00:00+00:00</published>
@@ -548,33 +564,6 @@ programming.&lt;&#x2F;p&gt;
 &lt;p&gt;Rule 6. There is no Rule 6.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.cat-v.org&#x2F;bell_labs&#x2F;pikestyle&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>LWN: C library system-call wrappers, or the lack thereof</title>
-		<published>2022-08-19T00:00:00+00:00</published>
-		<updated>2022-08-19T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220819-lwn/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220819-lwn/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Calling into the kernel is not like calling a normal function; a special trap into the kernel
-must be triggered with the system-call arguments placed as the kernel expects. At a minimum, the
-system-call &amp;quot;wrapper&amp;quot; provided by the C library must set up this trap. In many cases, more work
-than that is required; the functionality provided by the kernel does not always exactly match
-what the application (or the relevant standards) will expect. Features like POSIX threads further
-complicate the situation. The end result is that a lot of work can be happening between the
-application and the kernel when a system call is made. Doing that work is, in most cases,
-delegated to the C library.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Free-software projects tend to value their independence; their developers have little time for
-others who would tell them what to do. But few projects truly stand alone. Whenever developers
-decide to cooperate more fully with related projects, the result tends to be better software for
-the community as a whole. The design and delivery of system calls would appear to be one of those
-places where a higher level of communication and cooperation would be a healthy thing. That,
-rather than trying to absorb low-level wrappers into the kernel project, seems like the proper
-long-term solution to this problem.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;771441&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>
