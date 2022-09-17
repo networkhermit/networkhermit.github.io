@@ -4,8 +4,38 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-09-16T00:00:00+00:00</updated>
+	<updated>2022-09-17T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Cloudflare Blog: Log analytics using ClickHouse</title>
+		<published>2022-09-17T00:00:00+00:00</published>
+		<updated>2022-09-17T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220917-cloudflare/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220917-cloudflare/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Characteristics of logs&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unpredictable&lt;&#x2F;li&gt;
+&lt;li&gt;Semi-structured&lt;&#x2F;li&gt;
+&lt;li&gt;Contextual&lt;&#x2F;li&gt;
+&lt;li&gt;Write-heavy&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;producer, shipper, queue, consumer, datastore (Elasticsearch)&lt;&#x2F;p&gt;
+&lt;p&gt;Elasticsearch bottlenecks&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mapping Explosion&lt;&#x2F;li&gt;
+&lt;li&gt;Multi-tenancy support&lt;&#x2F;li&gt;
+&lt;li&gt;Cluster operational tasks&lt;&#x2F;li&gt;
+&lt;li&gt;Garbage collection&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;producer, shipper, queue, inserter, datastore (ClickHouse)&lt;&#x2F;p&gt;
+&lt;p&gt;Elasticsearch is great for full-text search and ClickHouse is great for analytics.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;log-analytics-using-clickhouse&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Adaptive_bitrate_streaming&quot;&gt;Adaptive Bit Rate&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Simme Blog: Observability is becoming mission critical, but who watches the watchmen?</title>
 		<published>2022-09-16T00:00:00+00:00</published>
@@ -528,42 +558,6 @@ proxy.&lt;&#x2F;p&gt;
 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;container-storage-interface&#x2F;spec&quot;&gt;CSI&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Cat-v Archive: Notes on Programming in C</title>
-		<published>2022-08-22T00:00:00+00:00</published>
-		<updated>2022-08-22T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220822-cat-v/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220822-cat-v/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Rule 1. You can&#x27;t tell where a program is going to spend its time. Bottlenecks occur in surprising
-places, so don&#x27;t try to second guess and put in a speed hack until you&#x27;ve proven that&#x27;s where the
-bottleneck is.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 2. Measure. Don&#x27;t tune for speed until you&#x27;ve measured, and even then don&#x27;t unless one part
-of the code overwhelms the rest.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 3. Fancy algorithms are slow when n is small, and n is usually small. Fancy algorithms have
-big constants. Until you know that n is frequently going to be big, don&#x27;t get fancy. (Even if n
-does get big, use Rule 2 first.) For example, binary trees are always faster than splay trees for
-workaday problems.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 4. Fancy algorithms are buggier than simple ones, and they&#x27;re much harder to implement. Use
-simple algorithms as well as simple data structures.&lt;&#x2F;p&gt;
-&lt;p&gt;The following data structures are a complete list for almost all practical programs:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;array&lt;&#x2F;li&gt;
-&lt;li&gt;linked list&lt;&#x2F;li&gt;
-&lt;li&gt;hash table&lt;&#x2F;li&gt;
-&lt;li&gt;binary tree&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Of course, you must also be prepared to collect these into compound data structures. For instance,
-a symbol table might be implemented as a hash table containing linked lists of arrays of
-characters.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 5. Data dominates. If you&#x27;ve chosen the right data structures and organized things well, the
-algorithms will almost always be self-evident. Data structures, not algorithms, are central to
-programming.&lt;&#x2F;p&gt;
-&lt;p&gt;Rule 6. There is no Rule 6.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.cat-v.org&#x2F;bell_labs&#x2F;pikestyle&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>
