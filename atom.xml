@@ -4,8 +4,37 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-09-17T00:00:00+00:00</updated>
+	<updated>2022-09-18T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Cloudflare Blog: How we built Pingora, the proxy that connects Cloudflare to the Internet</title>
+		<published>2022-09-18T00:00:00+00:00</published>
+		<updated>2022-09-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220918-cloudflare/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220918-cloudflare/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;NGINX worker&#x2F;process architecture limitations:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;each request can only be served by a single worker: unbalanced load across all CPU cores,
+requests that do CPU heavy or blocking IO tasks can slow down other requests&lt;&#x2F;li&gt;
+&lt;li&gt;the connection pool is per worker: poor connection reuse, connection reuse ratio gets worse when
+scale up&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;At Cloudflare, we handle traffic across the entire Internet. We have many cases of bizarre and
+non-RFC compliant HTTP traffic that we have to support. This is a common dilemma across the HTTP
+community and web, where there is tension between strictly following HTTP specifications and
+accommodating the nuances of a wide ecosystem of potentially legacy clients or servers. Picking
+one side can be a tough job.&lt;&#x2F;p&gt;
+&lt;p&gt;In order to satisfy the requirements of Cloudflare&#x27;s position in the HTTP ecosystem, we needed a
+robust, permissive, customizable HTTP library that can survive the wilds of the Internet and
+support a variety of noncompliant use cases. The best way to guarantee that is to implement our
+own.&lt;&#x2F;p&gt;
+&lt;p&gt;We chose multithreading over multiprocessing in order to share resources, especially connection
+pools, easily.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Cloudflare Blog: Log analytics using ClickHouse</title>
 		<published>2022-09-17T00:00:00+00:00</published>
@@ -521,41 +550,6 @@ proxy.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Process_group&quot;&gt;Process group&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>LWN: Docker and the OCI container ecosystem &amp; The container orchestrator landscape</title>
-		<published>2022-08-26T00:00:00+00:00</published>
-		<updated>2022-08-26T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220826-lwn/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220826-lwn/</id>
-		<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;902049&#x2F;&quot;&gt;Docker and the OCI container ecosystem&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;905164&#x2F;&quot;&gt;The container orchestrator landscape&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;containers-vs-pods&#x2F;&quot;&gt;Containers vs. Pods - Taking a Deeper Look&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;kubernetes-ephemeral-containers&#x2F;&quot;&gt;Kubernetes Ephemeral Containers and kubectl debug Command&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Linux_namespaces&quot;&gt;Linux namespaces&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Cgroups&quot;&gt;cgroups&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Union_mount&quot;&gt;Union mount&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Seccomp&quot;&gt;seccomp&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;OCI &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;runtime-spec&quot;&gt;Runtime&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;image-spec&quot;&gt;Image&lt;&#x2F;a&gt;,
-&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opencontainers&#x2F;distribution-spec&quot;&gt;Distribution&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kubernetes&#x2F;cri-api&quot;&gt;CRI&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;containernetworking&#x2F;cni&quot;&gt;CNI&lt;&#x2F;a&gt;,
-&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;container-storage-interface&#x2F;spec&quot;&gt;CSI&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>

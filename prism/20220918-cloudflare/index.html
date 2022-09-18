@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>
+        Cloudflare Blog: How we built Pingora, the proxy that connects Cloudflare to the Internet
+    </title>
+    
+
+    
+    
+        <link rel="icon" type="image/x-icon" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+    
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)"/>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Cloudflare Blog: How we built Pingora, the proxy that connects Cloudflare to the Internet<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2022-09-18</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<p>NGINX worker/process architecture limitations:</p>
+<ul>
+<li>each request can only be served by a single worker: unbalanced load across all CPU cores,
+requests that do CPU heavy or blocking IO tasks can slow down other requests</li>
+<li>the connection pool is per worker: poor connection reuse, connection reuse ratio gets worse when
+scale up</li>
+</ul>
+<p>At Cloudflare, we handle traffic across the entire Internet. We have many cases of bizarre and
+non-RFC compliant HTTP traffic that we have to support. This is a common dilemma across the HTTP
+community and web, where there is tension between strictly following HTTP specifications and
+accommodating the nuances of a wide ecosystem of potentially legacy clients or servers. Picking
+one side can be a tough job.</p>
+<p>In order to satisfy the requirements of Cloudflare's position in the HTTP ecosystem, we needed a
+robust, permissive, customizable HTTP library that can survive the wilds of the Internet and
+support a variety of noncompliant use cases. The best way to guarantee that is to implement our
+own.</p>
+<p>We chose multithreading over multiprocessing in order to share resources, especially connection
+pools, easily.</p>
+</blockquote>
+<p><a href="https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/">Link</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
