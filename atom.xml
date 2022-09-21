@@ -4,8 +4,58 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-09-18T00:00:00+00:00</updated>
+	<updated>2022-09-21T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Baby Steps: What I meant by the &quot;soul of Rust&quot;</title>
+		<published>2022-09-21T00:00:00+00:00</published>
+		<updated>2022-09-21T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220921-smallcultfollowing/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220921-smallcultfollowing/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;The soul of Rust, to my mind, is definitely &lt;strong&gt;not&lt;&#x2F;strong&gt; being explicit about allocation. Rather, it’s
+about the struggle between a few key values — especially &lt;em&gt;productivity&lt;&#x2F;em&gt; and &lt;em&gt;versatility&lt;&#x2F;em&gt; in
+tension with &lt;em&gt;transparency&lt;&#x2F;em&gt;. Rust’s goal has always been to &lt;em&gt;feel&lt;&#x2F;em&gt; like a high-level but with the
+performance and control of a &lt;em&gt;low-level&lt;&#x2F;em&gt; one.&lt;&#x2F;p&gt;
+&lt;p&gt;Transparent: “you can predict and control low-level details”&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transparency gives you control&lt;&#x2F;li&gt;
+&lt;li&gt;Transparency can cost performance&lt;&#x2F;li&gt;
+&lt;li&gt;Transparency hurts versatility and productivity&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;smallcultfollowing.com&#x2F;babysteps&#x2F;blog&#x2F;2022&#x2F;09&#x2F;19&#x2F;what-i-meant-by-the-soul-of-rust&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Sysdig Blog: Understanding Kubernetes Evicted Pods</title>
+		<published>2022-09-21T00:00:00+00:00</published>
+		<updated>2022-09-21T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20220921-sysdig/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20220921-sysdig/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Every day, thousands of Pods are evicted from their homes. Stranded and confused, they have to
+abandon their previous lifestyle. Some of them even become nodeless. The current society, imposing
+higher demands of CPU and memory, is part of the problem.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Preemption eviction
+&lt;ul&gt;
+&lt;li&gt;Pod Priority Classes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Node-pressure eviction
+&lt;ul&gt;
+&lt;li&gt;Quality of Service Classes: BestEffort, Burstable, Guaranteed&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;API-initiated eviction&lt;&#x2F;li&gt;
+&lt;li&gt;Taint-based eviction&lt;&#x2F;li&gt;
+&lt;li&gt;Node drain eviction&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sysdig.com&#x2F;blog&#x2F;kubernetes-pod-evicted&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Cloudflare Blog: How we built Pingora, the proxy that connects Cloudflare to the Internet</title>
 		<published>2022-09-18T00:00:00+00:00</published>
@@ -472,86 +522,6 @@ C specific to the LK) and the hardware models targeted by the LK.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;3173162.3177156&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1608.07531&quot;&gt;Syntax and semantics of the weak consistency model specification language cat&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1308.6810&quot;&gt;Herding Cats: Modelling, Simulation, Testing, and Data Mining for Weak Memory&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Ivan Velichko: Reverse Proxy, HTTP Keep-Alive Timeout, and sporadic HTTP 502s</title>
-		<published>2022-08-27T00:00:00+00:00</published>
-		<updated>2022-08-27T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220827-iximiuz/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220827-iximiuz/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;HTTP Keep-Alive between a reverse proxy and an upstream server combined with some misfortunate
-downstream- and upstream-side timeout settings can make clients receiving HTTP 502s from the
-proxy.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;reverse-proxy-http-keep-alive-and-502s&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.tessian.com&#x2F;blog&#x2F;how-to-fix-http-502-errors&#x2F;&quot;&gt;A Solution to HTTP 502 Errors with AWS ALB&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;HTTP_persistent_connection&quot;&gt;HTTP persistent connection&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Die wunderbare Welt von Isotopp: fork, exec, wait and exit</title>
-		<published>2022-08-26T00:00:00+00:00</published>
-		<updated>2022-08-26T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220826-koehntopp/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220826-koehntopp/</id>
-		<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.koehntopp.info&#x2F;2020&#x2F;12&#x2F;28&#x2F;fork-exec-wait-and-exit.html&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;how-to-on-processes&#x2F;&quot;&gt;How to on starting processes (mostly in Linux)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fork_(system_call)&quot;&gt;fork (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Exec_(system_call)&quot;&gt;exec (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Wait_(system_call)&quot;&gt;wait (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Exit_(system_call)&quot;&gt;exit (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dup_(system_call)&quot;&gt;dup (system call)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pipeline_(Unix)&quot;&gt;Pipeline (Unix)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Spawn_(computing)&quot;&gt;Spawn (computing)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fork%E2%80%93exec&quot;&gt;Fork–exec&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fork_bomb&quot;&gt;Fork bomb&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Process_(computing)&quot;&gt;Process (computing)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Parent_process&quot;&gt;Parent process&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Child_process&quot;&gt;Child process&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Signal_(IPC)&quot;&gt;Signal (IPC)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Orphan_process&quot;&gt;Orphan process&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Zombie_process&quot;&gt;Zombie process&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Process_group&quot;&gt;Process group&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 </feed>
