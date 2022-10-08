@@ -4,8 +4,68 @@
 	<link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.vac.fun"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-09-21T00:00:00+00:00</updated>
+	<updated>2022-10-08T00:00:00+00:00</updated>
 	<id>https://blog.vac.fun/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Honeycomb Blog: The Future of Ops Is Platform Engineering</title>
+		<published>2022-10-08T00:00:00+00:00</published>
+		<updated>2022-10-08T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.vac.fun/prism/20221008-honeycomb/" type="text/html"/>
+		<id>https://blog.vac.fun/prism/20221008-honeycomb/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Building infrastructure and operational expertise used to be bundled together into a single role.
+But the industry is now bifurcating along an infrastructure fault line, and the overlap between
+infrastructure-oriented engineers and operationally-minded engineers is swiftly eroding. Engineers
+who love this work increasingly have a choice to make. Either you can 1) go deep on infrastructure
+by joining a company that does infrastructure as a service, or 2) go broad on operability by
+joining a company to help them do as little infrastructure as possible.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Our systems are only getting more complex, more difficult to operate, and simultaneously more
+critical to life on earth, which means that operational excellence has never been more desperately
+needed (and if you don’t respect that, 🌈 you deserve to suffer 🌈).&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Developer cycles are the scarcest resource in your company, and you want to spend as many of those
+as possible on your core product: the crown jewel, the code that makes you a business. Money is
+cheaper than engineering cycles, and teams that are focused on their core business will always
+outperform teams whose focus is spread across dozens of non-revenue-generating projects. Let
+someone else build and run all the dependencies and adjacencies. &lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;platform-engineering-is-what-stands-between-you-and-darkness&quot;&gt;Platform engineering is what stands between you and darkness&lt;&#x2F;h2&gt;
+&lt;p&gt;When you start talking about putting software engineers on call for their own code, and generally
+being more involved in production, some percentage of the time you will hear back a guttural wail
+of despair: &lt;em&gt;&amp;quot;You can&#x27;t expect me to know EVERYTHING about EVERYTHING!&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Quite right; we can’t. Platform engineering teams are part of the answer to this perfectly
+reasonable complaint. It’s not that you’re being asked to do or understand more &lt;em&gt;in toto&lt;&#x2F;em&gt;, but the
+distribution of labor and responsibility is shifting:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Before&lt;&#x2F;strong&gt;: some engineers wrote code, and some engineers ran code.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Now&lt;&#x2F;strong&gt;: all engineers write code, and all engineers run the code they write—but we divide the areas
+of responsibility by layer or function.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;One of the key principles of any developer platform is that &lt;em&gt;it should be easy to do the right
+things, and hard to do the wrong things&lt;&#x2F;em&gt;. It should be much simpler and easier to use the blessed
+paths than anything else, and there should be friction if you go off the beaten path.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;strong&gt;A strong platform team has an equally deep grounding in operations experience and software
+development.&lt;&#x2F;strong&gt; Individuals who are experts in both areas are fairly rare, but you can pull together
+a strong, well-rounded &lt;em&gt;team&lt;&#x2F;em&gt; by assembling a mix of SWEs (with some ops experience) and ops or
+DevOps engineers (with some software experience) and having them learn and grow from each other.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Platform teams typically work higher up the stack than operations, DevOps, or SRE teams do, and
+they involve a great deal less infrastructure.&lt;&#x2F;p&gt;
+&lt;p&gt;If a company has both a DevOps team and SRE, typically I expect to see the SRE team more on the
+frontlines, involved with incidents, telemetry, etc., and DevOps teams more on the backburner,
+slinging pipes and plumbing.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;That team should write libraries, generate examples, and drive standardization; ushering in
+consistency, predictability, and usability. They should partner with internal teams to evaluate
+use cases. They should partner with your vendors as roadmap stakeholders. They might also write
+glue code and helper modules to connect disparate data sources and create cohesive visualizations.
+Basically, that team becomes an integration point between your organization and the outsourced
+work.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.honeycomb.io&#x2F;blog&#x2F;future-ops-platform-engineering&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Baby Steps: What I meant by the &quot;soul of Rust&quot;</title>
 		<published>2022-09-21T00:00:00+00:00</published>
@@ -507,21 +567,6 @@ especially code written by others.&lt;&#x2F;p&gt;
 reading from top to bottom.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.felienne.com&#x2F;archives&#x2F;6472&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>ASPLOS Paper: Frightening Small Children and Disconcerting Grown-ups: Concurrency in the Linux Kernel</title>
-		<published>2022-08-31T00:00:00+00:00</published>
-		<updated>2022-08-31T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.vac.fun/prism/20220831-asplos/" type="text/html"/>
-		<id>https://blog.vac.fun/prism/20220831-asplos/</id>
-		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;All in all, our LK model specifies the cumulative effect of a language-level model (the subset of
-C specific to the LK) and the hardware models targeted by the LK.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;3173162.3177156&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1608.07531&quot;&gt;Syntax and semantics of the weak consistency model specification language cat&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1308.6810&quot;&gt;Herding Cats: Modelling, Simulation, Testing, and Data Mining for Weak Memory&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>
