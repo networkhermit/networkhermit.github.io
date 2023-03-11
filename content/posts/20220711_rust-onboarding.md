@@ -118,7 +118,7 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
     "[rust]": {
         "editor.formatOnSave": true
     },
-    "rust-analyzer.checkOnSave.command": "clippy"
+    "rust-analyzer.check.command": "clippy"
 }
 ```
 
