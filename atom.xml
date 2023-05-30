@@ -4,8 +4,29 @@
     <link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-04-20T00:00:00+00:00</updated>
+    <updated>2023-05-30T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Linux Journal: Understanding Bash: Elements of Programming</title>
+        <published>2023-05-30T00:00:00+00:00</published>
+        <updated>2023-05-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.vac.fun/prism/20230530-linuxjournal/" type="text/html"/>
+        <id>https://blog.vac.fun/prism/20230530-linuxjournal/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Although Bash is primarily a command interpreter, it&#x27;s also a programming language. Bash supports
+variables, functions and has control flow constructs, such as conditional statements and loops.
+However, all of this comes with some unusual quirks. This is because Bash attempts to fulfill two
+roles at the same time: to be a command interpreter and a programming language—and there is
+tension between the two.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.linuxjournal.com&#x2F;content&#x2F;understanding-bash-elements-programming&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>LWN: The shrinking role of semaphores</title>
         <published>2023-04-20T00:00:00+00:00</published>
@@ -473,34 +494,6 @@ format&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
 time&lt;&#x2F;em&gt; timestamps everwhere.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nakedsecurity.sophos.com&#x2F;2022&#x2F;09&#x2F;09&#x2F;hoe-to-deal-with-dates-and-times-without-any-timezone-tantrums&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rosieland: Stop Measuring Community Engagement</title>
-        <published>2022-09-10T00:00:00+00:00</published>
-        <updated>2022-09-10T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220910-rosieland/" type="text/html"/>
-        <id>https://blog.vac.fun/prism/20220910-rosieland/</id>
-        
-        <content type="html">&lt;blockquote&gt;
-&lt;p&gt;good intentions with bad outcomes&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;strong&gt;Engagement is Value-Neutral&lt;&#x2F;strong&gt; &#x2F; &lt;strong&gt;Quantity over Quality&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Engagement is just the mechanism for delivering something of value, it’s not the value itself.
-Knowing how much engagement you have doesn’t tell you how much value you’re getting. Engagement
-that makes a difference is often what can&#x27;t be seen, and consequently (easily) measured. It’s not
-even a good proxy measurement or leading indicator. You could deliver less value with more
-engagement, or more value with less engagement. At best it’s a vanity metric. At worst it’s
-ticking time bomb.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;We should measure what we value, not value what we measure. Unfortunately for us, human psychology
-makes the latter inevitable. So our only hope is in the former, measuring what we value.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rosie.land&#x2F;posts&#x2F;stop-measuring-community-engagement&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
