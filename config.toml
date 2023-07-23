@@ -26,6 +26,7 @@ menu = [
     { name = "/prism", url = "/prism", weight = 2 },
     { name = "/about", url = "/about", weight = 3 },
 ]
+socials = []
 theme = "auto"
 toc = false
 use_cdn = false
