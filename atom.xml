@@ -4,8 +4,77 @@
     <link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-05-30T00:00:00+00:00</updated>
+    <updated>2023-07-23T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>mahesh&#x27;s blog: What we talk about when we talk about System Design</title>
+        <published>2023-07-23T00:00:00+00:00</published>
+        <updated>2023-07-23T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.vac.fun/prism/20230723-mahesh/" type="text/html"/>
+        <id>https://blog.vac.fun/prism/20230723-mahesh/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Late-bind on designs&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The goal of the design process is not to generate a single point solution, but to instead
+characterize the design space for a given problem: a single point should then fall naturally out
+of that space given the problem constraints. Converging early on a single design is harmful; the
+team should have the ability to jump from one part of the space to another right until a solution
+is picked.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Each point solution is a DoS attack on the design process&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Talking about individual designs in isolation slows down design. Talking about designs in the
+context of the design space accelerates design. New designs should be described in terms of the
+design space, so you can immediately convey their relative position compared to other point
+solutions.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Think in parallel; Design together; Implement in parallel; Review together&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Certain parts of the design and development process are creative and should be parallelized &#x2F;
+sharded, while others require discipline and should be centralized &#x2F; broadcast.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Talk about the problem, not existing systems&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Solution Complexity » Problem Complexity&lt;&#x2F;li&gt;
+&lt;li&gt;Solution Bias&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Always talk about a second application&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Practically, even if you are implementing only one app, it helps to always consider a second app
+(or even implement one in tests); to prevent application specifics from leaking into the
+abstraction.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;For each abstraction, build one implementation; plan for a second; hope for a third&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;In the opposite direction, you don’t want the abstraction’s semantics to rely on its
+implementation details. One way to ensure this is to talk about multiple implementations in the
+design process.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;7&quot;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Abstraction is not free&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Abstraction is a balancing act between two types of complexity: the complexity of concreteness and
+the complexity of abstractness. Each time you add a layer of abstraction, have a precise
+characterization for why it has to exist, as well as the division of functionality between this
+layer and the ones around it.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;8&quot;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Be critical (but about the right things)&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;One way to approach design is to continually de-risk the pieces that are truly unknown; while
+deferring work on the pieces that are difficult but known. (In the opposite direction, researchers
+need to be more focused on details and practicality, but this happens naturally in an industry
+environment).&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;maheshba.bitbucket.io&#x2F;blog&#x2F;2023&#x2F;07&#x2F;12&#x2F;Design.html&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Linux Journal: Understanding Bash: Elements of Programming</title>
         <published>2023-05-30T00:00:00+00:00</published>
@@ -472,28 +541,6 @@ it.&lt;&#x2F;p&gt;
 time and money.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.honeycomb.io&#x2F;blog&#x2F;pipeline-blues-cicd-observability&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Naked Security: How to deal with dates and times without any timezone tantrums…</title>
-        <published>2022-09-10T00:00:00+00:00</published>
-        <updated>2022-09-10T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220910-nakedsecurity/" type="text/html"/>
-        <id>https://blog.vac.fun/prism/20220910-nakedsecurity/</id>
-        
-        <content type="html">&lt;blockquote&gt;
-&lt;p&gt;There’s one thing you can do to help, both as a logfile creator and a logfile consumer.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Always reduce timestamps to UTC&lt;&#x2F;strong&gt; (universal co-ordinated time), thus factoring timezones out of
-your logfiles, and &lt;strong&gt;always record timestamps in a simple, unambiguous, alphabetically sortable
-format&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Simply put: consult, &lt;a href=&quot;https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc3339.txt&quot;&gt;RFC 3339&lt;&#x2F;a&gt;, and stick to &lt;em&gt;Zulu
-time&lt;&#x2F;em&gt; timestamps everwhere.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nakedsecurity.sophos.com&#x2F;2022&#x2F;09&#x2F;09&#x2F;hoe-to-deal-with-dates-and-times-without-any-timezone-tantrums&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>

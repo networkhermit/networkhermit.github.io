@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="dark light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         mahesh&#x27;s blog: What we talk about when we talk about System Design
+        
+    </title>
+
+        
+            <meta property="og:title" content="mahesh&#x27;s blog: What we talk about when we talk about System Design" />
+        
+     
+
+     
+         
+     
+
+     
+         
+    
+
+    
+    
+        <link rel="icon" type="image/png" href=&#x2F;images&#x2F;favicon.ico />
+    
+
+    
+    
+        <link href=https://blog.vac.fun/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="hi, I’m vac" href="https://blog.vac.fun/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://blog.vac.fun/theme/light.css />
+        <link rel="stylesheet" type="text/css" href="https://blog.vac.fun/theme/dark.css" media="(prefers-color-scheme: dark)" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
+
+    
+
+    <script src=https://blog.vac.fun/js/feather.min.js></script>
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+
+        <div class="socials">
+            
+        </div>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;posts style="margin-left: 0.7em">&#x2F;posts</a>
+        
+            <a href=&#x2F;prism style="margin-left: 0.7em">&#x2F;prism</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+
+    
+</header>
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        mahesh&#x27;s blog: What we talk about when we talk about System Design<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2023-07-23</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<ol>
+<li><em><strong>Late-bind on designs</strong></em>.</li>
+</ol>
+<p>The goal of the design process is not to generate a single point solution, but to instead
+characterize the design space for a given problem: a single point should then fall naturally out
+of that space given the problem constraints. Converging early on a single design is harmful; the
+team should have the ability to jump from one part of the space to another right until a solution
+is picked.</p>
+<ol start="2">
+<li><em><strong>Each point solution is a DoS attack on the design process</strong></em>.</li>
+</ol>
+<p>Talking about individual designs in isolation slows down design. Talking about designs in the
+context of the design space accelerates design. New designs should be described in terms of the
+design space, so you can immediately convey their relative position compared to other point
+solutions.</p>
+<ol start="3">
+<li><em><strong>Think in parallel; Design together; Implement in parallel; Review together</strong></em>.</li>
+</ol>
+<p>Certain parts of the design and development process are creative and should be parallelized /
+sharded, while others require discipline and should be centralized / broadcast.</p>
+<ol start="4">
+<li><em><strong>Talk about the problem, not existing systems</strong></em>.</li>
+</ol>
+<ul>
+<li>Solution Complexity » Problem Complexity</li>
+<li>Solution Bias</li>
+</ul>
+<ol start="5">
+<li><em><strong>Always talk about a second application</strong></em>.</li>
+</ol>
+<p>Practically, even if you are implementing only one app, it helps to always consider a second app
+(or even implement one in tests); to prevent application specifics from leaking into the
+abstraction.</p>
+<ol start="6">
+<li><em><strong>For each abstraction, build one implementation; plan for a second; hope for a third</strong></em>.</li>
+</ol>
+<p>In the opposite direction, you don’t want the abstraction’s semantics to rely on its
+implementation details. One way to ensure this is to talk about multiple implementations in the
+design process.</p>
+<ol start="7">
+<li><em><strong>Abstraction is not free</strong></em>.</li>
+</ol>
+<p>Abstraction is a balancing act between two types of complexity: the complexity of concreteness and
+the complexity of abstractness. Each time you add a layer of abstraction, have a precise
+characterization for why it has to exist, as well as the division of functionality between this
+layer and the ones around it.</p>
+<ol start="8">
+<li><em><strong>Be critical (but about the right things)</strong></em>.</li>
+</ol>
+<p>One way to approach design is to continually de-risk the pieces that are truly unknown; while
+deferring work on the pieces that are difficult but known. (In the opposite direction, researchers
+need to be more focused on details and practicality, but this happens naturally in an industry
+environment).</p>
+</blockquote>
+<p><a href="https://maheshba.bitbucket.io/blog/2023/07/12/Design.html">Link</a></p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
