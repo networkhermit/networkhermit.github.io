@@ -66,9 +66,9 @@ title = "Rust: 上手和提升"
 
 * [rustlings](https://github.com/rust-lang/rustlings) ~~Jedi Younglings~~
   > `Small exercises to get you used to reading and writing Rust code.`
-* [The Book](https://doc.rust-lang.org/book/index.html)
+* [The Book](https://doc.rust-lang.org/book/)
   > *`The Rust Programming Language`*
-* [Rust by Example](https://doc.rust-lang.org/rust-by-example/index.html)
+* [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
   > `Learn Rust with examples`
 
 让自己对这门语言关键的概念有个印象，避免刻意套用以往的编程经验，试着去认识 Rust 的独特之处，入个门没
@@ -122,7 +122,7 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 }
 ```
 
-* 依赖安全：[cargo-audit](https://github.com/RustSec/cargo-audit), [cargo-outdated](https://github.com/kbknapp/cargo-outdated)
+* 依赖安全：[cargo-audit](https://github.com/rustsec/rustsec), [cargo-outdated](https://github.com/kbknapp/cargo-outdated)
 
 * 额外推荐：[mold](https://github.com/rui314/mold)（一款现代链接器）, [sccache](https://github.com/mozilla/sccache)
   （编译缓存）
@@ -158,15 +158,15 @@ https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
 
 不管最终能达到什么深度，只要是坚持涉猎都值得被认可：
 
+* [Effective Rust](https://lurklurk.org/effective-rust/)
 * 源码阅读: [rust](https://github.com/rust-lang/rust),
-  [mio](https://github.com/tokio-rs/mio)/[io-uring](https://github.com/tokio-rs/io-uring)/[aya](https://github.com/aya-rs/aya),
   [tokio](https://github.com/tokio-rs/tokio)/[rayon](https://github.com/rayon-rs/rayon),
   [axum](https://github.com/tokio-rs/axum)/[tonic](https://github.com/hyperium/tonic),
   [tracing](https://github.com/tokio-rs/tracing)/[opentelemetry](https://github.com/open-telemetry/opentelemetry-rust)
 * [reference](https://doc.rust-lang.org/stable/reference/): Rust 语言参考
 * [nomicon](https://doc.rust-lang.org/stable/nomicon/): `The Dark Arts of Advanced and Unsafe Rust
   Programming`
-* 网络协议：[Transmission Control Protocol (TCP)](https://www.rfc-editor.org/rfc/rfc9293.html)
+* 网络协议：[TCP](https://www.rfc-editor.org/rfc/rfc9293.html), [UDP](https://www.rfc-editor.org/rfc/rfc768.html)
 
 ## 写在最后
 
