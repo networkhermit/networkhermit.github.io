@@ -4,8 +4,29 @@
     <link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-08-05T00:00:00+00:00</updated>
+    <updated>2023-08-16T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Gruntwork Blog: The future of Terraform must be open</title>
+        <published>2023-08-16T00:00:00+00:00</published>
+        <updated>2023-08-16T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.vac.fun/prism/20230816-gruntwork/" type="text/html"/>
+        <id>https://blog.vac.fun/prism/20230816-gruntwork/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;the BSL license is a poison pill for Terraform which threatens the entire community and ecosystem&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We believe that the essential building blocks of the modern Internet—tools such as Linux,
+Kubernetes, and Terraform—must be truly open source. That is the only way to ensure that we are
+building our industry on top of solid and predictable underpinnings.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Bram Moolenaar :h 42</title>
         <published>2023-08-05T00:00:00+00:00</published>
@@ -526,30 +547,6 @@ wonderfully.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;firecracker-microvm&#x2F;firecracker&#x2F;blob&#x2F;main&#x2F;docs&#x2F;snapshotting&#x2F;snapshot-support.md&quot;&gt;Firecracker Snapshotting&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;File_system_fragmentation&quot;&gt;File system fragmentation&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>InfraCloud Blog:  Securing Kubernetes Cluster using Kubescape and kube-bench</title>
-        <published>2022-09-11T00:00:00+00:00</published>
-        <updated>2022-09-11T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220911-infracloud/" type="text/html"/>
-        <id>https://blog.vac.fun/prism/20220911-infracloud/</id>
-        
-        <content type="html">&lt;blockquote&gt;
-&lt;p&gt;With businesses adopting cloud native technology, Kubernetes has emerged as a primary tool of
-choice for container orchestration. Deploying and managing applications has never been easier.
-However, securing clusters has been much like uncharted waters with containers. Attackers find and
-exploit new ways to break into the systems while the community works round the clock to protect
-it.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.infracloud.io&#x2F;blogs&#x2F;securing-kubernetes-cluster-kubescape-kubebench&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kubescape&#x2F;kubescape&quot;&gt;Kubescape&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aquasecurity&#x2F;kube-bench&quot;&gt;kube-bench&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
