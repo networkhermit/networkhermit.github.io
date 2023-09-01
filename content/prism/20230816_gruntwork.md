@@ -8,3 +8,5 @@ title = "Gruntwork Blog: The future of Terraform must be open"
 > We believe that the essential building blocks of the modern Internet—tools such as Linux,
 > Kubernetes, and Terraform—must be truly open source. That is the only way to ensure that we are
 > building our industry on top of solid and predictable underpinnings.
+
+[Link](https://blog.gruntwork.io/the-future-of-terraform-must-be-open-ab0b9ba65bca)
