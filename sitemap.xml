@@ -19,6 +19,9 @@
         <loc>https://blog.vac.fun/page/4/</loc>
     </url>
     <url>
+        <loc>https://blog.vac.fun/page/5/</loc>
+    </url>
+    <url>
         <loc>https://blog.vac.fun/posts/</loc>
     </url>
     <url>
@@ -282,6 +285,14 @@
     <url>
         <loc>https://blog.vac.fun/prism/20230901-linuxjournal/</loc>
         <lastmod>2023-09-01</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20231224-over-yonder/</loc>
+        <lastmod>2023-12-24</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.vac.fun/prism/20231224-technologyreview/</loc>
+        <lastmod>2023-12-24</lastmod>
     </url>
     <url>
         <loc>https://blog.vac.fun/prism/page/1/</loc>

@@ -1,22 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>hi, I’m vac</title>
-    <link href="https://blog.vac.fun/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.vac.fun"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.vac.fun/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-09-01T00:00:00+00:00</updated>
+    <updated>2023-12-24T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Matt Rants: BSD for Linux Users</title>
+        <published>2023-12-24T00:00:00+00:00</published>
+        <updated>2023-12-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20231224-over-yonder/"/>
+        <id>https://blog.vac.fun/prism/20231224-over-yonder/</id>
+        
+        <content type="html" xml:base="https://blog.vac.fun/prism/20231224-over-yonder/">&lt;blockquote&gt;
+&lt;p&gt;Linux, with its chaotic tinkering background, naturally appeals to a different personality, in
+general, than BSD with its academic and rigorous background.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.over-yonder.net&#x2F;~fullermd&#x2F;rants&#x2F;bsd4linux&#x2F;01&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>MIT Technology Review: These six questions will dictate the future of generative AI</title>
+        <published>2023-12-24T00:00:00+00:00</published>
+        <updated>2023-12-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20231224-technologyreview/"/>
+        <id>https://blog.vac.fun/prism/20231224-technologyreview/</id>
+        
+        <content type="html" xml:base="https://blog.vac.fun/prism/20231224-technologyreview/">&lt;blockquote&gt;
+&lt;p&gt;Here’s the catch: it is impossible to know all the ways a technology will be misused until it is
+used.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Will we ever mitigate the bias problem?&lt;&#x2F;li&gt;
+&lt;li&gt;How will AI change the way we apply copyright?&lt;&#x2F;li&gt;
+&lt;li&gt;How will it change our jobs?&lt;&#x2F;li&gt;
+&lt;li&gt;What misinformation will it make possible?&lt;&#x2F;li&gt;
+&lt;li&gt;Will we come to grips with its costs?&lt;&#x2F;li&gt;
+&lt;li&gt;Will doomerism continue to dominate policymaking?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.technologyreview.com&#x2F;2023&#x2F;12&#x2F;19&#x2F;1084505&#x2F;generative-ai-artificial-intelligence-bias-jobs-copyright-misinformation&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Linux Journal: Remotely Wipe a Server</title>
         <published>2023-09-01T00:00:00+00:00</published>
         <updated>2023-09-01T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20230901-linuxjournal/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20230901-linuxjournal/"/>
         <id>https://blog.vac.fun/prism/20230901-linuxjournal/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20230901-linuxjournal/">&lt;blockquote&gt;
 &lt;p&gt;With Linux, I&#x27;ve always felt that I was limited only by my own programming and problem-solving
 abilities, no matter what problem presented itself.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -34,13 +98,19 @@ abilities, no matter what problem presented itself.&lt;&#x2F;p&gt;
         <title>Gruntwork Blog: The future of Terraform must be open</title>
         <published>2023-08-16T00:00:00+00:00</published>
         <updated>2023-08-16T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20230816-gruntwork/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20230816-gruntwork/"/>
         <id>https://blog.vac.fun/prism/20230816-gruntwork/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20230816-gruntwork/">&lt;blockquote&gt;
 &lt;p&gt;the BSL license is a poison pill for Terraform which threatens the entire community and ecosystem&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;blockquote&gt;
@@ -56,13 +126,19 @@ building our industry on top of solid and predictable underpinnings.&lt;&#x2F;p&
         <title>Bram Moolenaar :h 42</title>
         <published>2023-08-05T00:00:00+00:00</published>
         <updated>2023-08-05T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/posts/20230805-bram-moolenaar/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/posts/20230805-bram-moolenaar/"/>
         <id>https://blog.vac.fun/posts/20230805-bram-moolenaar/</id>
         
-        <content type="html">&lt;p&gt;R.I.P.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://blog.vac.fun/posts/20230805-bram-moolenaar/">&lt;p&gt;R.I.P.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;vim&lt;&#x2F;span&gt;&lt;span&gt; -c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;#39;:h 42&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;blockquote&gt;
@@ -83,13 +159,19 @@ is...&lt;&#x2F;p&gt;
         <title>mahesh&#x27;s blog: What we talk about when we talk about System Design</title>
         <published>2023-07-23T00:00:00+00:00</published>
         <updated>2023-07-23T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20230723-mahesh/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20230723-mahesh/"/>
         <id>https://blog.vac.fun/prism/20230723-mahesh/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20230723-mahesh/">&lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Late-bind on designs&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
@@ -152,13 +234,19 @@ environment).&lt;&#x2F;p&gt;
         <title>Linux Journal: Understanding Bash: Elements of Programming</title>
         <published>2023-05-30T00:00:00+00:00</published>
         <updated>2023-05-30T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20230530-linuxjournal/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20230530-linuxjournal/"/>
         <id>https://blog.vac.fun/prism/20230530-linuxjournal/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20230530-linuxjournal/">&lt;blockquote&gt;
 &lt;p&gt;Although Bash is primarily a command interpreter, it&#x27;s also a programming language. Bash supports
 variables, functions and has control flow constructs, such as conditional statements and loops.
 However, all of this comes with some unusual quirks. This is because Bash attempts to fulfill two
@@ -173,13 +261,19 @@ tension between the two.&lt;&#x2F;p&gt;
         <title>LWN: The shrinking role of semaphores</title>
         <published>2023-04-20T00:00:00+00:00</published>
         <updated>2023-04-20T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20230420-lwn/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20230420-lwn/"/>
         <id>https://blog.vac.fun/prism/20230420-lwn/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20230420-lwn/">&lt;blockquote&gt;
 &lt;p&gt;a &lt;em&gt;classic&lt;&#x2F;em&gt; concurrency limiter&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;blockquote&gt;
@@ -193,13 +287,19 @@ tension between the two.&lt;&#x2F;p&gt;
         <title>新年快乐</title>
         <published>2023-01-10T00:00:00+00:00</published>
         <updated>2023-01-10T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/posts/20230110-happy-new-year/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/posts/20230110-happy-new-year/"/>
         <id>https://blog.vac.fun/posts/20230110-happy-new-year/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/posts/20230110-happy-new-year/">&lt;blockquote&gt;
 &lt;p&gt;Study hard what interests you the most in the most undisciplined, irreverent and original manner
 possible.&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -213,13 +313,19 @@ possible.&lt;&#x2F;p&gt;
         <title>Honeycomb Blog: The Future of Ops Is Platform Engineering</title>
         <published>2022-10-08T00:00:00+00:00</published>
         <updated>2022-10-08T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20221008-honeycomb/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20221008-honeycomb/"/>
         <id>https://blog.vac.fun/prism/20221008-honeycomb/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20221008-honeycomb/">&lt;blockquote&gt;
 &lt;p&gt;Building infrastructure and operational expertise used to be bundled together into a single role.
 But the industry is now bifurcating along an infrastructure fault line, and the overlap between
 infrastructure-oriented engineers and operationally-minded engineers is swiftly eroding. Engineers
@@ -278,13 +384,19 @@ work.&lt;&#x2F;p&gt;
         <title>Baby Steps: What I meant by the &quot;soul of Rust&quot;</title>
         <published>2022-09-21T00:00:00+00:00</published>
         <updated>2022-09-21T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220921-smallcultfollowing/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220921-smallcultfollowing/"/>
         <id>https://blog.vac.fun/prism/20220921-smallcultfollowing/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20220921-smallcultfollowing/">&lt;blockquote&gt;
 &lt;p&gt;The soul of Rust, to my mind, is definitely &lt;strong&gt;not&lt;&#x2F;strong&gt; being explicit about allocation. Rather, it’s
 about the struggle between a few key values — especially &lt;em&gt;productivity&lt;&#x2F;em&gt; and &lt;em&gt;versatility&lt;&#x2F;em&gt; in
 tension with &lt;em&gt;transparency&lt;&#x2F;em&gt;. Rust’s goal has always been to &lt;em&gt;feel&lt;&#x2F;em&gt; like a high-level but with the
@@ -304,13 +416,19 @@ performance and control of a &lt;em&gt;low-level&lt;&#x2F;em&gt; one.&lt;&#x2F;p
         <title>Sysdig Blog: Understanding Kubernetes Evicted Pods</title>
         <published>2022-09-21T00:00:00+00:00</published>
         <updated>2022-09-21T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220921-sysdig/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220921-sysdig/"/>
         <id>https://blog.vac.fun/prism/20220921-sysdig/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20220921-sysdig/">&lt;blockquote&gt;
 &lt;p&gt;Every day, thousands of Pods are evicted from their homes. Stranded and confused, they have to
 abandon their previous lifestyle. Some of them even become nodeless. The current society, imposing
 higher demands of CPU and memory, is part of the problem.&lt;&#x2F;p&gt;
@@ -338,13 +456,19 @@ higher demands of CPU and memory, is part of the problem.&lt;&#x2F;p&gt;
         <title>Cloudflare Blog: How we built Pingora, the proxy that connects Cloudflare to the Internet</title>
         <published>2022-09-18T00:00:00+00:00</published>
         <updated>2022-09-18T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220918-cloudflare/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220918-cloudflare/"/>
         <id>https://blog.vac.fun/prism/20220918-cloudflare/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20220918-cloudflare/">&lt;blockquote&gt;
 &lt;p&gt;NGINX worker&#x2F;process architecture limitations:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;each request can only be served by a single worker: unbalanced load across all CPU cores,
@@ -372,13 +496,19 @@ pools, easily.&lt;&#x2F;p&gt;
         <title>Cloudflare Blog: Log analytics using ClickHouse</title>
         <published>2022-09-17T00:00:00+00:00</published>
         <updated>2022-09-17T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220917-cloudflare/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220917-cloudflare/"/>
         <id>https://blog.vac.fun/prism/20220917-cloudflare/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20220917-cloudflare/">&lt;blockquote&gt;
 &lt;p&gt;Characteristics of logs&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Unpredictable&lt;&#x2F;li&gt;
@@ -407,13 +537,19 @@ pools, easily.&lt;&#x2F;p&gt;
         <title>Simme Blog: Observability is becoming mission critical, but who watches the watchmen?</title>
         <published>2022-09-16T00:00:00+00:00</published>
         <updated>2022-09-16T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220916-simme/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220916-simme/"/>
         <id>https://blog.vac.fun/prism/20220916-simme/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20220916-simme/">&lt;blockquote&gt;
 &lt;p&gt;What observes the observability stack? How will we be made aware if it is starting to have issues?&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Alerts not firing&lt;&#x2F;li&gt;
@@ -428,13 +564,19 @@ pools, easily.&lt;&#x2F;p&gt;
         <title>Cloudflare Blog: The story of one latency spike &amp; The revenge of the listening sockets</title>
         <published>2022-09-12T00:00:00+00:00</published>
         <updated>2022-09-12T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220912-cloudflare/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220912-cloudflare/"/>
         <id>https://blog.vac.fun/prism/20220912-cloudflare/</id>
         
-        <content type="html">&lt;blockquote&gt;
+        <content type="html" xml:base="https://blog.vac.fun/prism/20220912-cloudflare/">&lt;blockquote&gt;
 &lt;p&gt;Using a large chunk of receive buffer space for the metadata is not really what the programmer
 wants. To counter that, when the socket is under memory pressure complex logic is run with the
 intention of freeing some space. One of the operations is &lt;code&gt;tcp_collapse&lt;&#x2F;code&gt; and it will merge
@@ -448,109 +590,6 @@ learned a bit about the Linux networking stack: the fact that &lt;code&gt;LHTABL
 hashed by destination port only.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;revenge-listening-sockets&#x2F;&quot;&gt;The revenge of the listening sockets&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Isovalent Blog: Addressing Bandwidth Exhaustion with Cilium Bandwidth Manager &amp; The Rise of Kubernetes and the End of Networking &amp; Security as You Know It. What’s Next?</title>
-        <published>2022-09-12T00:00:00+00:00</published>
-        <updated>2022-09-12T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220912-isovalent/" type="text/html"/>
-        <id>https://blog.vac.fun/prism/20220912-isovalent/</id>
-        
-        <content type="html">&lt;blockquote&gt;
-&lt;p&gt;Since inception, part of the core characteristics of Kubernetes have been its outstanding
-orchestration and scheduling capabilities. By nature, resources available to the pods are shared
-resources and preventing compute starvation is critical. But if we are capable of preventing
-compute starvation, shouldn’t we also prevent &lt;em&gt;network&lt;&#x2F;em&gt; starvation?&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;ul&gt;
-&lt;li&gt;Cilium removes the need for an IFB (Intermediate Functional Block), therefore reducing the
-latency that was introduced with the CNI plugin implementation&lt;&#x2F;li&gt;
-&lt;li&gt;Cilium leverages multi-core and multi queue capabilities, ensuring rate-limiting is not
-detrimental to performances&lt;&#x2F;li&gt;
-&lt;li&gt;Cilium leverages state-of-the-art and optimal congestion avoidance technologies like Earliest
-Departure Time and Timing Wheel to reduce latency.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Now – platform operators don’t always care &lt;em&gt;how&lt;&#x2F;em&gt; it’s done – they want to know 1) if it works and
-2) if it’s easy to operate.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;A typical netperf test is called TCP_STREAM and goes from the netperf client to the netperf
-server. Therefore a stream from the netperf server to the client will be STREAM backwards –
-MAERTS. This is how servers typically operate, with larger data flows going from server to client.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;addressing-bandwidth-exhaustion-with-cilium-bandwidth-manager&#x2F;&quot;&gt;Addressing Bandwidth Exhaustion with Cilium Bandwidth Manager&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In a few short years, Kubernetes has gone from being a “bleeding edge tech” to the “new enterprise
-standard” for how modern applications are built and operated. Enterprises and telcos are now past
-the initial “Day 1” challenges (e.g., “which Kubernetes distro do I run?”) and are in the deeper
-“Day 2” challenges, with a major focus on how they scalably connect, secure, and observe the
-connectivity between these modern API-driven applications.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;As organizations look for the best way to solve these challenges on modern Kubernetes platforms
-the most obvious technical requirements are:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Highly distributed &amp;amp; efficient processing to handle the explosion of east-west communication
-(centralized devices become bottlenecks and per-workload “sidecar proxies” are too heavyweight).&lt;&#x2F;li&gt;
-&lt;li&gt;Workload identity and API-layer visibility as a first-class construct for both zero-trust
-security and observability (since IPs and ports are nearly meaningless in a Kubernetes
-environment).&lt;&#x2F;li&gt;
-&lt;li&gt;Configurable via standardized and automation-friendly APIs (e.g., Kubernetes CRDs such as
-Services, Ingress, NetworkPolicy).&lt;&#x2F;li&gt;
-&lt;li&gt;Integrates with legacy networks and legacy workloads running outside of Kubernetes.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;isovalent.com&#x2F;blog&#x2F;post&#x2F;isovalent-series-b&#x2F;&quot;&gt;The Rise of Kubernetes and the End of Networking &amp;amp; Security as You Know It. What’s Next?&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Cloudflare Blog: 50 Years of The Internet. Work in Progress to a Better Internet</title>
-        <published>2022-09-11T00:00:00+00:00</published>
-        <updated>2022-09-11T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://blog.vac.fun/prism/20220911-cloudflare/" type="text/html"/>
-        <id>https://blog.vac.fun/prism/20220911-cloudflare/</id>
-        
-        <content type="html">&lt;blockquote&gt;
-&lt;p&gt;The “L” and “O” from the word “LOGIN” had been transmitted successfully in their packets; but that
-“G”, wrapped in its own packet, caused the death of that nascent packet network setup. Even today,
-software crashes, that’s a solid fact; but this historic crash, is exactly that — historic.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Be conservative in what you send, be liberal in what you accept.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Robustness_principle&quot;&gt;Robustness principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;What’s the use of a protocol if you don’t have software to speak it.&lt;&#x2F;p&gt;
-&lt;p&gt;Berkeley’s Unix (or FreeBSD, OpenBSD, NetBSD as its variants are known) is now the basis of every
-iPhone, iPad and Mac laptops software in existence. Android’s and Chromebooks come from a
-different lineage; but still hold those BSD methodologies as the fundamental basis of all their
-networking software.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;50-years-of-the-internet-work-in-progress-to-a-better-internet&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The hardware interfaces, the protocols and the software that implemented the protocols were the
-tangible engineering products of that early work. Equally important was the social fabric and
-culture that we created. We knew the system would evolve, so we envisioned an open and evolving
-architecture.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Depend upon it, sir, when a man knows he is to be hanged in a fortnight, it concentrates his mind
-wonderfully.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Samuel Johnson&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;fifty-years-ago&#x2F;&quot;&gt;Fifty Years Ago&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Random_early_detection&quot;&gt;Random early detection&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
