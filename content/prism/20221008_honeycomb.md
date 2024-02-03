@@ -22,7 +22,7 @@ title = "Honeycomb Blog: The Future of Ops Is Platform Engineering"
 > as possible on your core product: the crown jewel, the code that makes you a business. Money is
 > cheaper than engineering cycles, and teams that are focused on their core business will always
 > outperform teams whose focus is spread across dozens of non-revenue-generating projects. Let
-> someone else build and run all the dependencies and adjacencies. 
+> someone else build and run all the dependencies and adjacencies.
 >
 > ---
 >
