@@ -4,8 +4,36 @@
     <link rel="self" type="application/atom+xml" href="https://blog.vac.fun/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-12-24T00:00:00+00:00</updated>
+    <updated>2024-02-28T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Macbeth and Kafka</title>
+        <published>2024-02-28T00:00:00+00:00</published>
+        <updated>2024-02-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/posts/20240228-macbeth-and-kafka/"/>
+        <id>https://blog.vac.fun/posts/20240228-macbeth-and-kafka/</id>
+        
+        <content type="html" xml:base="https://blog.vac.fun/posts/20240228-macbeth-and-kafka/">&lt;blockquote&gt;
+&lt;p&gt;It is a tale told by an idiot, full of sound and fury, signifying nothing.&lt;&#x2F;p&gt;
+&lt;p&gt;— Macbeth&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are two cardinal sins from which all others spring: Impatience and Laziness.&lt;&#x2F;p&gt;
+&lt;p&gt;— Franz Kafka&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Matt Rants: BSD for Linux Users</title>
         <published>2023-12-24T00:00:00+00:00</published>
@@ -302,9 +330,7 @@ tension between the two.&lt;&#x2F;p&gt;
         <content type="html" xml:base="https://blog.vac.fun/posts/20230110-happy-new-year/">&lt;blockquote&gt;
 &lt;p&gt;Study hard what interests you the most in the most undisciplined, irreverent and original manner
 possible.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Richard Feynmann&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+&lt;p&gt;— Richard Feynmann&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 </content>
         
@@ -557,39 +583,6 @@ pools, easily.&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;simme.dev&#x2F;posts&#x2F;who-watches-the-watchmen&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Cloudflare Blog: The story of one latency spike &amp; The revenge of the listening sockets</title>
-        <published>2022-09-12T00:00:00+00:00</published>
-        <updated>2022-09-12T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220912-cloudflare/"/>
-        <id>https://blog.vac.fun/prism/20220912-cloudflare/</id>
-        
-        <content type="html" xml:base="https://blog.vac.fun/prism/20220912-cloudflare/">&lt;blockquote&gt;
-&lt;p&gt;Using a large chunk of receive buffer space for the metadata is not really what the programmer
-wants. To counter that, when the socket is under memory pressure complex logic is run with the
-intention of freeing some space. One of the operations is &lt;code&gt;tcp_collapse&lt;&#x2F;code&gt; and it will merge
-adjacent TCP packets into one larger &lt;code&gt;sk_buff&lt;&#x2F;code&gt;. This behavior is pretty much a garbage collection
-(GC)—and as everyone knows, when the garbage collection kicks in, the latency must spike.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;the-story-of-one-latency-spike&#x2F;&quot;&gt;The story of one latency spike&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You can&#x27;t have a very large number of bound TCP sockets and we learned that the hard way. We
-learned a bit about the Linux networking stack: the fact that &lt;code&gt;LHTABLE&lt;&#x2F;code&gt; is fixed size and is
-hashed by destination port only.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;revenge-listening-sockets&#x2F;&quot;&gt;The revenge of the listening sockets&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
