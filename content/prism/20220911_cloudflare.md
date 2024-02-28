@@ -10,7 +10,8 @@ title = "Cloudflare Blog: 50 Years of The Internet. Work in Progress to a Better
 > ---
 >
 > Be conservative in what you send, be liberal in what you accept.
-> - [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)
+>
+> — [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)
 >
 > ---
 >
@@ -32,7 +33,8 @@ title = "Cloudflare Blog: 50 Years of The Internet. Work in Progress to a Better
 >
 > Depend upon it, sir, when a man knows he is to be hanged in a fortnight, it concentrates his mind
 > wonderfully.
-> - Samuel Johnson
+>
+> — Samuel Johnson
 
 [Fifty Years Ago](https://blog.cloudflare.com/fifty-years-ago/)
 
