@@ -71,23 +71,41 @@
 
     {# Font from cdn or disk #}
     {% if config.extra.use_cdn | default(value=false) %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libre-baskerville@5.0.5/index.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/league-spartan@5.0.5/index.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libre-baskerville@5.0.12/index.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/league-spartan@5.0.19/index.min.css">
         <link rel="stylesheet" href="https://fontlibrary.org/face/go-mono">
     {% else %}
         <link href={{ get_url(path="fonts.css") }} rel="stylesheet" />
     {% endif %}
 
     {# Analytics #}
-    {% if config.extra.analytics.enabled and config.extra.analytics.goatcounter_user %}
-        {% set user = config.extra.analytics.goatcounter_user %}
-        {% set host = config.extra.analytics.goatcounter_host | default(value="goatcounter.com") %}
+    {% if config.extra.analytics.enabled %}
+        {% if config.extra.analytics.umami.website_id %}
+            {% set website_id = config.extra.analytics.umami.website_id %}
+            {% set host_url = config.extra.analytics.umami.host_url | default(value="https://analytics.eu.umami.is") %}
 
-        <script data-goatcounter="https://{{ user }}.{{ host }}/count" async src="{{ get_url(path="js/count.js") }}"></script>
-        <noscript>
-            {# EasyList blocks '.com/count?', so we have to use '.com//count' #}
-            <img src="https://{{ user }}.{{ host }}//count?p={{ current_path }}&t={{ page.title | default(value=config.title) }}">
-        </noscript>
+            <script>
+                (function () {
+                  var el = document.createElement('script');
+                  el.setAttribute('src', '/js/imamu.js');
+                  el.setAttribute('data-website-id', '{{ website_id }}');
+                  el.setAttribute('data-host-url', '{{ host_url }}');
+                  document.body.appendChild(el);
+                })();
+              </script>
+            <script async src="/js/imamu.js" data-website-id="{{ website_id }}" data-host-url="{{ host_url }}"></script>
+        {% endif %}
+
+        {% if config.extra.analytics.goatcounter.user %}
+            {% set user = config.extra.analytics.goatcounter.user %}
+            {% set host = config.extra.analytics.goatcounter.host | default(value="goatcounter.com") %}
+
+            <script data-goatcounter="https://{{ user }}.{{ host }}/count" async src="{{ get_url(path="js/count.js") }}"></script>
+            <noscript>
+                {# EasyList blocks '.com/count?', so we have to use '.com//count' #}
+                <img src="https://{{ user }}.{{ host }}//count?p={{ current_path }}&t={{ page.title | default(value=config.title) }}">
+            </noscript>
+        {% endif %}
     {% endif %}
 
 
@@ -130,6 +148,4 @@
             <link rel="stylesheet" href="{{ get_url(path=stylesheet) }}">
         {% endfor %}
     {% endif %}
-
-    <script src={{ get_url(path="js/feather.min.js" ) }}></script>
 </head>

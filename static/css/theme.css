@@ -1,0 +1,93 @@
+:root {
+  --code-font: 'Go Mono', monospace;
+  --header-font: 'League Spartan', 'Helvetica', sans-serif;
+  --text-font: 'Libre Baskerville', serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.page-header {
+  font-size: 2em;
+}
+
+.post-header h1 {
+  font-size: 1em;
+}
+
+@media screen and (min-width:960px) {
+  .page-header {
+    font-size: 2.25em;
+  }
+}
+
+@media screen and (min-width:960px) {
+  .post-header h1 {
+    font-size: 1.125em;
+  }
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Go Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Go Mono'), local('Go-Mono'), url('/fonts/Go-Mono.ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Go Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Go Mono Bold'), local('GoMono-Bold'), url('/fonts/Go-Mono-Bold.ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Go Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Go Mono Italic'), local('GoMono-Italic'), url('/fonts/Go-Mono-Italic.ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 400;
+  src: local('League Spartan Regular'), local('LeagueSpartan-Regular'), url('/fonts/LeagueSpartan-Regular.woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  src: local('League Spartan Bold'), local('LeagueSpartan-Bold'), url('/fonts/LeagueSpartan-Bold.woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url('/fonts/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url('/fonts/LibreBaskerville-Bold.ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url('/fonts/LibreBaskerville-Italic.ttf');
+}

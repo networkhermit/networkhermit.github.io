@@ -2,7 +2,7 @@
 base_url = "https://blog.vac.fun"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
@@ -20,6 +20,7 @@ highlight_theme = "nord"
 
 [extra]
 # Put all your custom variables here
+comment = false
 favicon = "/images/favicon.ico"
 menu = [
     { name = "/posts", url = "/posts", weight = 1 },
@@ -27,6 +28,7 @@ menu = [
     { name = "/about", url = "/about", weight = 3 },
 ]
 socials = []
+stylesheets = ["css/theme.css"]
 theme = "auto"
 toc = false
 use_cdn = false
