@@ -70,6 +70,7 @@ trap clean_up EXIT
 
 PAGE=pages
 
+git -C "${PAGE}" pull origin gh-pages
 rm --force --recursive "${PAGE:?}/"*
 zola build --output-dir "${PAGE}/public"
 mv "${PAGE}/public/"* "${PAGE}"
