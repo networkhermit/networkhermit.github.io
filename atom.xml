@@ -4,8 +4,35 @@
     <link rel="self" type="application/atom+xml" href="https://blog.vac.fun/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-02-28T00:00:00+00:00</updated>
+    <updated>2024-04-06T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>ACM: Reflections on trusting trust</title>
+        <published>2024-04-06T00:00:00+00:00</published>
+        <updated>2024-04-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20240406-acm/"/>
+        <id>https://blog.vac.fun/prism/20240406-acm/</id>
+        
+        <content type="html" xml:base="https://blog.vac.fun/prism/20240406-acm/">&lt;blockquote&gt;
+&lt;p&gt;To what extent should one trust a statement that a program is free of Trojan horses? Perhaps it is
+more important to trust the people who wrote the software.&lt;&#x2F;p&gt;
+&lt;p&gt;— Ken Thompson&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;358198.358210&quot;&gt;Reflections on Trusting Trust&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.openwall.com&#x2F;lists&#x2F;oss-security&#x2F;2024&#x2F;03&#x2F;29&#x2F;4&quot;&gt;backdoor in upstream xz&#x2F;liblzma leading to ssh server compromise&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;research.swtch.com&#x2F;xz-timeline&quot;&gt;Timeline of the xz open source attack&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Macbeth and Kafka</title>
         <published>2024-02-28T00:00:00+00:00</published>
@@ -556,33 +583,6 @@ pools, easily.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;log-analytics-using-clickhouse&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Adaptive_bitrate_streaming&quot;&gt;Adaptive Bit Rate&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Simme Blog: Observability is becoming mission critical, but who watches the watchmen?</title>
-        <published>2022-09-16T00:00:00+00:00</published>
-        <updated>2022-09-16T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220916-simme/"/>
-        <id>https://blog.vac.fun/prism/20220916-simme/</id>
-        
-        <content type="html" xml:base="https://blog.vac.fun/prism/20220916-simme/">&lt;blockquote&gt;
-&lt;p&gt;What observes the observability stack? How will we be made aware if it is starting to have issues?&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Alerts not firing&lt;&#x2F;li&gt;
-&lt;li&gt;Telemetry missing&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;simme.dev&#x2F;posts&#x2F;who-watches-the-watchmen&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
