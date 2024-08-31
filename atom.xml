@@ -4,8 +4,40 @@
     <link rel="self" type="application/atom+xml" href="https://blog.vac.fun/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-04-06T00:00:00+00:00</updated>
+    <updated>2024-08-31T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Netflix Technology Blog: Investigation of a Cross-regional Network Performance Issue</title>
+        <published>2024-08-31T00:00:00+00:00</published>
+        <updated>2024-08-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20240831-netflixtechblog/"/>
+        <id>https://blog.vac.fun/prism/20240831-netflixtechblog/</id>
+        
+        <content type="html" xml:base="https://blog.vac.fun/prism/20240831-netflixtechblog/">&lt;blockquote&gt;
+&lt;p&gt;Simply put, &lt;strong&gt;the TCP receive window is how the receiver tells the sender “This is how many bytes
+you can send me without me ACKing any of them”.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In short, &lt;strong&gt;the receive window size halved after the kernel upgrade. Hence the throughput was cut in
+half, causing the data transfer time to double.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;While it technically wasn’t the “network” to blame, this time it turned out the culprit was the
+software components that make up the network (i.e. the TCP implementation in the kernel).&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;netflixtechblog.com&#x2F;investigation-of-a-cross-regional-network-performance-issue-422d6218fdf1&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>ACM: Reflections on trusting trust</title>
         <published>2024-04-06T00:00:00+00:00</published>
@@ -401,7 +433,7 @@ someone else build and run all the dependencies and adjacencies.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;platform-engineering-is-what-stands-between-you-and-darkness&quot;&gt;Platform engineering is what stands between you and darkness&lt;&#x2F;h2&gt;
 &lt;p&gt;When you start talking about putting software engineers on call for their own code, and generally
 being more involved in production, some percentage of the time you will hear back a guttural wail
-of despair: &lt;em&gt;&amp;quot;You can&#x27;t expect me to know EVERYTHING about EVERYTHING!&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+of despair: &lt;em&gt;&quot;You can&#x27;t expect me to know EVERYTHING about EVERYTHING!&quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Quite right; we can’t. Platform engineering teams are part of the answer to this perfectly
 reasonable complaint. It’s not that you’re being asked to do or understand more &lt;em&gt;in toto&lt;&#x2F;em&gt;, but the
 distribution of labor and responsibility is shifting:&lt;&#x2F;p&gt;
@@ -544,47 +576,6 @@ own.&lt;&#x2F;p&gt;
 pools, easily.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Cloudflare Blog: Log analytics using ClickHouse</title>
-        <published>2022-09-17T00:00:00+00:00</published>
-        <updated>2022-09-17T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220917-cloudflare/"/>
-        <id>https://blog.vac.fun/prism/20220917-cloudflare/</id>
-        
-        <content type="html" xml:base="https://blog.vac.fun/prism/20220917-cloudflare/">&lt;blockquote&gt;
-&lt;p&gt;Characteristics of logs&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unpredictable&lt;&#x2F;li&gt;
-&lt;li&gt;Semi-structured&lt;&#x2F;li&gt;
-&lt;li&gt;Contextual&lt;&#x2F;li&gt;
-&lt;li&gt;Write-heavy&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;producer, shipper, queue, consumer, datastore (Elasticsearch)&lt;&#x2F;p&gt;
-&lt;p&gt;Elasticsearch bottlenecks&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Mapping Explosion&lt;&#x2F;li&gt;
-&lt;li&gt;Multi-tenancy support&lt;&#x2F;li&gt;
-&lt;li&gt;Cluster operational tasks&lt;&#x2F;li&gt;
-&lt;li&gt;Garbage collection&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;producer, shipper, queue, inserter, datastore (ClickHouse)&lt;&#x2F;p&gt;
-&lt;p&gt;Elasticsearch is great for full-text search and ClickHouse is great for analytics.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;log-analytics-using-clickhouse&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Adaptive_bitrate_streaming&quot;&gt;Adaptive Bit Rate&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>

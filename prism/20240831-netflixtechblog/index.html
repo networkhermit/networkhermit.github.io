@@ -13,12 +13,12 @@
     
     
     <title>
-         Macbeth and Kafka
+         Netflix Technology Blog: Investigation of a Cross-regional Network Performance Issue
         
     </title>
 
         
-            <meta property="og:title" content="Macbeth and Kafka" />
+            <meta property="og:title" content="Netflix Technology Blog: Investigation of a Cross-regional Network Performance Issue" />
         
      
 
@@ -120,13 +120,13 @@
             
             
     <div class="page-header">
-        Macbeth and Kafka<span class="primary-color" style="font-size: 1.6em">.</span>
+        Netflix Technology Blog: Investigation of a Cross-regional Network Performance Issue<span class="primary-color" style="font-size: 1.6em">.</span>
     </div>
 
 
                 <div class="meta">
                     
-                        Posted on <time>2024-02-28</time>
+                        Posted on <time>2024-08-31</time>
                     
 
                     
@@ -151,14 +151,18 @@
 
         <section class="body">
             <blockquote>
-<p>It is a tale told by an idiot, full of sound and fury, signifying nothing.</p>
-<p>— Macbeth</p>
+<p>Simply put, <strong>the TCP receive window is how the receiver tells the sender “This is how many bytes
+you can send me without me ACKing any of them”.</strong></p>
 </blockquote>
-<hr />
 <blockquote>
-<p>There are two cardinal sins from which all others spring: Impatience and Laziness.</p>
-<p>— Franz Kafka</p>
+<p>In short, <strong>the receive window size halved after the kernel upgrade. Hence the throughput was cut in
+half, causing the data transfer time to double.</strong></p>
 </blockquote>
+<blockquote>
+<p>While it technically wasn’t the “network” to blame, this time it turned out the culprit was the
+software components that make up the network (i.e. the TCP implementation in the kernel).</p>
+</blockquote>
+<p><a href="https://netflixtechblog.com/investigation-of-a-cross-regional-network-performance-issue-422d6218fdf1">Link</a></p>
 
         </section>
     </article>
