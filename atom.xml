@@ -4,8 +4,36 @@
     <link rel="self" type="application/atom+xml" href="https://blog.vac.fun/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-08-31T00:00:00+00:00</updated>
+    <updated>2024-10-19T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Pulumi Blog: From CDK to Pulumi: The Evolution of SST</title>
+        <published>2024-10-19T00:00:00+00:00</published>
+        <updated>2024-10-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20241019-pulumi/"/>
+        <id>https://blog.vac.fun/prism/20241019-pulumi/</id>
+        
+        <content type="html" xml:base="https://blog.vac.fun/prism/20241019-pulumi/">&lt;blockquote&gt;
+&lt;p&gt;SST was built on AWS CDK and CloudFormation. But after nearly 3 years of working with CDK and
+CloudFormation we hit some of its underlying design flaws and were forced to look at alternatives.&lt;&#x2F;p&gt;
+&lt;p&gt;Late last year we started work on a new deployment engine that would use Pulumi and Terraform, as
+opposed to CDK and CloudFormation.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.pulumi.com&#x2F;blog&#x2F;from-cdk-pulumi-evolution-of-sst&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sst.dev&#x2F;blog&#x2F;moving-away-from-cdk&quot;&gt;Moving away from CDK&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sst.dev&#x2F;blog&#x2F;sst-v3&quot;&gt;SST v3&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Netflix Technology Blog: Investigation of a Cross-regional Network Performance Issue</title>
         <published>2024-08-31T00:00:00+00:00</published>
@@ -536,46 +564,6 @@ higher demands of CPU and memory, is part of the problem.&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sysdig.com&#x2F;blog&#x2F;kubernetes-pod-evicted&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Cloudflare Blog: How we built Pingora, the proxy that connects Cloudflare to the Internet</title>
-        <published>2022-09-18T00:00:00+00:00</published>
-        <updated>2022-09-18T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220918-cloudflare/"/>
-        <id>https://blog.vac.fun/prism/20220918-cloudflare/</id>
-        
-        <content type="html" xml:base="https://blog.vac.fun/prism/20220918-cloudflare/">&lt;blockquote&gt;
-&lt;p&gt;NGINX worker&#x2F;process architecture limitations:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;each request can only be served by a single worker: unbalanced load across all CPU cores,
-requests that do CPU heavy or blocking IO tasks can slow down other requests&lt;&#x2F;li&gt;
-&lt;li&gt;the connection pool is per worker: poor connection reuse, connection reuse ratio gets worse when
-scale up&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;At Cloudflare, we handle traffic across the entire Internet. We have many cases of bizarre and
-non-RFC compliant HTTP traffic that we have to support. This is a common dilemma across the HTTP
-community and web, where there is tension between strictly following HTTP specifications and
-accommodating the nuances of a wide ecosystem of potentially legacy clients or servers. Picking
-one side can be a tough job.&lt;&#x2F;p&gt;
-&lt;p&gt;In order to satisfy the requirements of Cloudflare&#x27;s position in the HTTP ecosystem, we needed a
-robust, permissive, customizable HTTP library that can survive the wilds of the Internet and
-support a variety of noncompliant use cases. The best way to guarantee that is to implement our
-own.&lt;&#x2F;p&gt;
-&lt;p&gt;We chose multithreading over multiprocessing in order to share resources, especially connection
-pools, easily.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
