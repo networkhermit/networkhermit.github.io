@@ -4,8 +4,71 @@
     <link rel="self" type="application/atom+xml" href="https://blog.vac.fun/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-10-19T00:00:00+00:00</updated>
+    <updated>2024-11-18T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Istio Blog: Scaling in the Clouds: Istio Ambient vs. Cilium</title>
+        <published>2024-11-18T00:00:00+00:00</published>
+        <updated>2024-11-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20241118-istio/"/>
+        <id>https://blog.vac.fun/prism/20241118-istio/</id>
+        
+        <content type="html" xml:base="https://blog.vac.fun/prism/20241118-istio/">&lt;blockquote&gt;
+&lt;p&gt;Despite offering a similar feature set on the surface, the two projects have substantially
+different architectures, most notably Cilium’s use of eBPF and WireGuard for processing and
+encrypting L4 traffic in the kernel, contrasted with Istio’s ztunnel component for L4 in user
+space. These differences have resulted in substantial speculation about how Istio will perform at
+scale compared to Cilium.&lt;&#x2F;p&gt;
+&lt;p&gt;While many comparisons have been made about tenancy models, security protocols and basic
+performance of the two projects, there has not yet been a full evaluation published at enterprise
+scale. Rather than emphasizing theoretical performance, we put Istio’s ambient mode and Cilium
+through their paces, focusing on key metrics like latency, throughput, and resource consumption.
+We cranked up the pressure with realistic load scenarios, simulating a bustling Kubernetes
+environment. Finally, we pushed the size of our AKS cluster up to 1,000 nodes on 11,000 cores, to
+understand how these projects perform at scale. Our results show areas where each can improve, but
+also indicate that Istio is the clear winner.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;behind-the-scenes-why-the-difference&quot;&gt;Behind the Scenes: Why the Difference?&lt;&#x2F;h2&gt;
+&lt;p&gt;The key to understanding these performance differences lies in the architecture and design of each tool.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cilium’s Control Plane Conundrum&lt;&#x2F;strong&gt;: Cilium runs a control plane instance on each node, leading to
+API server strain and configuration overhead as your cluster expands. This frequently caused our
+API server to crash, followed by Cilium becoming unready, and the entire cluster becoming
+unresponsive.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Istio’s Efficiency Edge&lt;&#x2F;strong&gt;: Istio, with its centralized control plane and identity-based approach,
+streamlines configuration and reduces the burden on your API server and nodes, directing
+critical resources to processing and securing your traffic, rather than processing
+configuration. Istio takes further advantage of the resources not used in the control plane by
+running as many Envoy instances as a workload needs, while Cilium is limited to one shared Envoy
+instance per node.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;digging-deeper&quot;&gt;Digging Deeper&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;hidden-costs&quot;&gt;Hidden Costs&lt;&#x2F;h3&gt;
+&lt;p&gt;While Istio operates entirely in user space, Cilium’s L4 dataplane runs in the Linux kernel using
+eBPF. Prometheus metrics for resource consumption only measure user space resources, meaning that
+all kernel resources used by Cilium are not accounted for in this test.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;recommendations-choosing-the-right-tool-for-the-job&quot;&gt;Recommendations: Choosing the Right Tool for the Job&lt;&#x2F;h2&gt;
+&lt;p&gt;So, what’s the verdict? Well, it depends on your specific needs and priorities. For small clusters
+with pure L3&#x2F;L4 use cases and no requirement for encryption, Cilium offers a cost-effective and
+performant solution. However, for larger clusters and a focus on stability, scalability, and
+advanced features, Istio’s ambient mode, along with an alternate NetworkPolicy implementation, is
+the way to go. Many customers choose to combine the L3&#x2F;L4 features of Cilium with the L4&#x2F;L7 and
+encryption features of Istio for a defense-in-depth strategy.&lt;&#x2F;p&gt;
+&lt;p&gt;Remember, the world of cloud-native networking is constantly evolving. Keep an eye on developments
+in both Istio and Cilium, as they continue to improve and address these challenges.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.pulumi.com&#x2F;blog&#x2F;from-cdk-pulumi-evolution-of-sst&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Pulumi Blog: From CDK to Pulumi: The Evolution of SST</title>
         <published>2024-10-19T00:00:00+00:00</published>
@@ -524,46 +587,6 @@ performance and control of a &lt;em&gt;low-level&lt;&#x2F;em&gt; one.&lt;&#x2F;p
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;smallcultfollowing.com&#x2F;babysteps&#x2F;blog&#x2F;2022&#x2F;09&#x2F;19&#x2F;what-i-meant-by-the-soul-of-rust&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Sysdig Blog: Understanding Kubernetes Evicted Pods</title>
-        <published>2022-09-21T00:00:00+00:00</published>
-        <updated>2022-09-21T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20220921-sysdig/"/>
-        <id>https://blog.vac.fun/prism/20220921-sysdig/</id>
-        
-        <content type="html" xml:base="https://blog.vac.fun/prism/20220921-sysdig/">&lt;blockquote&gt;
-&lt;p&gt;Every day, thousands of Pods are evicted from their homes. Stranded and confused, they have to
-abandon their previous lifestyle. Some of them even become nodeless. The current society, imposing
-higher demands of CPU and memory, is part of the problem.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Preemption eviction
-&lt;ul&gt;
-&lt;li&gt;Pod Priority Classes&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Node-pressure eviction
-&lt;ul&gt;
-&lt;li&gt;Quality of Service Classes: BestEffort, Burstable, Guaranteed&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;API-initiated eviction&lt;&#x2F;li&gt;
-&lt;li&gt;Taint-based eviction&lt;&#x2F;li&gt;
-&lt;li&gt;Node drain eviction&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sysdig.com&#x2F;blog&#x2F;kubernetes-pod-evicted&#x2F;&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
