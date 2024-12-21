@@ -9,7 +9,7 @@ title = "致敬 hello, world"
 内容，博客会以记录和分享为主，记录自己的学习过程，也顺便练习下表达能力。
 
 为了方便管理，我选择借助 [Zola](https://github.com/getzola/zola) 以 [Markdown](https://en.wikipedia.org/wiki/Markdown)
-格式组织博客，网站主题基于 [Apollo](https://github.com/not-matthias/apollo)，代码高亮主题为 [Nord](https://github.com/arcticicestudio/nord)，
+格式组织博客，网站主题基于 [Apollo](https://github.com/not-matthias/apollo)，代码高亮主题为 [Nord](https://github.com/nordtheme/nord)，
 博客目前托管在 [GitHub Pages](https://pages.github.com) 上。
 
 ## 代码高亮效果
