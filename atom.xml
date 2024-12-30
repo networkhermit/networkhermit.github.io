@@ -4,8 +4,143 @@
     <link rel="self" type="application/atom+xml" href="https://blog.vac.fun/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.vac.fun"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-12-27T00:00:00+00:00</updated>
+    <updated>2024-12-30T00:00:00+00:00</updated>
     <id>https://blog.vac.fun/atom.xml</id>
+    <entry xml:lang="en">
+        <title>USENIX ;login:: The Evolution of SRE at Google</title>
+        <published>2024-12-30T00:00:00+00:00</published>
+        <updated>2024-12-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20241230-usenix/"/>
+        <id>https://blog.vac.fun/prism/20241230-usenix/</id>
+        
+        <content type="html" xml:base="https://blog.vac.fun/prism/20241230-usenix/">&lt;blockquote&gt;
+&lt;p&gt;Google’s SRE team has pioneered methods to keep failures rare by engineering reliability into
+every part of the stack. SREs have scaled up methods that have gotten us very far—Service Level
+Objectives (SLOs), error budgets, isolation strategies, thorough postmortems, progressive rollouts,
+and other techniques. In the face of increasing system complexity and emerging challenges, we at
+Google are always asking ourselves: what&#x27;s next? How can we continue to push the boundaries of
+reliability and safety?&lt;&#x2F;p&gt;
+&lt;p&gt;Ideas like error budgets worked well with products that were largely stateless web services, but
+today our products have losses that must never occur—error budgets of zero. The types of failures
+we need to prevent have evolved beyond what error budgets can effectively address. Issues like
+privacy breaches, data loss, and regulatory compliance demand absolute prevention, not just low
+frequency and rapid mitigation. In addition to  these elevated expectations, our systems also
+become more complex every year. Sophisticated automation has enabled us to scale, AI and ML are
+now core to almost every product we build, and cost and energy efficiency are as important as
+user-visible features.&lt;&#x2F;p&gt;
+&lt;p&gt;To address these challenges, Google SRE has embraced systems theory and control theory. We have
+adopted the STAMP (System-Theoretic Accident Model and Processes) framework, developed by
+Professor Nancy Leveson at MIT, which shifts the focus from preventing individual component
+failures to understanding and managing complex system interactions. STAMP incorporates tools like
+Causal Analysis based on Systems Theory (CAST) for post-incident investigations and
+System-Theoretic Process Analysis (STPA) for hazard analysis.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;A design might implement its requirements flawlessly. But what if requirements necessary for the
+system to be safe were incorrect or, even worse, missing altogether?&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Building upon the foundations laid by cybernetics pioneer Norbert Wiener and control theorists
+like Rudolf Kalman, Leveson recognized that safety is an emergent property that can only be
+analyzed at the system-level, rather than an attribute of individual system components. STAMP
+applies control theory principles to safety engineering, viewing accidents not as a chain of
+events, but as complex interactions between system components, including human operators and
+software.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;control-theory-as-a-foundation-the-four-conditions&quot;&gt;Control Theory as a Foundation - The Four Conditions&lt;&#x2F;h2&gt;
+&lt;p&gt;&quot;In order to control a process, four conditions are required:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Goal Condition: The controller must have a goal or goals (for example, to maintain the setpoint).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Action Condition: The controller must be able to affect the state of the system. In engineering,
+actuators implement control actions.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Model Condition: The controller must be (or contain) a model of the system.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Observability Condition: The controller must be able to ascertain the state of the system. In
+engineering terminology, observation of the state of the system is provided by sensors.&quot;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;These four conditions provide a structured way to think about control in complex systems. When
+applying STAMP to our SRE practices, we can use these conditions as a checklist to ensure we have
+the necessary elements in place for effective control.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;treating-accidents-as-a-control-problem&quot;&gt;Treating Accidents as a Control Problem&lt;&#x2F;h2&gt;
+&lt;p&gt;STAMP shifts our perspective on accidents from a linear chain of failure events to a control
+problem. We want our model to explain accidents that result from component failures (like server
+crashes and buggy automation), but also external disturbances (environmental factors in our
+datacenters or subsea Internet cables), interactions between components of the system (including
+human-human, human-software, and software-software interactions), and also incorrect or inadequate
+behavior of individual system components—flawed algorithms or decision making.&lt;&#x2F;p&gt;
+&lt;p&gt;Instead of asking &quot;What software service failed?&quot; we ask “What interactions between parts of the
+system were inadequately controlled?” In complex systems, most accidents result from interactions
+between components that are all functioning as designed, but collectively produce an unsafe state.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;hazard-states-give-you-time&quot;&gt;Hazard states give you time&lt;&#x2F;h2&gt;
+&lt;p&gt;&quot;A hazard is a system state or set of conditions that, together with a particular set of
+worst-case environmental conditions, will lead to a loss [for one or more stakeholders in the
+system].&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Hazard states are not discrete events. They do not describe anything at the individual system
+component-level. A hazard state is a property of the system as a whole, and the system can be in a
+hazard state for a long period of time before an accident occurs. That gives engineers a much
+larger target to aim at when trying to prevent outages. Rather than trying to eliminate any single
+failure that could occur anywhere in the system, we work to prevent the system from entering a
+hazard state. And if we do enter a hazard state, if we can detect it and take action to transition
+from the hazard state back to normal operations, we can prevent any accident from occurring. In
+some cases, the system is in a hazard state for a long time—a bug is introduced but never
+triggered, an alert fires but no one receives it, a server is underprovisioned but suddenly
+receives traffic from a popular new product feature, etc.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;STPA analyzes each interaction in a system to determine comprehensively how the interaction must
+be controlled in order for the system to be safe. Unsafe control actions lead to the system
+entering one or more hazard states. There are only four possible types of UCA:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;A required control action is not provided.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;An incorrect or inadequate control action is provided.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;A control action is provided at the wrong time or in the wrong sequence.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;A control action is stopped too soon or applied for too long.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;This highlights a major advantage of STPA—by looking at the system level and by modeling the
+system in terms of control-feedback loops, we find issues both in the control path and the
+feedback path. As we run STPA on more and more systems, we see that the feedback path is often
+less well understood than the control path, but just as important from a system safety
+perspective.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;As Leveson writes in Engineering a Safer World: &quot;In [STAMP], understanding why an accident
+occurred requires determining why the control was ineffective. Preventing future accidents
+requires shifting from a focus on preventing failures to the broader goal of designing and
+implementing controls that will enforce the necessary constraints.&quot; This shift in perspective -
+from trying to prove the absence of problems to effectively managing known and potential hazards -
+is a key principle in our system safety approach.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Rather than seeing complexity as a bug, SRE teams at Google are leveraging control theory and
+methods like STPA and CAST to lead us to more comprehensive and proactive approaches to
+reliability, moving beyond simply reacting to failures to actively designing safer systems from
+the ground up.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.usenix.org&#x2F;publications&#x2F;loginonline&#x2F;evolution-sre-google&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>E.W.Dijkstra Archive: On the nature of Computing Science</title>
         <published>2024-12-27T00:00:00+00:00</published>
@@ -508,77 +643,6 @@ tension between the two.&lt;&#x2F;p&gt;
 possible.&lt;&#x2F;p&gt;
 &lt;p&gt;— Richard Feynmann&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Honeycomb Blog: The Future of Ops Is Platform Engineering</title>
-        <published>2022-10-08T00:00:00+00:00</published>
-        <updated>2022-10-08T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://blog.vac.fun/prism/20221008-honeycomb/"/>
-        <id>https://blog.vac.fun/prism/20221008-honeycomb/</id>
-        
-        <content type="html" xml:base="https://blog.vac.fun/prism/20221008-honeycomb/">&lt;blockquote&gt;
-&lt;p&gt;Building infrastructure and operational expertise used to be bundled together into a single role.
-But the industry is now bifurcating along an infrastructure fault line, and the overlap between
-infrastructure-oriented engineers and operationally-minded engineers is swiftly eroding. Engineers
-who love this work increasingly have a choice to make. Either you can 1) go deep on infrastructure
-by joining a company that does infrastructure as a service, or 2) go broad on operability by
-joining a company to help them do as little infrastructure as possible.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Our systems are only getting more complex, more difficult to operate, and simultaneously more
-critical to life on earth, which means that operational excellence has never been more desperately
-needed (and if you don’t respect that, 🌈 you deserve to suffer 🌈).&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Developer cycles are the scarcest resource in your company, and you want to spend as many of those
-as possible on your core product: the crown jewel, the code that makes you a business. Money is
-cheaper than engineering cycles, and teams that are focused on their core business will always
-outperform teams whose focus is spread across dozens of non-revenue-generating projects. Let
-someone else build and run all the dependencies and adjacencies.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;platform-engineering-is-what-stands-between-you-and-darkness&quot;&gt;Platform engineering is what stands between you and darkness&lt;&#x2F;h2&gt;
-&lt;p&gt;When you start talking about putting software engineers on call for their own code, and generally
-being more involved in production, some percentage of the time you will hear back a guttural wail
-of despair: &lt;em&gt;&quot;You can&#x27;t expect me to know EVERYTHING about EVERYTHING!&quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Quite right; we can’t. Platform engineering teams are part of the answer to this perfectly
-reasonable complaint. It’s not that you’re being asked to do or understand more &lt;em&gt;in toto&lt;&#x2F;em&gt;, but the
-distribution of labor and responsibility is shifting:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Before&lt;&#x2F;strong&gt;: some engineers wrote code, and some engineers ran code.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Now&lt;&#x2F;strong&gt;: all engineers write code, and all engineers run the code they write—but we divide the areas
-of responsibility by layer or function.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;One of the key principles of any developer platform is that &lt;em&gt;it should be easy to do the right
-things, and hard to do the wrong things&lt;&#x2F;em&gt;. It should be much simpler and easier to use the blessed
-paths than anything else, and there should be friction if you go off the beaten path.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;strong&gt;A strong platform team has an equally deep grounding in operations experience and software
-development.&lt;&#x2F;strong&gt; Individuals who are experts in both areas are fairly rare, but you can pull together
-a strong, well-rounded &lt;em&gt;team&lt;&#x2F;em&gt; by assembling a mix of SWEs (with some ops experience) and ops or
-DevOps engineers (with some software experience) and having them learn and grow from each other.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Platform teams typically work higher up the stack than operations, DevOps, or SRE teams do, and
-they involve a great deal less infrastructure.&lt;&#x2F;p&gt;
-&lt;p&gt;If a company has both a DevOps team and SRE, typically I expect to see the SRE team more on the
-frontlines, involved with incidents, telemetry, etc., and DevOps teams more on the backburner,
-slinging pipes and plumbing.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;That team should write libraries, generate examples, and drive standardization; ushering in
-consistency, predictability, and usability. They should partner with internal teams to evaluate
-use cases. They should partner with your vendors as roadmap stakeholders. They might also write
-glue code and helper modules to connect disparate data sources and create cohesive visualizations.
-Basically, that team becomes an integration point between your organization and the outsourced
-work.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.honeycomb.io&#x2F;blog&#x2F;future-ops-platform-engineering&quot;&gt;Link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
