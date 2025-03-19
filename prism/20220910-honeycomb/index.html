@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base" content="https:&#x2F;&#x2F;blog.vac.fun">
 
     
 
@@ -64,16 +65,21 @@
     
 
     <!-- Set the correct theme in the script -->
-    <script src=https://blog.vac.fun/js/themetoggle.js></script>
+
     
-        <script>
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setTheme("dark");
-            } else {
-                setTheme("light");
-            }
-        </script>
+        <script src=https://blog.vac.fun/js/themetoggle.js></script>
+
+        
+            <script>
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    setTheme("dark");
+                } else {
+                    setTheme("light");
+                }
+            </script>
+        
     
+
 
     <link rel="stylesheet" type="text/css" media="screen" href=https://blog.vac.fun/main.css />
 
@@ -82,8 +88,9 @@
             <link rel="stylesheet" href="https://blog.vac.fun/css/theme.css">
         
     
-    <script src=https://blog.vac.fun/js/mermaid.js></script>
-</head>
+
+    <script defer src="https://blog.vac.fun/search_index.en.js?h=65093fae5022a6a6a0e5"></script>
+        <script defer src="https://blog.vac.fun/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
 
 
 <body>
@@ -91,8 +98,9 @@
         <header>
     <div class="main">
         
-        <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
+            <a href=https:&#x2F;&#x2F;blog.vac.fun>hi, I’m vac</a>
         
+
 
         <div class="socials">
             
@@ -101,11 +109,59 @@
 
     <nav>
         
-        <a href=https://blog.vac.fun/posts style="margin-left: 0.5em">&#x2F;posts</a>
+            <a href=https://blog.vac.fun/posts style="margin-left: 0.25em">&#x2F;posts</a>
         
-        <a href=https://blog.vac.fun/prism style="margin-left: 0.5em">&#x2F;prism</a>
+            <a href=https://blog.vac.fun/prism style="margin-left: 0.25em">&#x2F;prism</a>
         
-        <a href=https://blog.vac.fun/about style="margin-left: 0.5em">&#x2F;about</a>
+            <a href=https://blog.vac.fun/about style="margin-left: 0.25em">&#x2F;about</a>
+        
+
+        
+        <button
+            id="search-button"
+            class="search-button"
+            title="$SHORTCUT to open search"
+        >
+            <img
+                src="https://blog.vac.fun/icons/search.svg"
+                alt="Search"
+                class="search-icon"
+            >
+        </button>
+
+        <div id="searchModal" class="search-modal js" role="dialog" aria-labelledby="modalTitle">
+            <div id="modal-content">
+                <h1 id="modalTitle" class="page-header">Search</h1>
+                <div id="searchBar">
+                    <input
+                        id="searchInput"
+                        role="combobox"
+                        autocomplete="off"
+                        spellcheck="false"
+                        aria-expanded="false"
+                        aria-controls="results-container"
+                        placeholder="Search..."
+                    />
+                    <button
+                        id="clear-search"
+                        class="clear-button"
+                        title="Clear search"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="results-container">
+                    <div id="results-info">
+                        <span id="zero_results" style="display: none;">No results</span>
+                        <span id="one_result" style="display: none;">1 result</span>
+                        <span id="many_results" style="display: none;">$NUMBER results</span>
+                    </div>
+                    <div id="results" role="listbox"></div>
+                </div>
+            </div>
+        </div>
         
 
         
@@ -133,6 +189,10 @@
 
                     
 
+                    
+
+                    
+                        :: 28 Words
                     
 
                     
